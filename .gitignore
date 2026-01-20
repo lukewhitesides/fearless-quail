@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# User data (don't commit personal progress)
+user_progress.json
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Vocabulary Trainer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Spanish Vocabulary Trainer</h1>
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="stats">
+                    <span id="mastered-count">0</span> / <span id="total-count">500</span> words mastered
+                    <span class="separator">|</span>
+                    <span id="accuracy">0</span>% accuracy
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="flashcard" id="flashcard">
+                <div class="card-content">
+                    <div class="english-word" id="english-word">Loading...</div>
+                    <div class="category" id="category"></div>
+                    <div class="hint-toggle">
+                        <button id="hint-btn" class="hint-btn" style="display: none;">Show Hint</button>
+                        <div class="hint" id="hint" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="special-chars">
+                <button type="button" class="char-btn" data-char="á">á</button>
+                <button type="button" class="char-btn" data-char="é">é</button>
+                <button type="button" class="char-btn" data-char="í">í</button>
+                <button type="button" class="char-btn" data-char="ó">ó</button>
+                <button type="button" class="char-btn" data-char="ú">ú</button>
+                <button type="button" class="char-btn" data-char="ü">ü</button>
+                <button type="button" class="char-btn" data-char="ñ">ñ</button>
+                <button type="button" class="char-btn" data-char="¿">¿</button>
+                <button type="button" class="char-btn" data-char="¡">¡</button>
+            </div>
+
+            <div class="answer-section">
+                <input type="text"
+                       id="answer-input"
+                       placeholder="Type the Spanish translation..."
+                       autocomplete="off"
+                       autofocus>
+                <button id="submit-btn" class="submit-btn">Check Answer</button>
+            </div>
+
+            <div class="feedback" id="feedback" style="display: none;">
+                <div class="feedback-icon" id="feedback-icon"></div>
+                <div class="feedback-text" id="feedback-text"></div>
+                <div class="correct-answers" id="correct-answers"></div>
+                <button id="next-btn" class="next-btn">Next Word</button>
+            </div>
+
+            <div class="completion" id="completion" style="display: none;">
+                <h2>Congratulations!</h2>
+                <p>You've mastered all the words!</p>
+                <button id="reset-btn" class="reset-btn">Start Over</button>
+            </div>
+        </main>
+
+        <footer>
+            <button id="reset-progress-btn" class="reset-link">Reset All Progress</button>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
