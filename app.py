@@ -2,14 +2,18 @@ from flask import Flask, jsonify, request, render_template
 import json
 import os
 import random
-import psycopg2
-from psycopg2.extras import RealDictCursor
 from datetime import datetime
 
 app = Flask(__name__)
 
 WORDS_FILE = 'words.json'
+PROGRESS_FILE = 'user_progress.json'
 DATABASE_URL = os.environ.get('DATABASE_URL')
+
+# Only import psycopg2 if we have a database URL
+if DATABASE_URL:
+    import psycopg2
+    from psycopg2.extras import RealDictCursor
 
 def get_db_connection():
     """Get a database connection."""
@@ -58,7 +62,26 @@ def load_words():
     with open(WORDS_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)['words']
 
-def load_progress():
+# JSON-based progress functions for local development
+def load_progress_json():
+    if not os.path.exists(PROGRESS_FILE):
+        return {
+            'user_stats': {
+                'total_practiced': 0,
+                'total_correct': 0,
+                'session_count': 1,
+                'last_session': datetime.now().isoformat()
+            },
+            'word_progress': {}
+        }
+    with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+def save_progress_json(progress):
+    with open(PROGRESS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(progress, f, indent=2, ensure_ascii=False)
+
+def load_progress_db():
     """Load progress from PostgreSQL."""
     conn = get_db_connection()
     cur = conn.cursor(cursor_factory=RealDictCursor)
@@ -146,6 +169,38 @@ def update_user_stats(is_correct):
     conn.commit()
     cur.close()
     conn.close()
+
+# Wrapper functions that choose DB or JSON based on environment
+def load_progress():
+    if DATABASE_URL:
+        return load_progress_db()
+    return load_progress_json()
+
+def save_progress(word_id, wp, is_correct):
+    if DATABASE_URL:
+        save_word_progress(word_id, wp)
+        update_user_stats(is_correct)
+    else:
+        progress = load_progress_json()
+        progress['word_progress'][word_id] = wp
+        progress['user_stats']['total_practiced'] += 1
+        if is_correct:
+            progress['user_stats']['total_correct'] += 1
+        progress['user_stats']['last_session'] = datetime.now().isoformat()
+        save_progress_json(progress)
+
+def reset_all_progress():
+    if DATABASE_URL:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('DELETE FROM word_progress')
+        cur.execute('UPDATE user_stats SET total_practiced = 0, total_correct = 0, session_count = 1, last_session = CURRENT_TIMESTAMP WHERE id = 1')
+        conn.commit()
+        cur.close()
+        conn.close()
+    else:
+        if os.path.exists(PROGRESS_FILE):
+            os.remove(PROGRESS_FILE)
 
 def is_mastered(word_progress):
     """Check if a word is mastered based on the mastery rules."""
@@ -270,9 +325,8 @@ def check_user_answer():
     # Check if now mastered
     wp['mastered'] = is_mastered(wp)
 
-    # Save to database
-    save_word_progress(word_id, wp)
-    update_user_stats(is_correct)
+    # Save progress
+    save_progress(word_id, wp, is_correct)
 
     return jsonify({
         'correct': is_correct,
@@ -301,16 +355,7 @@ def get_progress():
 
 @app.route('/api/reset', methods=['POST'])
 def reset_progress():
-    conn = get_db_connection()
-    cur = conn.cursor()
-
-    cur.execute('DELETE FROM word_progress')
-    cur.execute('UPDATE user_stats SET total_practiced = 0, total_correct = 0, session_count = 1, last_session = CURRENT_TIMESTAMP WHERE id = 1')
-
-    conn.commit()
-    cur.close()
-    conn.close()
-
+    reset_all_progress()
     return jsonify({'success': True, 'message': 'Progress reset successfully'})
 
 # Initialize database on startup
