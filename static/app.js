@@ -52,6 +52,13 @@ function setupEventListeners() {
         hintBtn.textContent = hintEl.style.display === 'none' ? 'Show Hint' : 'Hide Hint';
     });
 
+    // Tap flashcard to focus input (helps on mobile)
+    flashcardEl.addEventListener('click', () => {
+        if (!isAnswered) {
+            answerInput.focus();
+        }
+    });
+
     // Special character buttons
     document.querySelectorAll('.char-btn').forEach(btn => {
         btn.addEventListener('click', () => {
