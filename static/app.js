@@ -4,8 +4,6 @@ let isAnswered = false;
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
-const hintBtn = document.getElementById('hint-btn');
-const hintEl = document.getElementById('hint');
 const answerInput = document.getElementById('answer-input');
 const submitBtn = document.getElementById('submit-btn');
 const feedbackEl = document.getElementById('feedback');
@@ -44,11 +42,6 @@ function setupEventListeners() {
                 checkAnswer();
             }
         }
-    });
-
-    hintBtn.addEventListener('click', () => {
-        hintEl.style.display = hintEl.style.display === 'none' ? 'block' : 'none';
-        hintBtn.textContent = hintEl.style.display === 'none' ? 'Show Hint' : 'Hide Hint';
     });
 
     // Tap flashcard to focus input (helps on mobile)
@@ -90,8 +83,6 @@ async function loadNextWord() {
         answerSection.style.display = 'flex';
         flashcardEl.style.display = 'block';
         completionEl.style.display = 'none';
-        hintEl.style.display = 'none';
-        hintBtn.textContent = 'Show Hint';
 
         const response = await fetch('/api/next-word');
         const data = await response.json();
@@ -103,13 +94,6 @@ async function loadNextWord() {
 
         currentWord = data.word;
         englishWordEl.textContent = currentWord.english;
-
-        if (currentWord.hint) {
-            hintBtn.style.display = 'inline-block';
-            hintEl.textContent = currentWord.hint;
-        } else {
-            hintBtn.style.display = 'none';
-        }
 
         // Ensure focus on input (with delay for reliability)
         setTimeout(() => {
