@@ -1,6 +1,7 @@
 // State
 let currentWord = null;
 let isAnswered = false;
+let autoAdvanceTimeout = null;
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
@@ -72,6 +73,12 @@ function setupEventListeners() {
 }
 
 async function loadNextWord() {
+    // Clear any pending auto-advance timeout
+    if (autoAdvanceTimeout) {
+        clearTimeout(autoAdvanceTimeout);
+        autoAdvanceTimeout = null;
+    }
+
     try {
         // Reset UI
         isAnswered = false;
@@ -152,7 +159,7 @@ async function checkAnswer() {
             correctAnswersEl.innerHTML = '';
 
             // Auto-advance after 1 second for correct answers
-            setTimeout(() => loadNextWord(), 1000);
+            autoAdvanceTimeout = setTimeout(() => loadNextWord(), 1000);
         } else {
             feedbackEl.classList.add('incorrect');
             feedbackIcon.textContent = '✗';
