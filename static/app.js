@@ -105,7 +105,8 @@ async function loadNextWord() {
             hintBtn.style.display = 'none';
         }
 
-        answerInput.focus();
+        // Ensure focus on input (with delay for reliability)
+        setTimeout(() => answerInput.focus(), 50);
     } catch (error) {
         console.error('Error loading word:', error);
         englishWordEl.textContent = 'Error loading word. Please refresh.';
@@ -155,6 +156,9 @@ async function checkAnswer() {
             }
             feedbackText.textContent = text;
             correctAnswersEl.innerHTML = '';
+
+            // Auto-advance after 1 second for correct answers
+            setTimeout(() => loadNextWord(), 1000);
         } else {
             feedbackEl.classList.add('incorrect');
             feedbackIcon.textContent = '✗';
