@@ -349,28 +349,106 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+
     .container {
         border-radius: 0;
+        min-height: 100vh;
+    }
+
+    header {
+        padding: 15px;
     }
 
     header h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .progress-section {
+        margin-top: 8px;
+    }
+
+    .progress-bar {
+        height: 8px;
+        margin-bottom: 6px;
+    }
+
+    .stats {
+        font-size: 0.75rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .flashcard {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    .flashcard::after {
+        margin-top: 8px;
+        font-size: 0.7rem;
     }
 
     .english-word {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+
+    .hint-toggle {
+        margin-top: 10px;
     }
 
     .answer-section {
         flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    #answer-input {
+        padding: 12px 15px;
+        font-size: 1rem;
     }
 
     .submit-btn {
         width: 100%;
+        padding: 12px 20px;
     }
 
-    main {
-        padding: 25px 20px;
+    .special-chars {
+        gap: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .char-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .feedback {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .feedback-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .feedback-text {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        padding: 10px;
     }
 }
 

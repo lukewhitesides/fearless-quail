@@ -55,6 +55,7 @@ function setupEventListeners() {
     flashcardEl.addEventListener('click', () => {
         if (!isAnswered) {
             answerInput.focus();
+            answerInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     });
 
@@ -111,7 +112,11 @@ async function loadNextWord() {
         }
 
         // Ensure focus on input (with delay for reliability)
-        setTimeout(() => answerInput.focus(), 50);
+        setTimeout(() => {
+            answerInput.focus();
+            // Scroll input into view on mobile when keyboard opens
+            answerInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 50);
     } catch (error) {
         console.error('Error loading word:', error);
         englishWordEl.textContent = 'Error loading word. Please refresh.';
