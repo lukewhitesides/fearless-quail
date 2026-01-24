@@ -26,12 +26,20 @@
             <div class="flashcard" id="flashcard">
                 <div class="card-content">
                     <div class="english-word" id="english-word">Loading...</div>
-                    <div class="category" id="category"></div>
                     <div class="hint-toggle">
                         <button id="hint-btn" class="hint-btn" style="display: none;">Show Hint</button>
                         <div class="hint" id="hint" style="display: none;"></div>
                     </div>
                 </div>
+            </div>
+
+            <div class="answer-section">
+                <input type="text"
+                       id="answer-input"
+                       placeholder="Type the Spanish translation..."
+                       autocomplete="off"
+                       autofocus>
+                <button id="submit-btn" class="submit-btn">Check Answer</button>
             </div>
 
             <div class="special-chars">
@@ -44,15 +52,6 @@
                 <button type="button" class="char-btn" data-char="ñ">ñ</button>
                 <button type="button" class="char-btn" data-char="¿">¿</button>
                 <button type="button" class="char-btn" data-char="¡">¡</button>
-            </div>
-
-            <div class="answer-section">
-                <input type="text"
-                       id="answer-input"
-                       placeholder="Type the Spanish translation..."
-                       autocomplete="off"
-                       autofocus>
-                <button id="submit-btn" class="submit-btn">Check Answer</button>
             </div>
 
             <div class="feedback" id="feedback" style="display: none;">

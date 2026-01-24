@@ -4,7 +4,6 @@ let isAnswered = false;
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
-const categoryEl = document.getElementById('category');
 const hintBtn = document.getElementById('hint-btn');
 const hintEl = document.getElementById('hint');
 const answerInput = document.getElementById('answer-input');
@@ -103,7 +102,6 @@ async function loadNextWord() {
 
         currentWord = data.word;
         englishWordEl.textContent = currentWord.english;
-        categoryEl.textContent = currentWord.category;
 
         if (currentWord.hint) {
             hintBtn.style.display = 'inline-block';
