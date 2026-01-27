@@ -270,9 +270,9 @@ def get_next_word():
         return jsonify({'done': True, 'message': 'All words mastered!'})
 
     # Selection logic:
-    # 50/50 chance between active words and new words (if both available)
+    # 80% new word by frequency rank, 20% random active word (if both available)
     if active_words and new_words:
-        if random.random() < 0.5:
+        if random.random() < 0.2:
             selected = random.choice(active_words)
         else:
             new_words.sort(key=lambda x: x['rank'])
