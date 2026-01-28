@@ -323,14 +323,15 @@ footer {
 .reset-link {
     background: none;
     border: none;
-    color: #999;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.85rem;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .reset-link:hover {
-    color: #f12711;
+    color: white;
+    text-decoration: underline;
 }
 
 /* Streak indicator */
