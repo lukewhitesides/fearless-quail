@@ -1812,7 +1812,7 @@
     },
     {
       "id": 202,
-      "english": "reality, actuality",
+      "english": "reality",
       "spanish": [
         "realidad"
       ],
@@ -1902,7 +1902,7 @@
     },
     {
       "id": 212,
-      "english": "reason; tener razón: to be right",
+      "english": "reason",
       "spanish": [
         "razón"
       ],
@@ -1911,7 +1911,7 @@
     },
     {
       "id": 213,
-      "english": "en cuanto a: in terms of, regarding",
+      "english": "in terms of, regarding",
       "spanish": [
         "cuanto"
       ],
@@ -2064,7 +2064,7 @@
     },
     {
       "id": 230,
-      "english": "relationship, relation Juan",
+      "english": "relationship, relation",
       "spanish": [
         "relación"
       ],
@@ -2073,7 +2073,7 @@
     },
     {
       "id": 231,
-      "english": "five cuestiones",
+      "english": "five",
       "spanish": [
         "cinco"
       ],
@@ -2091,7 +2091,7 @@
     },
     {
       "id": 233,
-      "english": "nobody, anybody",
+      "english": "nobody",
       "spanish": [
         "nadie"
       ],
@@ -2145,7 +2145,7 @@
     },
     {
       "id": 239,
-      "english": "equal, same (as)",
+      "english": "equal",
       "spanish": [
         "igual"
       ],
@@ -2289,7 +2289,7 @@
     },
     {
       "id": 255,
-      "english": "strength, force, power perfecto",
+      "english": "strength, force",
       "spanish": [
         "fuerza"
       ],
@@ -2316,7 +2316,7 @@
     },
     {
       "id": 258,
-      "english": "saint (m)",
+      "english": "saint",
       "spanish": [
         "santo"
       ],
@@ -2334,7 +2334,7 @@
     },
     {
       "id": 260,
-      "english": "al frente: facing; frente a: across",
+      "english": "facing, across",
       "spanish": [
         "frente"
       ],
@@ -2370,7 +2370,7 @@
     },
     {
       "id": 264,
-      "english": "whose ternura",
+      "english": "whose",
       "spanish": [
         "cuyo"
       ],
@@ -2415,7 +2415,7 @@
     },
     {
       "id": 269,
-      "english": "you (subj/–fam)",
+      "english": "you (formal)",
       "spanish": [
         "usted"
       ],
@@ -2424,7 +2424,7 @@
     },
     {
       "id": 270,
-      "english": "rather, fairly, quite a bit (adv)",
+      "english": "rather, enough",
       "spanish": [
         "bastante"
       ],
@@ -2442,7 +2442,7 @@
     },
     {
       "id": 272,
-      "english": "(pl) thank you; grace, favor",
+      "english": "grace, favor",
       "spanish": [
         "gracia"
       ],
@@ -2451,7 +2451,7 @@
     },
     {
       "id": 273,
-      "english": "century, age",
+      "english": "century",
       "spanish": [
         "siglo"
       ],
@@ -2550,7 +2550,7 @@
     },
     {
       "id": 284,
-      "english": "political finish",
+      "english": "politician, political",
       "spanish": [
         "político"
       ],
@@ -2586,7 +2586,7 @@
     },
     {
       "id": 288,
-      "english": "kind, class, order",
+      "english": "class",
       "spanish": [
         "clase"
       ],
@@ -2604,7 +2604,7 @@
     },
     {
       "id": 290,
-      "english": "to divide, leave; a partir",
+      "english": "to divide, to part",
       "spanish": [
         "partir"
       ],
@@ -2640,7 +2640,7 @@
     },
     {
       "id": 294,
-      "english": "including, even (adv)",
+      "english": "including",
       "spanish": [
         "incluso"
       ],
@@ -2649,7 +2649,7 @@
     },
     {
       "id": 295,
-      "english": "field, country libros",
+      "english": "field, country",
       "spanish": [
         "campo"
       ],
@@ -2685,7 +2685,7 @@
     },
     {
       "id": 299,
-      "english": "to fulfill, carry out loco",
+      "english": "to fulfill, carry out",
       "spanish": [
         "realizar"
       ],
@@ -2712,7 +2712,7 @@
     },
     {
       "id": 302,
-      "english": "order; sequence (m), religious",
+      "english": "order; sequence",
       "spanish": [
         "orden"
       ],
@@ -2721,7 +2721,7 @@
     },
     {
       "id": 303,
-      "english": "courtesy title (m), Mr, gift",
+      "english": "Mr. (courtesy title)",
       "spanish": [
         "don"
       ],
@@ -2757,7 +2757,7 @@
     },
     {
       "id": 307,
-      "english": "al final: finally, in the end",
+      "english": "finally, in the end",
       "spanish": [
         "final"
       ],
@@ -2784,7 +2784,7 @@
     },
     {
       "id": 310,
-      "english": "view, sight order (f)",
+      "english": "view, sight",
       "spanish": [
         "vista"
       ],
@@ -2811,7 +2811,7 @@
     },
     {
       "id": 313,
-      "english": "accord; de acuerdo: in agreement",
+      "english": "accord, in agreement",
       "spanish": [
         "acuerdo"
       ],
@@ -2883,7 +2883,7 @@
     },
     {
       "id": 321,
-      "english": "study, learning",
+      "english": "study (noun), learning",
       "spanish": [
         "estudio"
       ],
@@ -2892,7 +2892,7 @@
     },
     {
       "id": 322,
-      "english": "necessary escenario",
+      "english": "necessary",
       "spanish": [
         "necesario"
       ],
@@ -2901,7 +2901,7 @@
     },
     {
       "id": 323,
-      "english": "to ask (a",
+      "english": "to ask a question",
       "spanish": [
         "preguntar"
       ],
@@ -2991,7 +2991,7 @@
     },
     {
       "id": 333,
-      "english": "measure; a medida que: as, to the extent that",
+      "english": "measure",
       "spanish": [
         "medida"
       ],
@@ -3027,9 +3027,9 @@
     },
     {
       "id": 337,
-      "english": "well…",
+      "english": "well",
       "spanish": [
-        "bueno"
+        "bien"
       ],
       "rank": 337,
       "category": "adverb"
@@ -3081,7 +3081,7 @@
     },
     {
       "id": 343,
-      "english": "it (subj-n)",
+      "english": "it",
       "spanish": [
         "ello"
       ],
@@ -3117,7 +3117,7 @@
     },
     {
       "id": 347,
-      "english": "a través: across, over, through",
+      "english": "across, over, through",
       "spanish": [
         "través"
       ],
@@ -3126,7 +3126,7 @@
     },
     {
       "id": 348,
-      "english": "old, ancient, former",
+      "english": "ancient, former",
       "spanish": [
         "antiguo"
       ],
@@ -3135,7 +3135,7 @@
     },
     {
       "id": 349,
-      "english": "your (sg/+fam)",
+      "english": "your (informal)",
       "spanish": [
         "tu"
       ],
@@ -3144,7 +3144,7 @@
     },
     {
       "id": 350,
-      "english": "age extent",
+      "english": "age (time period)",
       "spanish": [
         "edad"
       ],
@@ -3171,7 +3171,7 @@
     },
     {
       "id": 353,
-      "english": "to be pleasing to sobresaliente",
+      "english": "to be pleasing to",
       "spanish": [
         "gustar"
       ],
@@ -3207,7 +3207,7 @@
     },
     {
       "id": 357,
-      "english": "me (obj prep)",
+      "english": "my",
       "spanish": [
         "mí"
       ],
@@ -3216,7 +3216,7 @@
     },
     {
       "id": 358,
-      "english": "time, age, period",
+      "english": "epoch",
       "spanish": [
         "época"
       ],
@@ -3234,7 +3234,7 @@
     },
     {
       "id": 360,
-      "english": "to listen to guerra",
+      "english": "to listen to",
       "spanish": [
         "escuchar"
       ],
@@ -3261,7 +3261,7 @@
     },
     {
       "id": 363,
-      "english": "to fulfill",
+      "english": "to complete",
       "spanish": [
         "cumplir"
       ],
@@ -3288,7 +3288,7 @@
     },
     {
       "id": 366,
-      "english": "sorrow; a pesar",
+      "english": "sorrow",
       "spanish": [
         "pesar"
       ],
@@ -3324,7 +3324,7 @@
     },
     {
       "id": 370,
-      "english": "previous, preceding",
+      "english": "anterior, preceding",
       "spanish": [
         "anterior"
       ],
@@ -3378,7 +3378,7 @@
     },
     {
       "id": 376,
-      "english": "to try, attempt",
+      "english": "to intend, attempt",
       "spanish": [
         "intentar"
       ],
@@ -3441,7 +3441,7 @@
     },
     {
       "id": 383,
-      "english": "to forget diferente",
+      "english": "to forget",
       "spanish": [
         "olvidar"
       ],
@@ -3450,7 +3450,7 @@
     },
     {
       "id": 384,
-      "english": "law, bill, rule entristeciera",
+      "english": "law",
       "spanish": [
         "ley"
       ],
@@ -3477,7 +3477,7 @@
     },
     {
       "id": 387,
-      "english": "to be worth, cost",
+      "english": "to be worth",
       "spanish": [
         "valer"
       ],
@@ -3540,7 +3540,7 @@
     },
     {
       "id": 394,
-      "english": "third carrera?",
+      "english": "third",
       "spanish": [
         "tercero"
       ],
@@ -3558,7 +3558,7 @@
     },
     {
       "id": 396,
-      "english": "soon, quick libre",
+      "english": "soon",
       "spanish": [
         "pronto"
       ],
