@@ -3639,7 +3639,7 @@
     },
     {
       "id": 405,
-      "english": "action, act",
+      "english": "action",
       "spanish": [
         "acción"
       ],
@@ -3657,7 +3657,7 @@
     },
     {
       "id": 407,
-      "english": "to set, fix, [se] notice",
+      "english": "to fix, set,",
       "spanish": [
         "fijar"
       ],
@@ -3729,7 +3729,7 @@
     },
     {
       "id": 415,
-      "english": "to",
+      "english": "to decide",
       "spanish": [
         "dedicar"
       ],
@@ -3747,7 +3747,7 @@
     },
     {
       "id": 417,
-      "english": "peso (money), weight, load",
+      "english": "weight, load",
       "spanish": [
         "peso"
       ],
@@ -3810,7 +3810,7 @@
     },
     {
       "id": 424,
-      "english": "death literatura",
+      "english": "death",
       "spanish": [
         "muerte"
       ],
@@ -3819,7 +3819,7 @@
     },
     {
       "id": 425,
-      "english": "party, group, (sports) match",
+      "english": "sports match, group of people, party",
       "spanish": [
         "partido"
       ],
@@ -3891,7 +3891,7 @@
     },
     {
       "id": 433,
-      "english": "respect; con respecto a: with regards to",
+      "english": "respect",
       "spanish": [
         "respecto"
       ],
@@ -4017,7 +4017,7 @@
     },
     {
       "id": 447,
-      "english": "rest, remainder, leftover",
+      "english": "rest, remainder",
       "spanish": [
         "resto"
       ],
@@ -4053,7 +4053,7 @@
     },
     {
       "id": 451,
-      "english": "out, outside, away costumbres",
+      "english": "out, outside, away",
       "spanish": [
         "fuera"
       ],
@@ -4071,7 +4071,7 @@
     },
     {
       "id": 453,
-      "english": "alive, bright realidad",
+      "english": "alive, bright",
       "spanish": [
         "vivo"
       ],
@@ -4107,7 +4107,7 @@
     },
     {
       "id": 457,
-      "english": "to suffer, undergo cena",
+      "english": "to suffer, undergo",
       "spanish": [
         "sufrir"
       ],
@@ -4170,7 +4170,7 @@
     },
     {
       "id": 464,
-      "english": "to matter, import",
+      "english": "to matter, to be important",
       "spanish": [
         "importar"
       ],
@@ -4215,7 +4215,7 @@
     },
     {
       "id": 469,
-      "english": "far (away, off)",
+      "english": "far away, off",
       "spanish": [
         "lejos"
       ],
@@ -4242,7 +4242,7 @@
     },
     {
       "id": 472,
-      "english": "answer, reply",
+      "english": "response, reply",
       "spanish": [
         "respuesta"
       ],
@@ -4287,7 +4287,7 @@
     },
     {
       "id": 477,
-      "english": "end, bit; llevar a cabo: to carry out",
+      "english": "cabo, end, bit",
       "spanish": [
         "cabo"
       ],
@@ -4341,7 +4341,7 @@
     },
     {
       "id": 483,
-      "english": "back, behind, ago",
+      "english": "back, behind",
       "spanish": [
         "atrás"
       ],
@@ -4413,7 +4413,7 @@
     },
     {
       "id": 491,
-      "english": "to",
+      "english": "to develop",
       "spanish": [
         "desarrollar"
       ],
@@ -4431,7 +4431,7 @@
     },
     {
       "id": 493,
-      "english": "to point (out), signal",
+      "english": "to signal",
       "spanish": [
         "señalar"
       ],
@@ -4449,7 +4449,7 @@
     },
     {
       "id": 495,
-      "english": "figure microscopio",
+      "english": "figure",
       "spanish": [
         "figura"
       ],
@@ -4458,7 +4458,7 @@
     },
     {
       "id": 496,
-      "english": "main, principal ocupar",
+      "english": "main, principal",
       "spanish": [
         "principal"
       ],
@@ -4521,7 +4521,7 @@
     },
     {
       "id": 503,
-      "english": "position presencia",
+      "english": "position",
       "spanish": [
         "posición"
       ],
@@ -4530,7 +4530,7 @@
     },
     {
       "id": 504,
-      "english": "motive, cause",
+      "english": "motive",
       "spanish": [
         "motivo"
       ],
@@ -4584,7 +4584,7 @@
     },
     {
       "id": 510,
-      "english": "to be",
+      "english": "to miss",
       "spanish": [
         "faltar"
       ],
@@ -4593,7 +4593,7 @@
     },
     {
       "id": 511,
-      "english": "supposed; por supuesto: of course",
+      "english": "supposed",
       "spanish": [
         "supuesto"
       ],
@@ -4638,7 +4638,7 @@
     },
     {
       "id": 516,
-      "english": "forward, further notable",
+      "english": "forward, further",
       "spanish": [
         "adelante"
       ],
@@ -4647,7 +4647,7 @@
     },
     {
       "id": 517,
-      "english": "firm, company, venture",
+      "english": "business, firm, venture",
       "spanish": [
         "empresa"
       ],
@@ -4674,7 +4674,7 @@
     },
     {
       "id": 520,
-      "english": "his, hers, yours (- fam), theirs",
+      "english": "his, hers, yours (formal), theirs",
       "spanish": [
         "suyo"
       ],
@@ -4710,7 +4710,7 @@
     },
     {
       "id": 524,
-      "english": "to teach, show mejor",
+      "english": "to teach",
       "spanish": [
         "enseñar"
       ],
@@ -4719,7 +4719,7 @@
     },
     {
       "id": 525,
-      "english": "to construct, build proporciones grotescas",
+      "english": "to construct, build",
       "spanish": [
         "construir"
       ],
@@ -4728,7 +4728,7 @@
     },
     {
       "id": 526,
-      "english": "to sell impresiones",
+      "english": "to sell",
       "spanish": [
         "vender"
       ],
@@ -4764,7 +4764,7 @@
     },
     {
       "id": 530,
-      "english": "personality, nature",
+      "english": "character, personality",
       "spanish": [
         "carácter"
       ],
@@ -4845,7 +4845,7 @@
     },
     {
       "id": 539,
-      "english": "brother, [pl] siblings",
+      "english": "brother",
       "spanish": [
         "hermano"
       ],
@@ -4881,7 +4881,7 @@
     },
     {
       "id": 543,
-      "english": "function, meeting",
+      "english": "function",
       "spanish": [
         "función"
       ],
@@ -4971,7 +4971,7 @@
     },
     {
       "id": 553,
-      "english": "to appear, spring (forth)",
+      "english": "to appear, spring forth",
       "spanish": [
         "surgir"
       ],
@@ -4980,7 +4980,7 @@
     },
     {
       "id": 554,
-      "english": "you (subj-sg/+fam)",
+      "english": "you (singular, informal)",
       "spanish": [
         "tú"
       ],
@@ -5016,7 +5016,7 @@
     },
     {
       "id": 558,
-      "english": "to",
+      "english": "to turn in, deliver",
       "spanish": [
         "entregar"
       ],
@@ -5052,7 +5052,7 @@
     },
     {
       "id": 562,
-      "english": "to place, position serio",
+      "english": "to place",
       "spanish": [
         "colocar"
       ],
@@ -5106,7 +5106,7 @@
     },
     {
       "id": 568,
-      "english": "to initiate, start hogar",
+      "english": "to initiate, start",
       "spanish": [
         "iniciar"
       ],
@@ -5124,7 +5124,7 @@
     },
     {
       "id": 570,
-      "english": "consequence soldados",
+      "english": "consequence",
       "spanish": [
         "consecuencia"
       ],
@@ -5133,7 +5133,7 @@
     },
     {
       "id": 571,
-      "english": "to notice financieras",
+      "english": "to notice",
       "spanish": [
         "notar"
       ],
@@ -5268,7 +5268,7 @@
     },
     {
       "id": 586,
-      "english": "letter, (playing) card",
+      "english": "letter, playing card",
       "spanish": [
         "carta"
       ],
@@ -5358,7 +5358,7 @@
     },
     {
       "id": 596,
-      "english": "language, tongue, strip (of",
+      "english": "language, tongue",
       "spanish": [
         "lengua"
       ],
@@ -5547,7 +5547,7 @@
     },
     {
       "id": 617,
-      "english": "to",
+      "english": "to deny",
       "spanish": [
         "negar"
       ],
@@ -5592,7 +5592,7 @@
     },
     {
       "id": 622,
-      "english": "to resolve, settle, work out",
+      "english": "to resolve, work out",
       "spanish": [
         "resolver"
       ],
@@ -5610,7 +5610,7 @@
     },
     {
       "id": 624,
-      "english": "opportunity, chance",
+      "english": "opportunity",
       "spanish": [
         "oportunidad"
       ],
@@ -5628,7 +5628,7 @@
     },
     {
       "id": 626,
-      "english": "to cost, be hard",
+      "english": "to cost",
       "spanish": [
         "costar"
       ],
@@ -5664,7 +5664,7 @@
     },
     {
       "id": 630,
-      "english": "to",
+      "english": "to demand, call for",
       "spanish": [
         "exigir"
       ],
@@ -5682,7 +5682,7 @@
     },
     {
       "id": 632,
-      "english": "opinion, view",
+      "english": "opinion",
       "spanish": [
         "opinión"
       ],
@@ -5709,7 +5709,7 @@
     },
     {
       "id": 635,
-      "english": "mouth, entrance, opening",
+      "english": "mouth, opening",
       "spanish": [
         "boca"
       ],
@@ -5736,7 +5736,7 @@
     },
     {
       "id": 638,
-      "english": "to abandon, leave (a place)",
+      "english": "to abandon",
       "spanish": [
         "abandonar"
       ],
@@ -5745,7 +5745,7 @@
     },
     {
       "id": 639,
-      "english": "piece, part",
+      "english": "piece",
       "spanish": [
         "pieza"
       ],
@@ -5808,7 +5808,7 @@
     },
     {
       "id": 646,
-      "english": "French personas",
+      "english": "French",
       "spanish": [
         "francés"
       ],
@@ -5853,7 +5853,7 @@
     },
     {
       "id": 651,
-      "english": "capital; city (f), money (m)",
+      "english": "capital",
       "spanish": [
         "capital"
       ],
@@ -5871,7 +5871,7 @@
     },
     {
       "id": 653,
-      "english": "title, heading otras estrellas",
+      "english": "title, heading",
       "spanish": [
         "título"
       ],
@@ -5943,7 +5943,7 @@
     },
     {
       "id": 661,
-      "english": "simple, mere, simple-minded",
+      "english": "simple",
       "spanish": [
         "simple"
       ],
@@ -5979,7 +5979,7 @@
     },
     {
       "id": 665,
-      "english": "to",
+      "english": "to defend",
       "spanish": [
         "defender"
       ],
@@ -5997,7 +5997,7 @@
     },
     {
       "id": 667,
-      "english": "goods, property, benefit",
+      "english": "well",
       "spanish": [
         "bien"
       ],
@@ -6051,7 +6051,7 @@
     },
     {
       "id": 673,
-      "english": "to",
+      "english": "to depend",
       "spanish": [
         "depender"
       ],
@@ -6060,7 +6060,7 @@
     },
     {
       "id": 674,
-      "english": "nature, character",
+      "english": "nature",
       "spanish": [
         "naturaleza"
       ],
@@ -6240,7 +6240,7 @@
     },
     {
       "id": 694,
-      "english": "exit, escape, outcome",
+      "english": "exit, escape",
       "spanish": [
         "salida"
       ],
@@ -6348,7 +6348,7 @@
     },
     {
       "id": 706,
-      "english": "private competitivo",
+      "english": "private",
       "spanish": [
         "privado"
       ],
@@ -6375,7 +6375,7 @@
     },
     {
       "id": 709,
-      "english": "popular mediante estanques",
+      "english": "popular",
       "spanish": [
         "popular"
       ],
@@ -6384,7 +6384,7 @@
     },
     {
       "id": 710,
-      "english": "to sit (down), seat",
+      "english": "to sit (down)",
       "spanish": [
         "sentar"
       ],
@@ -6393,7 +6393,7 @@
     },
     {
       "id": 711,
-      "english": "plant, floor",
+      "english": "plant",
       "spanish": [
         "planta"
       ],
@@ -6402,7 +6402,7 @@
     },
     {
       "id": 712,
-      "english": "character (e.g. movie)",
+      "english": "character (book or movie)",
       "spanish": [
         "personaje"
       ],
@@ -6411,7 +6411,7 @@
     },
     {
       "id": 713,
-      "english": "famous, well-known Dios",
+      "english": "famous, well-known",
       "spanish": [
         "famoso"
       ],
@@ -6438,7 +6438,7 @@
     },
     {
       "id": 716,
-      "english": "to",
+      "english": "to deserve",
       "spanish": [
         "merecer"
       ],
@@ -6609,7 +6609,7 @@
     },
     {
       "id": 735,
-      "english": "resource, recourse, means",
+      "english": "resource, recourse",
       "spanish": [
         "recurso"
       ],
@@ -6627,7 +6627,7 @@
     },
     {
       "id": 737,
-      "english": "team, equipment, outfit",
+      "english": "team, equipment",
       "spanish": [
         "equipo"
       ],
@@ -6663,7 +6663,7 @@
     },
     {
       "id": 741,
-      "english": "difficulty, obstacle aeropuerto",
+      "english": "difficulty",
       "spanish": [
         "dificultad"
       ],
@@ -6690,7 +6690,7 @@
     },
     {
       "id": 744,
-      "english": "familiar, of the family",
+      "english": "familiar",
       "spanish": [
         "familiar"
       ],
