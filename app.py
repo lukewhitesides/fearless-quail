@@ -43,8 +43,14 @@ def init_db():
             times_shown INTEGER DEFAULT 0,
             times_correct INTEGER DEFAULT 0,
             streak INTEGER DEFAULT 0,
-            mastered BOOLEAN DEFAULT FALSE
+            mastered BOOLEAN DEFAULT FALSE,
+            first_attempt_correct BOOLEAN DEFAULT NULL
         )
+    ''')
+
+    # Add first_attempt_correct column if it doesn't exist (for existing databases)
+    cur.execute('''
+        ALTER TABLE word_progress ADD COLUMN IF NOT EXISTS first_attempt_correct BOOLEAN DEFAULT NULL
     ''')
 
     # Insert default user_stats if not exists
@@ -115,7 +121,8 @@ def load_progress_db():
             'times_shown': row['times_shown'],
             'times_correct': row['times_correct'],
             'streak': row['streak'],
-            'mastered': row['mastered']
+            'mastered': row['mastered'],
+            'first_attempt_correct': row.get('first_attempt_correct')
         }
 
     cur.close()
@@ -132,14 +139,15 @@ def save_word_progress(word_id, wp):
     cur = conn.cursor()
 
     cur.execute('''
-        INSERT INTO word_progress (word_id, times_shown, times_correct, streak, mastered)
-        VALUES (%s, %s, %s, %s, %s)
+        INSERT INTO word_progress (word_id, times_shown, times_correct, streak, mastered, first_attempt_correct)
+        VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (word_id) DO UPDATE SET
             times_shown = EXCLUDED.times_shown,
             times_correct = EXCLUDED.times_correct,
             streak = EXCLUDED.streak,
-            mastered = EXCLUDED.mastered
-    ''', (int(word_id), wp['times_shown'], wp['times_correct'], wp['streak'], wp['mastered']))
+            mastered = EXCLUDED.mastered,
+            first_attempt_correct = EXCLUDED.first_attempt_correct
+    ''', (int(word_id), wp['times_shown'], wp['times_correct'], wp['streak'], wp['mastered'], wp.get('first_attempt_correct')))
 
     conn.commit()
     cur.close()
@@ -244,16 +252,20 @@ def get_next_word():
     # Separate words into categories:
     # - active: shown at least once but not mastered (randomly select from these)
     # - new: never shown (introduce by frequency rank when no active words)
+    # - review: mastered words that were initially gotten wrong (5% chance to review)
 
     active_words = []
     new_words = []
+    review_words = []
 
     for word in words:
         word_id = str(word['id'])
         wp = word_progress.get(word_id, {})
 
-        # Skip mastered words
         if wp.get('mastered', False):
+            # Mastered word - check if it was initially gotten wrong for review pool
+            if wp.get('first_attempt_correct') is False:
+                review_words.append(word)
             continue
 
         times_shown = wp.get('times_shown', 0)
@@ -270,8 +282,11 @@ def get_next_word():
         return jsonify({'done': True, 'message': 'All words mastered!'})
 
     # Selection logic:
+    # 5% chance to review a mastered word that was initially gotten wrong
     # 80% new word by frequency rank, 20% random active word (if both available)
-    if active_words and new_words:
+    if review_words and random.random() < 0.05:
+        selected = random.choice(review_words)
+    elif active_words and new_words:
         if random.random() < 0.2:
             selected = random.choice(active_words)
         else:
@@ -317,8 +332,13 @@ def check_user_answer():
         'times_shown': 0,
         'times_correct': 0,
         'streak': 0,
-        'mastered': False
+        'mastered': False,
+        'first_attempt_correct': None
     })
+
+    # Track first attempt result
+    if wp['times_shown'] == 0:
+        wp['first_attempt_correct'] = is_correct
 
     wp['times_shown'] += 1
     if is_correct:
