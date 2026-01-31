@@ -194,7 +194,8 @@
       "id": 22,
       "english": "all, every",
       "spanish": [
-        "todo"
+        "todo",
+        "toda"
       ],
       "rank": 22,
       "category": "adjective"
@@ -275,7 +276,8 @@
       "id": 31,
       "english": "other, another",
       "spanish": [
-        "otro"
+        "otro",
+        "otra"
       ],
       "rank": 31,
       "category": "adjective"
@@ -329,7 +331,8 @@
       "id": 37,
       "english": "to see",
       "spanish": [
-        "ver"
+        "ver",
+        "mirar"
       ],
       "rank": 37,
       "category": "verb"
@@ -401,7 +404,8 @@
       "id": 45,
       "english": "much, many, a lot",
       "spanish": [
-        "mucho"
+        "mucho",
+        "mucha"
       ],
       "rank": 45,
       "category": "adjective"
@@ -446,7 +450,8 @@
       "id": 50,
       "english": "some, someone",
       "spanish": [
-        "alguno"
+        "alguno",
+        "alguna"
       ],
       "rank": 50,
       "category": "adjective"
@@ -455,7 +460,8 @@
       "id": 51,
       "english": "same",
       "spanish": [
-        "mismo"
+        "mismo",
+        "misma"
       ],
       "rank": 51,
       "category": "adjective"
@@ -473,7 +479,8 @@
       "id": 53,
       "english": "also",
       "spanish": [
-        "también"
+        "también",
+        "además"
       ],
       "rank": 53,
       "category": "adverb"
@@ -536,7 +543,8 @@
       "id": 60,
       "english": "first",
       "spanish": [
-        "primero"
+        "primero",
+        "primera"
       ],
       "rank": 60,
       "category": "adjective"
@@ -554,7 +562,8 @@
       "id": 62,
       "english": "large, great, big",
       "spanish": [
-        "grande"
+        "grande",
+        "enorme"
       ],
       "rank": 62,
       "category": "adjective"
@@ -662,7 +671,8 @@
       "id": 74,
       "english": "little, few, a little bit",
       "spanish": [
-        "poco"
+        "poco",
+        "poca"
       ],
       "rank": 74,
       "category": "adjective"
@@ -707,7 +717,8 @@
       "id": 79,
       "english": "so much, so many",
       "spanish": [
-        "tanto"
+        "tanto",
+        "tanta"
       ],
       "rank": 79,
       "category": "adjective"
@@ -815,7 +826,8 @@
       "id": 91,
       "english": "to believe, think",
       "spanish": [
-        "creer"
+        "creer",
+        "pensar"
       ],
       "rank": 91,
       "category": "verb"
@@ -824,7 +836,9 @@
       "id": 92,
       "english": "to speak, talk",
       "spanish": [
-        "hablar"
+        "hablar",
+        "conversar",
+        "platicar"
       ],
       "rank": 92,
       "category": "verb"
@@ -887,7 +901,8 @@
       "id": 99,
       "english": "new",
       "spanish": [
-        "nuevo"
+        "nuevo",
+        "nueva"
       ],
       "rank": 99,
       "category": "adjective"
@@ -896,7 +911,8 @@
       "id": 100,
       "english": "to find",
       "spanish": [
-        "encontrar"
+        "encontrar",
+        "hallar"
       ],
       "rank": 100,
       "category": "verb"
@@ -950,7 +966,8 @@
       "id": 106,
       "english": "to think",
       "spanish": [
-        "pensar"
+        "pensar",
+        "creer"
       ],
       "rank": 106,
       "category": "verb"
@@ -1004,7 +1021,9 @@
       "id": 112,
       "english": "to return",
       "spanish": [
-        "volver"
+        "volver",
+        "regresar",
+        "retornar"
       ],
       "rank": 112,
       "category": "verb"
@@ -1031,7 +1050,8 @@
       "id": 115,
       "english": "good",
       "spanish": [
-        "bueno"
+        "bueno",
+        "buena"
       ],
       "rank": 115,
       "category": "adjective"
@@ -1094,7 +1114,9 @@
       "id": 122,
       "english": "to take, drink",
       "spanish": [
-        "tomar"
+        "tomar",
+        "coger",
+        "agarrar"
       ],
       "rank": 122,
       "category": "verb"
@@ -1103,7 +1125,8 @@
       "id": 123,
       "english": "certain, sure, true",
       "spanish": [
-        "cierto"
+        "cierto",
+        "cierta"
       ],
       "rank": 123,
       "category": "adjective"
@@ -1247,7 +1270,8 @@
       "id": 139,
       "english": "last, final",
       "spanish": [
-        "último"
+        "último",
+        "última"
       ],
       "rank": 139,
       "category": "adjective"
@@ -1256,7 +1280,8 @@
       "id": 140,
       "english": "own, proper, typical",
       "spanish": [
-        "propio"
+        "propio",
+        "propia"
       ],
       "rank": 140,
       "category": "adjective"
@@ -1274,7 +1299,9 @@
       "id": 142,
       "english": "to look, watch",
       "spanish": [
-        "mirar"
+        "mirar",
+        "ver",
+        "observar"
       ],
       "rank": 142,
       "category": "verb"
@@ -1292,7 +1319,8 @@
       "id": 144,
       "english": "no, none, nobody",
       "spanish": [
-        "ninguno"
+        "ninguno",
+        "ninguna"
       ],
       "rank": 144,
       "category": "adjective"
@@ -1355,7 +1383,8 @@
       "id": 151,
       "english": "never",
       "spanish": [
-        "nunca"
+        "nunca",
+        "jamás"
       ],
       "rank": 151,
       "category": "adverb"
@@ -1427,7 +1456,8 @@
       "id": 159,
       "english": "also, as well, besides",
       "spanish": [
-        "además"
+        "además",
+        "también"
       ],
       "rank": 159,
       "category": "adverb"
@@ -1436,7 +1466,8 @@
       "id": 160,
       "english": "lonely, alone",
       "spanish": [
-        "solo"
+        "solo",
+        "sola"
       ],
       "rank": 160,
       "category": "adjective"
@@ -1445,7 +1476,8 @@
       "id": 161,
       "english": "to begin, start",
       "spanish": [
-        "empezar"
+        "empezar",
+        "comenzar"
       ],
       "rank": 161,
       "category": "verb"
@@ -1571,7 +1603,8 @@
       "id": 175,
       "english": "long",
       "spanish": [
-        "largo"
+        "largo",
+        "larga"
       ],
       "rank": 175,
       "category": "adjective"
@@ -1625,7 +1658,8 @@
       "id": 181,
       "english": "only, unique, sole",
       "spanish": [
-        "único"
+        "único",
+        "única"
       ],
       "rank": 181,
       "category": "adjective"
@@ -1652,7 +1686,9 @@
       "id": 184,
       "english": "little, small, young",
       "spanish": [
-        "pequeño"
+        "pequeño",
+        "pequeña",
+        "chico"
       ],
       "rank": 184,
       "category": "adjective"
@@ -1661,7 +1697,8 @@
       "id": 185,
       "english": "tall, high",
       "spanish": [
-        "alto"
+        "alto",
+        "alta"
       ],
       "rank": 185,
       "category": "adjective"
@@ -1823,7 +1860,8 @@
       "id": 203,
       "english": "to understand",
       "spanish": [
-        "entender"
+        "entender",
+        "comprender"
       ],
       "rank": 203,
       "category": "verb"
@@ -1913,7 +1951,8 @@
       "id": 213,
       "english": "in terms of, regarding",
       "spanish": [
-        "cuanto"
+        "cuanto",
+        "cuanta"
       ],
       "rank": 213,
       "category": "adjective"
@@ -1958,7 +1997,8 @@
       "id": 218,
       "english": "human",
       "spanish": [
-        "humano"
+        "humano",
+        "humana"
       ],
       "rank": 218,
       "category": "adjective"
@@ -1967,7 +2007,9 @@
       "id": 219,
       "english": "to finish, end",
       "spanish": [
-        "terminar"
+        "terminar",
+        "acabar",
+        "finalizar"
       ],
       "rank": 219,
       "category": "verb"
@@ -1994,7 +2036,9 @@
       "id": 222,
       "english": "to get, acquire, obtain",
       "spanish": [
-        "conseguir"
+        "conseguir",
+        "obtener",
+        "lograr"
       ],
       "rank": 222,
       "category": "verb"
@@ -2003,7 +2047,8 @@
       "id": 223,
       "english": "to begin, start",
       "spanish": [
-        "comenzar"
+        "comenzar",
+        "empezar"
       ],
       "rank": 223,
       "category": "verb"
@@ -2183,7 +2228,8 @@
       "id": 243,
       "english": "second",
       "spanish": [
-        "segundo"
+        "segundo",
+        "segunda"
       ],
       "rank": 243,
       "category": "adjective"
@@ -2246,7 +2292,8 @@
       "id": 250,
       "english": "white",
       "spanish": [
-        "blanco"
+        "blanco",
+        "blanca"
       ],
       "rank": 250,
       "category": "adjective"
@@ -2282,7 +2329,8 @@
       "id": 254,
       "english": "distinct, different",
       "spanish": [
-        "distinto"
+        "distinto",
+        "distinta"
       ],
       "rank": 254,
       "category": "adjective"
@@ -2327,7 +2375,8 @@
       "id": 259,
       "english": "clear",
       "spanish": [
-        "claro"
+        "claro",
+        "clara"
       ],
       "rank": 259,
       "category": "adjective"
@@ -2390,7 +2439,9 @@
       "id": 266,
       "english": "acabar",
       "spanish": [
-        "acabar"
+        "acabar",
+        "terminar",
+        "finalizar"
       ],
       "rank": 266,
       "category": "verb"
@@ -2471,7 +2522,8 @@
       "id": 275,
       "english": "bad",
       "spanish": [
-        "malo"
+        "malo",
+        "mala"
       ],
       "rank": 275,
       "category": "adjective"
@@ -2525,7 +2577,9 @@
       "id": 281,
       "english": "old, aged",
       "spanish": [
-        "viejo"
+        "viejo",
+        "vieja",
+        "antiguo"
       ],
       "rank": 281,
       "category": "adjective"
@@ -2552,7 +2606,8 @@
       "id": 284,
       "english": "politician, political",
       "spanish": [
-        "político"
+        "político",
+        "política"
       ],
       "rank": 284,
       "category": "adjective"
@@ -2615,7 +2670,8 @@
       "id": 291,
       "english": "money",
       "spanish": [
-        "dinero"
+        "dinero",
+        "plata"
       ],
       "rank": 291,
       "category": "noun"
@@ -2633,7 +2689,8 @@
       "id": 293,
       "english": "to die",
       "spanish": [
-        "morir"
+        "morir",
+        "fallecer"
       ],
       "rank": 293,
       "category": "verb"
@@ -2669,7 +2726,9 @@
       "id": 297,
       "english": "perhaps, maybe",
       "spanish": [
-        "quizás"
+        "quizás",
+        "tal vez",
+        "quizá"
       ],
       "rank": 297,
       "category": "adverb"
@@ -2750,7 +2809,8 @@
       "id": 306,
       "english": "to understand",
       "spanish": [
-        "comprender"
+        "comprender",
+        "entender"
       ],
       "rank": 306,
       "category": "verb"
@@ -2795,7 +2855,9 @@
       "id": 311,
       "english": "to achieve, get, manage",
       "spanish": [
-        "lograr"
+        "lograr",
+        "obtener",
+        "conseguir"
       ],
       "rank": 311,
       "category": "verb"
@@ -2822,7 +2884,8 @@
       "id": 314,
       "english": "difficult, hard",
       "spanish": [
-        "difícil"
+        "difícil",
+        "complicado"
       ],
       "rank": 314,
       "category": "adjective"
@@ -2849,7 +2912,8 @@
       "id": 317,
       "english": "black",
       "spanish": [
-        "negro"
+        "negro",
+        "negra"
       ],
       "rank": 317,
       "category": "adjective"
@@ -2894,7 +2958,8 @@
       "id": 322,
       "english": "necessary",
       "spanish": [
-        "necesario"
+        "necesario",
+        "necesaria"
       ],
       "rank": 322,
       "category": "adjective"
@@ -3011,7 +3076,8 @@
       "id": 335,
       "english": "too much, too many",
       "spanish": [
-        "demasiado"
+        "demasiado",
+        "demasiada"
       ],
       "rank": 335,
       "category": "adjective"
@@ -3038,7 +3104,9 @@
       "id": 338,
       "english": "to use, utilize",
       "spanish": [
-        "utilizar"
+        "utilizar",
+        "usar",
+        "emplear"
       ],
       "rank": 338,
       "category": "verb"
@@ -3128,7 +3196,9 @@
       "id": 348,
       "english": "ancient, former",
       "spanish": [
-        "antiguo"
+        "antiguo",
+        "antigua",
+        "viejo"
       ],
       "rank": 348,
       "category": "adjective"
@@ -3416,7 +3486,9 @@
       "id": 380,
       "english": "to use",
       "spanish": [
-        "usar"
+        "usar",
+        "utilizar",
+        "emplear"
       ],
       "rank": 380,
       "category": "verb"
@@ -3524,7 +3596,8 @@
       "id": 392,
       "english": "to show",
       "spanish": [
-        "mostrar"
+        "mostrar",
+        "enseñar"
       ],
       "rank": 392,
       "category": "verb"
@@ -3542,7 +3615,8 @@
       "id": 394,
       "english": "third",
       "spanish": [
-        "tercero"
+        "tercero",
+        "tercera"
       ],
       "rank": 394,
       "category": "adjective"
@@ -3704,7 +3778,8 @@
       "id": 412,
       "english": "short, low",
       "spanish": [
-        "bajo"
+        "bajo",
+        "baja"
       ],
       "rank": 412,
       "category": "adjective"
@@ -3776,7 +3851,8 @@
       "id": 420,
       "english": "true, real",
       "spanish": [
-        "verdadero"
+        "verdadero",
+        "verdadera"
       ],
       "rank": 420,
       "category": "adjective"
@@ -3830,7 +3906,8 @@
       "id": 426,
       "english": "economic",
       "spanish": [
-        "económico"
+        "económico",
+        "económica"
       ],
       "rank": 426,
       "category": "adjective"
@@ -3947,7 +4024,8 @@
       "id": 439,
       "english": "open, unlocked",
       "spanish": [
-        "abierto"
+        "abierto",
+        "abierta"
       ],
       "rank": 439,
       "category": "adjective"
@@ -3956,7 +4034,9 @@
       "id": 440,
       "english": "next",
       "spanish": [
-        "próximo"
+        "próximo",
+        "próxima",
+        "cercano"
       ],
       "rank": 440,
       "category": "adjective"
@@ -3983,7 +4063,8 @@
       "id": 443,
       "english": "to go up",
       "spanish": [
-        "subir"
+        "subir",
+        "ascender"
       ],
       "rank": 443,
       "category": "verb"
@@ -4001,7 +4082,8 @@
       "id": 445,
       "english": "past",
       "spanish": [
-        "pasado"
+        "pasado",
+        "pasada"
       ],
       "rank": 445,
       "category": "adjective"
@@ -4073,7 +4155,8 @@
       "id": 453,
       "english": "alive, bright",
       "spanish": [
-        "vivo"
+        "vivo",
+        "viva"
       ],
       "rank": 453,
       "category": "adjective"
@@ -4100,7 +4183,8 @@
       "id": 456,
       "english": "to answer, respond",
       "spanish": [
-        "responder"
+        "responder",
+        "contestar"
       ],
       "rank": 456,
       "category": "verb"
@@ -4109,7 +4193,8 @@
       "id": 457,
       "english": "to suffer, undergo",
       "spanish": [
-        "sufrir"
+        "sufrir",
+        "padecer"
       ],
       "rank": 457,
       "category": "verb"
@@ -4118,7 +4203,8 @@
       "id": 458,
       "english": "complete",
       "spanish": [
-        "completo"
+        "completo",
+        "completa"
       ],
       "rank": 458,
       "category": "adjective"
@@ -4136,7 +4222,8 @@
       "id": 460,
       "english": "contrary, opposite",
       "spanish": [
-        "contrario"
+        "contrario",
+        "contraria"
       ],
       "rank": 460,
       "category": "adjective"
@@ -4181,7 +4268,8 @@
       "id": 465,
       "english": "public",
       "spanish": [
-        "público"
+        "público",
+        "pública"
       ],
       "rank": 465,
       "category": "adjective"
@@ -4190,7 +4278,9 @@
       "id": 466,
       "english": "to obtain",
       "spanish": [
-        "obtener"
+        "obtener",
+        "conseguir",
+        "lograr"
       ],
       "rank": 466,
       "category": "verb"
@@ -4235,7 +4325,8 @@
       "id": 471,
       "english": "enormous, vast",
       "spanish": [
-        "enorme"
+        "enorme",
+        "grande"
       ],
       "rank": 471,
       "category": "adjective"
@@ -4397,7 +4488,8 @@
       "id": 489,
       "english": "deep, profound",
       "spanish": [
-        "profundo"
+        "profundo",
+        "profunda"
       ],
       "rank": 489,
       "category": "adjective"
@@ -4442,7 +4534,9 @@
       "id": 494,
       "english": "to choose, elect",
       "spanish": [
-        "elegir"
+        "elegir",
+        "escoger",
+        "seleccionar"
       ],
       "rank": 494,
       "category": "verb"
@@ -4568,7 +4662,8 @@
       "id": 508,
       "english": "full, filled",
       "spanish": [
-        "lleno"
+        "lleno",
+        "llena"
       ],
       "rank": 508,
       "category": "adjective"
@@ -4595,7 +4690,8 @@
       "id": 511,
       "english": "supposed",
       "spanish": [
-        "supuesto"
+        "supuesto",
+        "supuesta"
       ],
       "rank": 511,
       "category": "adjective"
@@ -4622,7 +4718,9 @@
       "id": 514,
       "english": "easy",
       "spanish": [
-        "fácil"
+        "fácil",
+        "sencillo",
+        "simple"
       ],
       "rank": 514,
       "category": "adjective"
@@ -4712,7 +4810,8 @@
       "id": 524,
       "english": "to teach",
       "spanish": [
-        "enseñar"
+        "enseñar",
+        "mostrar"
       ],
       "rank": 524,
       "category": "verb"
@@ -4757,7 +4856,8 @@
       "id": 529,
       "english": "to send, order",
       "spanish": [
-        "mandar"
+        "mandar",
+        "enviar"
       ],
       "rank": 529,
       "category": "verb"
@@ -4793,7 +4893,8 @@
       "id": 533,
       "english": "red",
       "spanish": [
-        "rojo"
+        "rojo",
+        "roja"
       ],
       "rank": 533,
       "category": "adjective"
@@ -4820,7 +4921,8 @@
       "id": 536,
       "english": "to walk, function",
       "spanish": [
-        "andar"
+        "andar",
+        "caminar"
       ],
       "rank": 536,
       "category": "verb"
@@ -4829,7 +4931,8 @@
       "id": 537,
       "english": "short, brief",
       "spanish": [
-        "corto"
+        "corto",
+        "corta"
       ],
       "rank": 537,
       "category": "adjective"
@@ -4856,7 +4959,8 @@
       "id": 540,
       "english": "known, well-known",
       "spanish": [
-        "conocido"
+        "conocido",
+        "conocida"
       ],
       "rank": 540,
       "category": "adjective"
@@ -4901,7 +5005,8 @@
       "id": 545,
       "english": "serious",
       "spanish": [
-        "serio"
+        "serio",
+        "seria"
       ],
       "rank": 545,
       "category": "adjective"
@@ -4955,7 +5060,8 @@
       "id": 551,
       "english": "strange, foreign",
       "spanish": [
-        "extraño"
+        "extraño",
+        "extraña"
       ],
       "rank": 551,
       "category": "adjective"
@@ -5117,7 +5223,8 @@
       "id": 569,
       "english": "to come down, let down",
       "spanish": [
-        "bajar"
+        "bajar",
+        "descender"
       ],
       "rank": 569,
       "category": "verb"
@@ -5162,7 +5269,8 @@
       "id": 574,
       "english": "absolute",
       "spanish": [
-        "absoluto"
+        "absoluto",
+        "absoluta"
       ],
       "rank": 574,
       "category": "adjective"
@@ -5495,7 +5603,9 @@
       "id": 611,
       "english": "to throw",
       "spanish": [
-        "lanzar"
+        "lanzar",
+        "tirar",
+        "arrojar"
       ],
       "rank": 611,
       "category": "verb"
@@ -5531,7 +5641,8 @@
       "id": 615,
       "english": "hard",
       "spanish": [
-        "duro"
+        "duro",
+        "dura"
       ],
       "rank": 615,
       "category": "adjective"
@@ -5639,7 +5750,8 @@
       "id": 627,
       "english": "rich, tasty",
       "spanish": [
-        "rico"
+        "rico",
+        "rica"
       ],
       "rank": 627,
       "category": "adjective"
@@ -5729,7 +5841,8 @@
       "id": 637,
       "english": "pure, clean",
       "spanish": [
-        "puro"
+        "puro",
+        "pura"
       ],
       "rank": 637,
       "category": "adjective"
@@ -5783,7 +5896,8 @@
       "id": 643,
       "english": "physical",
       "spanish": [
-        "físico"
+        "físico",
+        "física"
       ],
       "rank": 643,
       "category": "adjective"
@@ -5864,7 +5978,9 @@
       "id": 652,
       "english": "quick, fast",
       "spanish": [
-        "rápido"
+        "rápido",
+        "rápida",
+        "veloz"
       ],
       "rank": 652,
       "category": "adjective"
@@ -5891,7 +6007,8 @@
       "id": 655,
       "english": "room, chamber",
       "spanish": [
-        "cuarto"
+        "cuarto",
+        "habitación"
       ],
       "rank": 655,
       "category": "noun"
@@ -5945,7 +6062,9 @@
       "id": 661,
       "english": "simple",
       "spanish": [
-        "simple"
+        "simple",
+        "fácil",
+        "sencillo"
       ],
       "rank": 661,
       "category": "adjective"
@@ -6035,7 +6154,8 @@
       "id": 671,
       "english": "modern",
       "spanish": [
-        "moderno"
+        "moderno",
+        "moderna"
       ],
       "rank": 671,
       "category": "adjective"
@@ -6107,7 +6227,8 @@
       "id": 679,
       "english": "complete, full",
       "spanish": [
-        "pleno"
+        "pleno",
+        "plena"
       ],
       "rank": 679,
       "category": "adjective"
@@ -6116,7 +6237,8 @@
       "id": 680,
       "english": "closed",
       "spanish": [
-        "cerrado"
+        "cerrado",
+        "cerrada"
       ],
       "rank": 680,
       "category": "adjective"
@@ -6179,7 +6301,8 @@
       "id": 687,
       "english": "dead",
       "spanish": [
-        "muerto"
+        "muerto",
+        "muerta"
       ],
       "rank": 687,
       "category": "adjective"
@@ -6206,7 +6329,8 @@
       "id": 690,
       "english": "willing, ready",
       "spanish": [
-        "dispuesto"
+        "dispuesto",
+        "dispuesta"
       ],
       "rank": 690,
       "category": "adjective"
@@ -6278,7 +6402,8 @@
       "id": 698,
       "english": "ill, sick",
       "spanish": [
-        "enfermo"
+        "enfermo",
+        "enferma"
       ],
       "rank": 698,
       "category": "adjective"
@@ -6350,7 +6475,8 @@
       "id": 706,
       "english": "private",
       "spanish": [
-        "privado"
+        "privado",
+        "privada"
       ],
       "rank": 706,
       "category": "adjective"
@@ -6413,7 +6539,8 @@
       "id": 713,
       "english": "famous, well-known",
       "spanish": [
-        "famoso"
+        "famoso",
+        "famosa"
       ],
       "rank": 713,
       "category": "adjective"
@@ -6503,7 +6630,8 @@
       "id": 723,
       "english": "how much?",
       "spanish": [
-        "cuánto"
+        "cuánto",
+        "cuánta"
       ],
       "rank": 723,
       "category": "adjective"
@@ -6512,7 +6640,8 @@
       "id": 724,
       "english": "immediate",
       "spanish": [
-        "inmediato"
+        "inmediato",
+        "inmediata"
       ],
       "rank": 724,
       "category": "adjective"
@@ -6557,7 +6686,8 @@
       "id": 729,
       "english": "together",
       "spanish": [
-        "junto"
+        "junto",
+        "junta"
       ],
       "rank": 729,
       "category": "adjective"
@@ -6593,7 +6723,8 @@
       "id": 733,
       "english": "direct, straight",
       "spanish": [
-        "directo"
+        "directo",
+        "directa"
       ],
       "rank": 733,
       "category": "adjective"
@@ -6647,7 +6778,8 @@
       "id": 739,
       "english": "precise, necessary",
       "spanish": [
-        "preciso"
+        "preciso",
+        "precisa"
       ],
       "rank": 739,
       "category": "adjective"
@@ -6656,7 +6788,8 @@
       "id": 740,
       "english": "different, several, diverse",
       "spanish": [
-        "diverso"
+        "diverso",
+        "diversa"
       ],
       "rank": 740,
       "category": "adjective"
@@ -6827,7 +6960,9 @@
       "id": 759,
       "english": "to throw, pull",
       "spanish": [
-        "tirar"
+        "tirar",
+        "lanzar",
+        "arrojar"
       ],
       "rank": 759,
       "category": "verb"
@@ -6836,7 +6971,8 @@
       "id": 760,
       "english": "entire, whole, complete",
       "spanish": [
-        "entero"
+        "entero",
+        "entera"
       ],
       "rank": 760,
       "category": "adjective"
@@ -6863,7 +6999,8 @@
       "id": 763,
       "english": "ample, broad",
       "spanish": [
-        "amplio"
+        "amplio",
+        "amplia"
       ],
       "rank": 763,
       "category": "adjective"
@@ -6872,7 +7009,8 @@
       "id": 764,
       "english": "to answer, reply",
       "spanish": [
-        "contestar"
+        "contestar",
+        "responder"
       ],
       "rank": 764,
       "category": "verb"
@@ -7043,7 +7181,8 @@
       "id": 783,
       "english": "internal",
       "spanish": [
-        "interno"
+        "interno",
+        "interna"
       ],
       "rank": 783,
       "category": "adjective"
@@ -7088,7 +7227,8 @@
       "id": 788,
       "english": "never",
       "spanish": [
-        "jamás"
+        "jamás",
+        "nunca"
       ],
       "rank": 788,
       "category": "adverb"
@@ -7169,7 +7309,9 @@
       "id": 797,
       "english": "floor, story",
       "spanish": [
-        "piso"
+        "piso",
+        "apartamento",
+        "departamento"
       ],
       "rank": 797,
       "category": "noun"
@@ -7187,7 +7329,9 @@
       "id": 799,
       "english": "to return (to a place)",
       "spanish": [
-        "regresar"
+        "regresar",
+        "volver",
+        "retornar"
       ],
       "rank": 799,
       "category": "verb"
@@ -7223,7 +7367,8 @@
       "id": 803,
       "english": "definitive, conclusive",
       "spanish": [
-        "definitivo"
+        "definitivo",
+        "definitiva"
       ],
       "rank": 803,
       "category": "adjective"
@@ -7286,7 +7431,8 @@
       "id": 810,
       "english": "perfect",
       "spanish": [
-        "perfecto"
+        "perfecto",
+        "perfecta"
       ],
       "rank": 810,
       "category": "adjective"
@@ -7430,7 +7576,8 @@
       "id": 826,
       "english": "movie, film",
       "spanish": [
-        "película"
+        "película",
+        "filme"
       ],
       "rank": 826,
       "category": "noun"
@@ -7529,7 +7676,8 @@
       "id": 837,
       "english": "similar",
       "spanish": [
-        "parecido"
+        "parecido",
+        "parecida"
       ],
       "rank": 837,
       "category": "adjective"
@@ -7574,7 +7722,8 @@
       "id": 842,
       "english": "to send",
       "spanish": [
-        "enviar"
+        "enviar",
+        "mandar"
       ],
       "rank": 842,
       "category": "verb"
@@ -7637,7 +7786,8 @@
       "id": 849,
       "english": "strange, rare, scarce",
       "spanish": [
-        "raro"
+        "raro",
+        "rara"
       ],
       "rank": 849,
       "category": "adjective"
@@ -7718,7 +7868,8 @@
       "id": 858,
       "english": "united",
       "spanish": [
-        "unido"
+        "unido",
+        "unida"
       ],
       "rank": 858,
       "category": "adjective"
@@ -7736,7 +7887,8 @@
       "id": 860,
       "english": "extraordinary",
       "spanish": [
-        "extraordinario"
+        "extraordinario",
+        "extraordinaria"
       ],
       "rank": 860,
       "category": "adjective"
@@ -7907,7 +8059,8 @@
       "id": 879,
       "english": "exact, faithful, true",
       "spanish": [
-        "exacto"
+        "exacto",
+        "exacta"
       ],
       "rank": 879,
       "category": "adjective"
@@ -7970,7 +8123,8 @@
       "id": 886,
       "english": "religious",
       "spanish": [
-        "religioso"
+        "religioso",
+        "religiosa"
       ],
       "rank": 886,
       "category": "adjective"
@@ -7988,7 +8142,8 @@
       "id": 888,
       "english": "dark, obscure",
       "spanish": [
-        "oscuro"
+        "oscuro",
+        "oscura"
       ],
       "rank": 888,
       "category": "adjective"
@@ -8069,7 +8224,8 @@
       "id": 897,
       "english": "fourth",
       "spanish": [
-        "cuarto"
+        "cuarto",
+        "habitación"
       ],
       "rank": 897,
       "category": "adjective"
@@ -8159,7 +8315,8 @@
       "id": 907,
       "english": "cold",
       "spanish": [
-        "frío"
+        "frío",
+        "fría"
       ],
       "rank": 907,
       "category": "adjective"
@@ -8177,7 +8334,8 @@
       "id": 909,
       "english": "concrete",
       "spanish": [
-        "concreto"
+        "concreto",
+        "concreta"
       ],
       "rank": 909,
       "category": "adjective"
@@ -8204,7 +8362,8 @@
       "id": 912,
       "english": "right, straight",
       "spanish": [
-        "derecho"
+        "derecho",
+        "derecha"
       ],
       "rank": 912,
       "category": "adjective"
@@ -8267,7 +8426,8 @@
       "id": 919,
       "english": "to walk",
       "spanish": [
-        "caminar"
+        "caminar",
+        "andar"
       ],
       "rank": 919,
       "category": "verb"
@@ -8294,7 +8454,10 @@
       "id": 922,
       "english": "simple, plain, easy",
       "spanish": [
-        "sencillo"
+        "sencillo",
+        "sencilla",
+        "fácil",
+        "simple"
       ],
       "rank": 922,
       "category": "adjective"
@@ -8339,7 +8502,8 @@
       "id": 927,
       "english": "determined, fixed",
       "spanish": [
-        "determinado"
+        "determinado",
+        "determinada"
       ],
       "rank": 927,
       "category": "adjective"
@@ -8375,7 +8539,8 @@
       "id": 931,
       "english": "lost",
       "spanish": [
-        "perdido"
+        "perdido",
+        "perdida"
       ],
       "rank": 931,
       "category": "adjective"
@@ -8474,7 +8639,9 @@
       "id": 942,
       "english": "near",
       "spanish": [
-        "cercano"
+        "cercano",
+        "cercana",
+        "próximo"
       ],
       "rank": 942,
       "category": "adjective"
@@ -8528,7 +8695,8 @@
       "id": 948,
       "english": "adequate, suitable",
       "spanish": [
-        "adecuado"
+        "adecuado",
+        "adecuada"
       ],
       "rank": 948,
       "category": "adjective"
@@ -8573,7 +8741,8 @@
       "id": 953,
       "english": "Italian",
       "spanish": [
-        "italiano"
+        "italiano",
+        "italiana"
       ],
       "rank": 953,
       "category": "adjective"
@@ -8600,7 +8769,9 @@
       "id": 956,
       "english": "happy, fortunate",
       "spanish": [
-        "feliz"
+        "feliz",
+        "contento",
+        "alegre"
       ],
       "rank": 956,
       "category": "adjective"
@@ -8654,7 +8825,9 @@
       "id": 962,
       "english": "to employ",
       "spanish": [
-        "emplear"
+        "emplear",
+        "utilizar",
+        "usar"
       ],
       "rank": 962,
       "category": "verb"
@@ -8708,7 +8881,8 @@
       "id": 968,
       "english": "given",
       "spanish": [
-        "dado"
+        "dado",
+        "dada"
       ],
       "rank": 968,
       "category": "adjective"
@@ -8807,7 +8981,8 @@
       "id": 979,
       "english": "daily",
       "spanish": [
-        "diario"
+        "diario",
+        "diaria"
       ],
       "rank": 979,
       "category": "adjective"
@@ -8816,7 +8991,8 @@
       "id": 980,
       "english": "historical",
       "spanish": [
-        "histórico"
+        "histórico",
+        "histórica"
       ],
       "rank": 980,
       "category": "adjective"
@@ -8825,7 +9001,8 @@
       "id": 981,
       "english": "due to",
       "spanish": [
-        "debido"
+        "debido",
+        "debida"
       ],
       "rank": 981,
       "category": "adjective"
@@ -8906,7 +9083,8 @@
       "id": 990,
       "english": "minimum",
       "spanish": [
-        "mínimo"
+        "mínimo",
+        "mínima"
       ],
       "rank": 990,
       "category": "adjective"
