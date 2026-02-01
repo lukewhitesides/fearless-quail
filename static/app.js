@@ -156,10 +156,25 @@ async function checkAnswer() {
                 text += ` Streak: ${data.streak}`;
             }
             feedbackText.textContent = text;
-            correctAnswersEl.innerHTML = '';
 
-            // Auto-advance after 1 second for correct answers
-            autoAdvanceTimeout = setTimeout(() => loadNextWord(), 1000);
+            // Show other accepted answers (synonyms) if there are any
+            const otherAnswers = data.valid_answers.filter(
+                a => a.toLowerCase() !== userAnswer.toLowerCase()
+            );
+            if (otherAnswers.length > 0) {
+                correctAnswersEl.innerHTML = '<strong>Also accepted:</strong>';
+                otherAnswers.forEach(answer => {
+                    const span = document.createElement('span');
+                    span.textContent = answer;
+                    correctAnswersEl.appendChild(span);
+                });
+                // Give more time to read synonyms
+                autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
+            } else {
+                correctAnswersEl.innerHTML = '';
+                // Auto-advance after 1 second for correct answers with no synonyms
+                autoAdvanceTimeout = setTimeout(() => loadNextWord(), 1000);
+            }
         } else {
             feedbackEl.classList.add('incorrect');
             feedbackIcon.textContent = '✗';
