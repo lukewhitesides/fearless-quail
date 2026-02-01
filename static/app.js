@@ -162,7 +162,7 @@ async function checkAnswer() {
                 a => a.toLowerCase() !== userAnswer.toLowerCase()
             );
             if (otherAnswers.length > 0) {
-                correctAnswersEl.innerHTML = '<strong>Also accepted:</strong>';
+                correctAnswersEl.innerHTML = '<strong>Other ways to say it:</strong>';
                 otherAnswers.forEach(answer => {
                     const span = document.createElement('span');
                     span.textContent = answer;
