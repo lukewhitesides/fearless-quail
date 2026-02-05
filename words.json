@@ -4378,7 +4378,7 @@
     },
     {
       "id": 477,
-      "english": "cabo, end, bit",
+      "english": "cape, end, bit",
       "spanish": [
         "cabo"
       ],
@@ -4727,7 +4727,7 @@
     },
     {
       "id": 515,
-      "english": "to want",
+      "english": "to desire, want",
       "spanish": [
         "desear"
       ],
@@ -4774,7 +4774,8 @@
       "id": 520,
       "english": "his, hers, yours (formal), theirs",
       "spanish": [
-        "suyo"
+        "suyo",
+        "su"
       ],
       "rank": 520,
       "category": "pronoun"
@@ -4939,7 +4940,7 @@
     },
     {
       "id": 538,
-      "english": "writer, author",
+      "english": "author",
       "spanish": [
         "autor"
       ],
@@ -5022,7 +5023,7 @@
     },
     {
       "id": 547,
-      "english": "sufficient, enough",
+      "english": "sufficient",
       "spanish": [
         "suficiente"
       ],
@@ -5031,7 +5032,7 @@
     },
     {
       "id": 548,
-      "english": "serious, solemn",
+      "english": "grave, solemn",
       "spanish": [
         "grave"
       ],
@@ -5277,7 +5278,7 @@
     },
     {
       "id": 575,
-      "english": "trouble; valer",
+      "english": "trouble",
       "spanish": [
         "pena"
       ],
@@ -6225,10 +6226,12 @@
     },
     {
       "id": 679,
-      "english": "complete, full",
+      "english": "full",
       "spanish": [
         "pleno",
-        "plena"
+        "plena",
+        "lleno",
+        "llena"
       ],
       "rank": 679,
       "category": "adjective"
@@ -6290,7 +6293,7 @@
     },
     {
       "id": 686,
-      "english": "sun cara",
+      "english": "sun",
       "spanish": [
         "sol"
       ],
@@ -13735,7 +13738,7 @@
     },
     {
       "id": 1507,
-      "english": "to",
+      "english": "to claim, demand",
       "spanish": [
         "reclamar"
       ],
@@ -13843,7 +13846,7 @@
     },
     {
       "id": 1519,
-      "english": "(government) secretary, minister",
+      "english": "minister, (government) secretary",
       "spanish": [
         "ministro"
       ],
@@ -13915,7 +13918,7 @@
     },
     {
       "id": 1527,
-      "english": "reservation, reserve negociar",
+      "english": "reservation, reserve",
       "spanish": [
         "reserva"
       ],
@@ -13933,7 +13936,7 @@
     },
     {
       "id": 1529,
-      "english": "competition, contest z = x - (x/y) *",
+      "english": "competition, contest",
       "spanish": [
         "competencia"
       ],
@@ -13942,7 +13945,7 @@
     },
     {
       "id": 1530,
-      "english": "to complain garantizada",
+      "english": "to complain",
       "spanish": [
         "quejar"
       ],
@@ -13978,7 +13981,7 @@
     },
     {
       "id": 1534,
-      "english": "[se] to give in; to render",
+      "english": "to produce",
       "spanish": [
         "rendir"
       ],
@@ -14059,9 +14062,9 @@
     },
     {
       "id": 1543,
-      "english": "to find out [se]",
+      "english": "to find out",
       "spanish": [
-        "enterar"
+        "enterarse"
       ],
       "rank": 1543,
       "category": "verb"
@@ -14149,7 +14152,7 @@
     },
     {
       "id": 1553,
-      "english": "y pico: and a bit; beak, peak",
+      "english": "beak, peak",
       "spanish": [
         "pico"
       ],
@@ -14167,7 +14170,7 @@
     },
     {
       "id": 1555,
-      "english": "to resort to",
+      "english": "to turn to",
       "spanish": [
         "recurrir"
       ],
@@ -14311,7 +14314,7 @@
     },
     {
       "id": 1571,
-      "english": "extreme naturaleza humana",
+      "english": "extreme",
       "spanish": [
         "extremo"
       ],
@@ -14365,7 +14368,7 @@
     },
     {
       "id": 1577,
-      "english": "emotion, excitement hombres",
+      "english": "emotion, excitement",
       "spanish": [
         "emoción"
       ],
@@ -14394,7 +14397,7 @@
       "id": 1580,
       "english": "evil",
       "spanish": [
-        "mal"
+        "malvado"
       ],
       "rank": 1580,
       "category": "noun"
@@ -14446,7 +14449,7 @@
     },
     {
       "id": 1586,
-      "english": "yellow contestarle",
+      "english": "yellow",
       "spanish": [
         "amarillo"
       ],
@@ -14518,7 +14521,7 @@
     },
     {
       "id": 1594,
-      "english": "proof, sample, sign Hotel Diamante",
+      "english": "proof, sample",
       "spanish": [
         "muestra"
       ],
@@ -14527,7 +14530,7 @@
     },
     {
       "id": 1595,
-      "english": "accustomed militar",
+      "english": "accustomed",
       "spanish": [
         "acostumbrado"
       ],
@@ -14563,7 +14566,7 @@
     },
     {
       "id": 1599,
-      "english": "mechanism emergencia",
+      "english": "mechanism",
       "spanish": [
         "mecanismo"
       ],
@@ -14590,7 +14593,7 @@
     },
     {
       "id": 1602,
-      "english": "(el) area, zone",
+      "english": "area, zone",
       "spanish": [
         "área"
       ],
@@ -14617,7 +14620,7 @@
     },
     {
       "id": 1605,
-      "english": "(self-) interested",
+      "english": "interested, self-interested",
       "spanish": [
         "interesado"
       ],
@@ -14644,7 +14647,7 @@
     },
     {
       "id": 1608,
-      "english": "to add up, amount to contra",
+      "english": "to add up, amount to",
       "spanish": [
         "sumar"
       ],
@@ -14743,7 +14746,7 @@
     },
     {
       "id": 1619,
-      "english": "power, control metros",
+      "english": "power, control, dominion",
       "spanish": [
         "dominio"
       ],
@@ -14806,7 +14809,7 @@
     },
     {
       "id": 1626,
-      "english": "Argentine granulosa",
+      "english": "Argentine",
       "spanish": [
         "argentino"
       ],
@@ -14815,7 +14818,7 @@
     },
     {
       "id": 1627,
-      "english": "comfortable, convenient postura natural",
+      "english": "comfortable, convenient",
       "spanish": [
         "cómodo"
       ],
@@ -14851,7 +14854,7 @@
     },
     {
       "id": 1631,
-      "english": "negative, pessimistic quark»",
+      "english": "negative, pessimistic",
       "spanish": [
         "negativo"
       ],
@@ -14932,7 +14935,7 @@
     },
     {
       "id": 1640,
-      "english": "a lo",
+      "english": "long",
       "spanish": [
         "largo"
       ],
@@ -14968,7 +14971,7 @@
     },
     {
       "id": 1644,
-      "english": "job, occupation, function",
+      "english": "trade, job, function",
       "spanish": [
         "oficio"
       ],
@@ -14977,7 +14980,7 @@
     },
     {
       "id": 1645,
-      "english": "to",
+      "english": "to go down, descend",
       "spanish": [
         "descender"
       ],
@@ -15004,7 +15007,7 @@
     },
     {
       "id": 1648,
-      "english": "employer",
+      "english": "employer, boss, pattern",
       "spanish": [
         "patrón"
       ],
@@ -15112,7 +15115,7 @@
     },
     {
       "id": 1660,
-      "english": "Castilian, Spanish clase",
+      "english": "Castilian",
       "spanish": [
         "castellano"
       ],
@@ -15166,7 +15169,7 @@
     },
     {
       "id": 1666,
-      "english": "nearby, neighboring espantosa",
+      "english": "nearby, neighboring",
       "spanish": [
         "vecino"
       ],
@@ -15184,7 +15187,7 @@
     },
     {
       "id": 1668,
-      "english": "initiative variedad",
+      "english": "initiative",
       "spanish": [
         "iniciativa"
       ],
@@ -15283,7 +15286,7 @@
     },
     {
       "id": 1679,
-      "english": "no + obstante: nevertheless",
+      "english": "however, nevertheless",
       "spanish": [
         "obstante"
       ],
@@ -15346,7 +15349,7 @@
     },
     {
       "id": 1686,
-      "english": "narrow papaya",
+      "english": "narrow",
       "spanish": [
         "estrecho"
       ],
@@ -15391,7 +15394,7 @@
     },
     {
       "id": 1691,
-      "english": "to reveal, disclose media docena",
+      "english": "to reveal, disclose",
       "spanish": [
         "revelar"
       ],
@@ -15400,7 +15403,7 @@
     },
     {
       "id": 1692,
-      "english": "drawing, sketch parece banal",
+      "english": "drawing, sketch",
       "spanish": [
         "dibujo"
       ],
@@ -15445,7 +15448,7 @@
     },
     {
       "id": 1697,
-      "english": "soldier, military person",
+      "english": "military person",
       "spanish": [
         "militar"
       ],
@@ -15463,7 +15466,7 @@
     },
     {
       "id": 1699,
-      "english": "opposition estudiar",
+      "english": "opposition",
       "spanish": [
         "oposición"
       ],
@@ -15472,7 +15475,7 @@
     },
     {
       "id": 1700,
-      "english": "courtyard, playground, yard",
+      "english": "patio, courtyard, playground",
       "spanish": [
         "patio"
       ],
@@ -15499,7 +15502,7 @@
     },
     {
       "id": 1703,
-      "english": "left (opposite of right)",
+      "english": "left (direction)",
       "spanish": [
         "izquierdo"
       ],
@@ -15508,9 +15511,10 @@
     },
     {
       "id": 1704,
-      "english": "you (obj prep-sg/+fam) 12",
+      "english": "your",
       "spanish": [
-        "ti"
+        "ti",
+        "tuyo"
       ],
       "rank": 1704,
       "category": "pronoun"
@@ -15544,7 +15548,7 @@
     },
     {
       "id": 1708,
-      "english": "to add, gather sensible",
+      "english": "to add, gather",
       "spanish": [
         "agregar"
       ],
@@ -15580,7 +15584,7 @@
     },
     {
       "id": 1712,
-      "english": "victim, casualty individual",
+      "english": "victim, casualty",
       "spanish": [
         "víctima"
       ],
@@ -15589,7 +15593,7 @@
     },
     {
       "id": 1713,
-      "english": "beach, seaside cosas funcionan bien",
+      "english": "beach, seaside",
       "spanish": [
         "playa"
       ],
@@ -15841,7 +15845,7 @@
     },
     {
       "id": 1741,
-      "english": "to prohibit, forbid capitalismo",
+      "english": "to prohibit, forbid",
       "spanish": [
         "prohibir"
       ],
@@ -16012,7 +16016,7 @@
     },
     {
       "id": 1760,
-      "english": "park mente abierta",
+      "english": "park",
       "spanish": [
         "parque"
       ],
@@ -16048,7 +16052,7 @@
     },
     {
       "id": 1764,
-      "english": "to invade, overcome relativo",
+      "english": "to invade",
       "spanish": [
         "invadir"
       ],
@@ -16093,7 +16097,7 @@
     },
     {
       "id": 1769,
-      "english": "exclusively musical",
+      "english": "exclusively",
       "spanish": [
         "exclusivamente"
       ],
@@ -16120,7 +16124,7 @@
     },
     {
       "id": 1772,
-      "english": "comparison primas",
+      "english": "comparison",
       "spanish": [
         "comparación"
       ],
@@ -16156,7 +16160,7 @@
     },
     {
       "id": 1776,
-      "english": "breast, bosom, cavity",
+      "english": "breast, bosom",
       "spanish": [
         "seno"
       ],
@@ -16210,7 +16214,7 @@
     },
     {
       "id": 1782,
-      "english": "fortune, fate iglesia",
+      "english": "fortune, fate",
       "spanish": [
         "fortuna"
       ],
@@ -16228,7 +16232,7 @@
     },
     {
       "id": 1784,
-      "english": "soft, gentle, mild buscar",
+      "english": "soft, gentle, mild",
       "spanish": [
         "suave"
       ],
@@ -16318,7 +16322,7 @@
     },
     {
       "id": 1794,
-      "english": "recognition, acknowl-",
+      "english": "recognition",
       "spanish": [
         "reconocimiento"
       ],
@@ -16525,9 +16529,10 @@
     },
     {
       "id": 1817,
-      "english": "friend (f)",
+      "english": "friend",
       "spanish": [
-        "amiga"
+        "amiga",
+        "amigo"
       ],
       "rank": 1817,
       "category": "noun"
@@ -16543,7 +16548,7 @@
     },
     {
       "id": 1819,
-      "english": "to",
+      "english": "to detach",
       "spanish": [
         "desprender"
       ],
@@ -16777,7 +16782,7 @@
     },
     {
       "id": 1845,
-      "english": "with",
+      "english": "with me",
       "spanish": [
         "conmigo"
       ],
@@ -16876,7 +16881,7 @@
     },
     {
       "id": 1856,
-      "english": "advanced eterno dos hombres",
+      "english": "advanced",
       "spanish": [
         "avanzado"
       ],
@@ -16885,7 +16890,7 @@
     },
     {
       "id": 1857,
-      "english": "curiosity, quaintness",
+      "english": "curiosity",
       "spanish": [
         "curiosidad"
       ],
@@ -16948,7 +16953,7 @@
     },
     {
       "id": 1864,
-      "english": "latest news, newness programa",
+      "english": "latest news, newness",
       "spanish": [
         "novedad"
       ],
@@ -17326,7 +17331,7 @@
     },
     {
       "id": 1906,
-      "english": "collection tinta",
+      "english": "collection",
       "spanish": [
         "colección"
       ],
@@ -17335,7 +17340,7 @@
     },
     {
       "id": 1907,
-      "english": "girl, female naciones europeas",
+      "english": "girl, female",
       "spanish": [
         "chica"
       ],
@@ -17578,7 +17583,7 @@
     },
     {
       "id": 1934,
-      "english": "relative parque",
+      "english": "relative",
       "spanish": [
         "familiar"
       ],
@@ -17587,7 +17592,7 @@
     },
     {
       "id": 1935,
-      "english": "worth, merit remedio",
+      "english": "worth, merit",
       "spanish": [
         "mérito"
       ],
@@ -17668,9 +17673,10 @@
     },
     {
       "id": 1944,
-      "english": "a menudo: often",
+      "english": "often",
       "spanish": [
-        "menudo"
+        "menudo",
+        "a menudo"
       ],
       "rank": 1944,
       "category": "adverb"
@@ -17713,7 +17719,7 @@
     },
     {
       "id": 1949,
-      "english": "indispensable, essential da",
+      "english": "indispensable, essential",
       "spanish": [
         "indispensable"
       ],
@@ -17740,7 +17746,7 @@
     },
     {
       "id": 1952,
-      "english": "(piece of) furniture",
+      "english": "piece of furniture",
       "spanish": [
         "mueble"
       ],
@@ -17803,7 +17809,7 @@
     },
     {
       "id": 1959,
-      "english": "to force vende Pizza Hut",
+      "english": "to force",
       "spanish": [
         "forzar"
       ],
@@ -18010,7 +18016,7 @@
     },
     {
       "id": 1982,
-      "english": "to",
+      "english": "to reduce, decrease",
       "spanish": [
         "disminuir"
       ],
@@ -18019,7 +18025,7 @@
     },
     {
       "id": 1983,
-      "english": "to investigate, find out a",
+      "english": "to investigate, find out",
       "spanish": [
         "averiguar"
       ],
@@ -18109,9 +18115,10 @@
     },
     {
       "id": 1993,
-      "english": "al revés: backwards, upside down",
+      "english": "backwards, upside down",
       "spanish": [
-        "revés"
+        "revés",
+        "al revés"
       ],
       "rank": 1993,
       "category": "noun"
@@ -18127,7 +18134,7 @@
     },
     {
       "id": 1995,
-      "english": "to",
+      "english": "to deposit",
       "spanish": [
         "depositar"
       ],
@@ -18154,9 +18161,9 @@
     },
     {
       "id": 1998,
-      "english": "[se] to insist on",
+      "english": "to insist on",
       "spanish": [
-        "empeñar"
+        "empeñarse"
       ],
       "rank": 1998,
       "category": "verb"
