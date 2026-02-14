@@ -25,6 +25,17 @@
         </header>
 
         <main>
+            <div class="review-bar" id="review-bar">
+                <button id="review-btn" class="review-btn" style="display: none;">
+                    Review Active Words (<span id="active-count">0</span>)
+                </button>
+                <div class="review-mode-indicator" id="review-mode-indicator" style="display: none;">
+                    <span class="review-label">Review Mode</span>
+                    <span class="review-remaining" id="review-remaining"></span>
+                    <button id="exit-review-btn" class="exit-review-btn">Exit Review</button>
+                </div>
+            </div>
+
             <div class="flashcard" id="flashcard">
                 <div class="card-content">
                     <div class="english-word" id="english-word">Loading...</div>

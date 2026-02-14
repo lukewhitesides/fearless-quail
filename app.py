@@ -360,6 +360,61 @@ def check_user_answer():
         'streak': wp['streak']
     })
 
+@app.route('/api/active-words')
+def get_active_words():
+    """Return count of active words (shown but not mastered)."""
+    words = load_words()
+    progress = load_progress()
+    word_progress = progress['word_progress']
+
+    count = 0
+    for word in words:
+        word_id = str(word['id'])
+        wp = word_progress.get(word_id, {})
+        if not wp.get('mastered', False) and wp.get('times_shown', 0) > 0:
+            count += 1
+
+    return jsonify({'active_count': count})
+
+@app.route('/api/next-review-word')
+def get_next_review_word():
+    """Return a random active word for review mode.
+
+    Accepts an optional 'exclude' query parameter with comma-separated
+    word IDs to exclude (words already reviewed this session).
+    """
+    words = load_words()
+    progress = load_progress()
+    word_progress = progress['word_progress']
+
+    exclude_param = request.args.get('exclude', '')
+    excluded_ids = set(exclude_param.split(',')) if exclude_param else set()
+
+    active_words = []
+    for word in words:
+        word_id = str(word['id'])
+        wp = word_progress.get(word_id, {})
+        if not wp.get('mastered', False) and wp.get('times_shown', 0) > 0:
+            if word_id not in excluded_ids:
+                active_words.append(word)
+
+    if not active_words:
+        return jsonify({'done': True, 'message': 'No active words to review!'})
+
+    selected = random.choice(active_words)
+
+    return jsonify({
+        'done': False,
+        'word': {
+            'id': selected['id'],
+            'english': selected['english'],
+            'category': selected['category'],
+            'hint': selected.get('hint', ''),
+            'rank': selected['rank']
+        },
+        'remaining': len(active_words)
+    })
+
 @app.route('/api/progress')
 def get_progress():
     words = load_words()

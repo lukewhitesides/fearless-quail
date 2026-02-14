@@ -70,6 +70,72 @@ main {
     padding: 40px 30px;
 }
 
+/* Review mode */
+.review-bar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.review-btn {
+    background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(241, 39, 17, 0.3);
+}
+
+.review-btn:active {
+    transform: translateY(0);
+}
+
+.review-mode-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(145deg, #fff3cd 0%, #ffeeba 100%);
+    border-radius: 10px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.review-label {
+    font-weight: 700;
+    color: #856404;
+    font-size: 0.95rem;
+}
+
+.review-remaining {
+    color: #856404;
+    font-size: 0.85rem;
+}
+
+.exit-review-btn {
+    background: none;
+    border: 1px solid #856404;
+    color: #856404;
+    padding: 5px 14px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.exit-review-btn:hover {
+    background: #856404;
+    color: white;
+}
+
 .flashcard {
     background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 15px;
@@ -384,6 +450,20 @@ footer {
 
     main {
         padding: 15px;
+    }
+
+    .review-bar {
+        margin-bottom: 10px;
+    }
+
+    .review-btn {
+        font-size: 0.85rem;
+        padding: 8px 18px;
+    }
+
+    .review-mode-indicator {
+        padding: 8px 12px;
+        gap: 8px;
     }
 
     .flashcard {
