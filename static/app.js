@@ -2,6 +2,8 @@
 let currentWord = null;
 let isAnswered = false;
 let autoAdvanceTimeout = null;
+let reviewMode = false;
+let reviewedWordIds = [];
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
@@ -21,11 +23,17 @@ const accuracyEl = document.getElementById('accuracy');
 const resetBtn = document.getElementById('reset-btn');
 const resetProgressBtn = document.getElementById('reset-progress-btn');
 const answerSection = document.querySelector('.answer-section');
+const reviewBtn = document.getElementById('review-btn');
+const activeCountEl = document.getElementById('active-count');
+const reviewModeIndicator = document.getElementById('review-mode-indicator');
+const reviewRemainingEl = document.getElementById('review-remaining');
+const exitReviewBtn = document.getElementById('exit-review-btn');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadNextWord();
     loadProgress();
+    loadActiveWordCount();
     setupEventListeners();
 });
 
@@ -34,6 +42,9 @@ function setupEventListeners() {
     nextBtn.addEventListener('click', loadNextWord);
     resetBtn.addEventListener('click', resetProgress);
     resetProgressBtn.addEventListener('click', confirmReset);
+
+    reviewBtn.addEventListener('click', enterReviewMode);
+    exitReviewBtn.addEventListener('click', exitReviewMode);
 
     answerInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -91,15 +102,34 @@ async function loadNextWord() {
         flashcardEl.style.display = 'block';
         completionEl.style.display = 'none';
 
-        const response = await fetch('/api/next-word');
+        let url;
+        if (reviewMode) {
+            const excludeParam = reviewedWordIds.length > 0 ? `?exclude=${reviewedWordIds.join(',')}` : '';
+            url = `/api/next-review-word${excludeParam}`;
+        } else {
+            url = '/api/next-word';
+        }
+
+        const response = await fetch(url);
         const data = await response.json();
 
         if (data.done) {
+            if (reviewMode) {
+                exitReviewMode();
+                return;
+            }
             showCompletion();
             return;
         }
 
+        if (reviewMode) {
+            reviewRemainingEl.textContent = `${data.remaining} word${data.remaining !== 1 ? 's' : ''} remaining`;
+        }
+
         currentWord = data.word;
+        if (reviewMode) {
+            reviewedWordIds.push(String(currentWord.id));
+        }
         englishWordEl.textContent = currentWord.english;
 
         // Ensure focus on input (with delay for reliability)
@@ -208,9 +238,38 @@ async function loadProgress() {
 
         const percentage = (data.mastered / data.total_words) * 100;
         progressFill.style.width = `${percentage}%`;
+
+        loadActiveWordCount();
     } catch (error) {
         console.error('Error loading progress:', error);
     }
+}
+
+async function loadActiveWordCount() {
+    try {
+        const response = await fetch('/api/active-words');
+        const data = await response.json();
+        activeCountEl.textContent = data.active_count;
+        reviewBtn.style.display = data.active_count > 0 ? 'inline-block' : 'none';
+    } catch (error) {
+        console.error('Error loading active word count:', error);
+    }
+}
+
+function enterReviewMode() {
+    reviewMode = true;
+    reviewedWordIds = [];
+    reviewBtn.style.display = 'none';
+    reviewModeIndicator.style.display = 'flex';
+    loadNextWord();
+}
+
+function exitReviewMode() {
+    reviewMode = false;
+    reviewedWordIds = [];
+    reviewModeIndicator.style.display = 'none';
+    loadActiveWordCount();
+    loadNextWord();
 }
 
 function showCompletion() {
