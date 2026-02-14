@@ -2366,7 +2366,8 @@
       "id": 258,
       "english": "saint",
       "spanish": [
-        "santo"
+        "santo",
+        "santa"
       ],
       "rank": 258,
       "category": "noun"
@@ -5177,7 +5178,7 @@
     },
     {
       "id": 564,
-      "english": "doctor",
+      "english": "medical doctor",
       "spanish": [
         "médico"
       ],
@@ -6163,7 +6164,7 @@
     },
     {
       "id": 672,
-      "english": "place, space",
+      "english": "place",
       "spanish": [
         "sitio"
       ],
@@ -6789,7 +6790,7 @@
     },
     {
       "id": 740,
-      "english": "different, several, diverse",
+      "english": "diverse",
       "spanish": [
         "diverso",
         "diversa"
@@ -7049,7 +7050,8 @@
       "id": 768,
       "english": "pair, couple",
       "spanish": [
-        "par"
+        "par",
+        "pareja"
       ],
       "rank": 768,
       "category": "noun"
@@ -7148,7 +7150,8 @@
       "id": 779,
       "english": "painting, picture",
       "spanish": [
-        "cuadro"
+        "cuadro",
+        "pintura"
       ],
       "rank": 779,
       "category": "noun"
@@ -7323,7 +7326,8 @@
       "id": 798,
       "english": "company",
       "spanish": [
-        "compañía"
+        "compañía",
+        "empresa"
       ],
       "rank": 798,
       "category": "noun"
@@ -7414,7 +7418,7 @@
     },
     {
       "id": 808,
-      "english": "to travel, cover (distance)",
+      "english": "to cover distance",
       "spanish": [
         "recorrer"
       ],
@@ -7787,7 +7791,7 @@
     },
     {
       "id": 849,
-      "english": "strange, rare, scarce",
+      "english": "rare, scarce",
       "spanish": [
         "raro",
         "rara"
@@ -7815,7 +7819,7 @@
     },
     {
       "id": 852,
-      "english": "to verify, prove",
+      "english": "to check, prove",
       "spanish": [
         "comprobar"
       ],
@@ -8503,7 +8507,7 @@
     },
     {
       "id": 927,
-      "english": "determined, fixed",
+      "english": "determined",
       "spanish": [
         "determinado",
         "determinada"
@@ -8531,7 +8535,7 @@
     },
     {
       "id": 930,
-      "english": "labor, work, task",
+      "english": "labor",
       "spanish": [
         "labor"
       ],
@@ -8644,7 +8648,8 @@
       "spanish": [
         "cercano",
         "cercana",
-        "próximo"
+        "próximo",
+        "cerca"
       ],
       "rank": 942,
       "category": "adjective"
@@ -8726,7 +8731,8 @@
       "id": 951,
       "english": "wife",
       "spanish": [
-        "esposa"
+        "esposa",
+        "mujer"
       ],
       "rank": 951,
       "category": "noun"
@@ -8799,7 +8805,7 @@
     },
     {
       "id": 959,
-      "english": "to",
+      "english": "to take",
       "spanish": [
         "tardar"
       ],
@@ -8894,7 +8900,8 @@
       "id": 969,
       "english": "student, pupil",
       "spanish": [
-        "alumno"
+        "alumno",
+        "estudiante"
       ],
       "rank": 969,
       "category": "noun"
@@ -8937,7 +8944,7 @@
     },
     {
       "id": 974,
-      "english": "to",
+      "english": "to define",
       "spanish": [
         "definir"
       ],
@@ -9211,7 +9218,7 @@
     },
     {
       "id": 1004,
-      "english": "to practice, exercise",
+      "english": "to exercise, to practice",
       "spanish": [
         "ejercer"
       ],
@@ -9256,7 +9263,7 @@
     },
     {
       "id": 1009,
-      "english": "to",
+      "english": "to determine",
       "spanish": [
         "determinar"
       ],
@@ -9499,7 +9506,7 @@
     },
     {
       "id": 1036,
-      "english": "edge, border, end",
+      "english": "extreme",
       "spanish": [
         "extremo"
       ],
@@ -9508,7 +9515,7 @@
     },
     {
       "id": 1037,
-      "english": "individual, person",
+      "english": "individual",
       "spanish": [
         "individuo"
       ],
@@ -9580,7 +9587,7 @@
     },
     {
       "id": 1045,
-      "english": "harm, injury, damage izquierdo",
+      "english": "harm, injury, damage",
       "spanish": [
         "daño"
       ],
@@ -9796,7 +9803,7 @@
     },
     {
       "id": 1069,
-      "english": "to express, show",
+      "english": "to declare, to state",
       "spanish": [
         "manifestar"
       ],
@@ -9877,7 +9884,7 @@
     },
     {
       "id": 1078,
-      "english": "TV, television",
+      "english": "TV, television (programming)",
       "spanish": [
         "televisión"
       ],
@@ -10356,7 +10363,8 @@
       "id": 1131,
       "english": "car, carriage",
       "spanish": [
-        "coche"
+        "coche",
+        "carro"
       ],
       "rank": 1131,
       "category": "noun"
@@ -10399,7 +10407,7 @@
     },
     {
       "id": 1136,
-      "english": "to",
+      "english": "to declare",
       "spanish": [
         "declarar"
       ],
@@ -10705,7 +10713,7 @@
     },
     {
       "id": 1170,
-      "english": "medical, doctor",
+      "english": "medical doctor",
       "spanish": [
         "médico"
       ],
@@ -10813,7 +10821,7 @@
     },
     {
       "id": 1182,
-      "english": "to reject muerte",
+      "english": "to reject",
       "spanish": [
         "rechazar"
       ],
