@@ -21,6 +21,11 @@
                     <span class="separator">|</span>
                     <button id="reset-progress-btn" class="reset-link">Reset All Progress</button>
                 </div>
+                <div class="strictness-setting">
+                    <span class="strictness-label">Strictness:</span>
+                    <button class="strictness-option" id="btn-strictness-high" data-value="high">High</button>
+                    <button class="strictness-option" id="btn-strictness-low" data-value="low">Low</button>
+                </div>
             </div>
         </header>
 
@@ -66,6 +71,7 @@
             <div class="feedback" id="feedback" style="display: none;">
                 <div class="feedback-icon" id="feedback-icon"></div>
                 <div class="feedback-text" id="feedback-text"></div>
+                <div class="accent-miss-note" id="accent-miss-note" style="display: none;"></div>
                 <div class="correct-answers" id="correct-answers"></div>
                 <button id="next-btn" class="next-btn">Next Word</button>
             </div>

@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, render_template
 import json
 import os
 import random
+import unicodedata
 from datetime import datetime
 
 app = Flask(__name__)
@@ -23,10 +24,14 @@ def load_progress_json():
                 'session_count': 1,
                 'last_session': datetime.now().isoformat()
             },
-            'word_progress': {}
+            'word_progress': {},
+            'settings': {'strictness': 'high'}
         }
     with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+        progress = json.load(f)
+    if 'settings' not in progress:
+        progress['settings'] = {'strictness': 'high'}
+    return progress
 
 def save_progress_json(progress):
     with open(PROGRESS_FILE, 'w', encoding='utf-8') as f:
@@ -69,13 +74,29 @@ def normalize_answer(answer):
     """Normalize answer for comparison."""
     return answer.strip().lower()
 
-def check_answer_match(user_answer, correct_answers):
-    """Check if user's answer matches any correct answer."""
+def remove_accents(text):
+    """Remove accent marks from text for loose comparison."""
+    nfkd = unicodedata.normalize('NFKD', text)
+    return ''.join(c for c in nfkd if not unicodedata.combining(c))
+
+def check_answer_match(user_answer, correct_answers, strictness='high'):
+    """Check if user's answer matches any correct answer.
+
+    Returns a dict: {'correct': bool, 'accent_only_miss': bool}.
+    accent_only_miss is True when the answer would be correct if accents are ignored.
+    """
     normalized_user = normalize_answer(user_answer)
     for correct in correct_answers:
         if normalize_answer(correct) == normalized_user:
-            return True
-    return False
+            return {'correct': True, 'accent_only_miss': False}
+
+    if strictness == 'low':
+        user_no_accents = remove_accents(normalized_user)
+        for correct in correct_answers:
+            if remove_accents(normalize_answer(correct)) == user_no_accents:
+                return {'correct': True, 'accent_only_miss': True}
+
+    return {'correct': False, 'accent_only_miss': False}
 
 @app.route('/')
 def index():
@@ -162,8 +183,11 @@ def check_user_answer():
     if not word:
         return jsonify({'error': 'Word not found'}), 404
 
-    # Check the answer
-    is_correct = check_answer_match(user_answer, word['spanish'])
+    # Check the answer using current strictness setting
+    strictness = progress.get('settings', {}).get('strictness', 'high')
+    result = check_answer_match(user_answer, word['spanish'], strictness)
+    is_correct = result['correct']
+    accent_only_miss = result['accent_only_miss']
 
     # Get current word progress
     wp = progress['word_progress'].get(word_id, {
@@ -193,6 +217,7 @@ def check_user_answer():
 
     return jsonify({
         'correct': is_correct,
+        'accent_only_miss': accent_only_miss,
         'valid_answers': word['spanish'],
         'mastered': wp['mastered'],
         'streak': wp['streak']
@@ -270,6 +295,16 @@ def get_progress():
         'session_count': progress['user_stats']['session_count'],
         'last_session': progress['user_stats']['last_session']
     })
+
+@app.route('/api/settings', methods=['GET', 'POST'])
+def handle_settings():
+    progress = load_progress_json()
+    if request.method == 'POST':
+        data = request.get_json()
+        if 'strictness' in data and data['strictness'] in ('low', 'high'):
+            progress['settings']['strictness'] = data['strictness']
+            save_progress_json(progress)
+    return jsonify(progress['settings'])
 
 @app.route('/api/reset', methods=['POST'])
 def reset_progress():
