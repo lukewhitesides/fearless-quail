@@ -4,6 +4,7 @@ let isAnswered = false;
 let autoAdvanceTimeout = null;
 let reviewMode = false;
 let reviewedWordIds = [];
+let currentStrictness = 'high';
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
@@ -28,12 +29,16 @@ const activeCountEl = document.getElementById('active-count');
 const reviewModeIndicator = document.getElementById('review-mode-indicator');
 const reviewRemainingEl = document.getElementById('review-remaining');
 const exitReviewBtn = document.getElementById('exit-review-btn');
+const strictnessHighBtn = document.getElementById('btn-strictness-high');
+const strictnessLowBtn = document.getElementById('btn-strictness-low');
+const accentMissNoteEl = document.getElementById('accent-miss-note');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadNextWord();
     loadProgress();
     loadActiveWordCount();
+    loadSettings();
     setupEventListeners();
 });
 
@@ -45,6 +50,9 @@ function setupEventListeners() {
 
     reviewBtn.addEventListener('click', enterReviewMode);
     exitReviewBtn.addEventListener('click', exitReviewMode);
+
+    strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
+    strictnessLowBtn.addEventListener('click', () => setStrictness('low'));
 
     answerInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -95,6 +103,7 @@ async function loadNextWord() {
         isAnswered = false;
         feedbackEl.style.display = 'none';
         feedbackEl.classList.remove('correct', 'incorrect', 'show');
+        accentMissNoteEl.style.display = 'none';
         answerInput.value = '';
         answerInput.disabled = false;
         submitBtn.style.display = 'inline-block';
@@ -187,6 +196,19 @@ async function checkAnswer() {
             }
             feedbackText.textContent = text;
 
+            // Show accent-miss note if the only mistake was a missing accent
+            if (data.accent_only_miss) {
+                const correctForm = data.valid_answers.find(
+                    a => a.toLowerCase().replace(/[^\w\s]/g, '') !== a.toLowerCase() ||
+                         a !== userAnswer
+                ) || data.valid_answers[0];
+                accentMissNoteEl.textContent =
+                    `Heads up: you missed an accent mark (correct: "${correctForm}") — but you still get credit on Low Strictness!`;
+                accentMissNoteEl.style.display = 'block';
+            } else {
+                accentMissNoteEl.style.display = 'none';
+            }
+
             // Show other accepted answers (synonyms) if there are any
             const otherAnswers = data.valid_answers.filter(
                 a => a.toLowerCase() !== userAnswer.toLowerCase()
@@ -198,7 +220,11 @@ async function checkAnswer() {
                     span.textContent = answer;
                     correctAnswersEl.appendChild(span);
                 });
-                // Give more time to read synonyms
+                // Give more time to read synonyms / accent note
+                autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
+            } else if (data.accent_only_miss) {
+                correctAnswersEl.innerHTML = '';
+                // Give time to read the accent miss note
                 autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
             } else {
                 correctAnswersEl.innerHTML = '';
@@ -209,6 +235,7 @@ async function checkAnswer() {
             feedbackEl.classList.add('incorrect');
             feedbackIcon.textContent = '✗';
             feedbackText.textContent = 'Not quite right';
+            accentMissNoteEl.style.display = 'none';
 
             correctAnswersEl.innerHTML = '<strong>Correct answers:</strong>';
             data.valid_answers.forEach(answer => {
@@ -270,6 +297,36 @@ function exitReviewMode() {
     reviewModeIndicator.style.display = 'none';
     loadActiveWordCount();
     loadNextWord();
+}
+
+async function loadSettings() {
+    try {
+        const response = await fetch('/api/settings');
+        const data = await response.json();
+        currentStrictness = data.strictness;
+        updateStrictnessUI();
+    } catch (error) {
+        console.error('Error loading settings:', error);
+    }
+}
+
+function updateStrictnessUI() {
+    strictnessHighBtn.classList.toggle('active', currentStrictness === 'high');
+    strictnessLowBtn.classList.toggle('active', currentStrictness === 'low');
+}
+
+async function setStrictness(value) {
+    try {
+        await fetch('/api/settings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ strictness: value })
+        });
+        currentStrictness = value;
+        updateStrictnessUI();
+    } catch (error) {
+        console.error('Error saving settings:', error);
+    }
 }
 
 function showCompletion() {
