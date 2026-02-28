@@ -9562,7 +9562,8 @@
       "id": 1042,
       "english": "foreign, alien",
       "spanish": [
-        "extranjero"
+        "extranjero",
+        "extranjera"
       ],
       "rank": 1042,
       "category": "adjective"
@@ -9733,7 +9734,8 @@
       "id": 1061,
       "english": "fixed, steady",
       "spanish": [
-        "fijo"
+        "fijo",
+        "fija"
       ],
       "rank": 1061,
       "category": "adjective"
@@ -9787,7 +9789,8 @@
       "id": 1067,
       "english": "prepared",
       "spanish": [
-        "preparado"
+        "preparado",
+        "preparada"
       ],
       "rank": 1067,
       "category": "adjective"
@@ -9850,7 +9853,8 @@
       "id": 1074,
       "english": "immense, vast, huge",
       "spanish": [
-        "inmenso"
+        "inmenso",
+        "inmensa"
       ],
       "rank": 1074,
       "category": "adjective"
@@ -9895,7 +9899,8 @@
       "id": 1079,
       "english": "boy",
       "spanish": [
-        "chico"
+        "chico",
+        "pequeño"
       ],
       "rank": 1079,
       "category": "noun"
@@ -9940,7 +9945,8 @@
       "id": 1084,
       "english": "curious, strange",
       "spanish": [
-        "curioso"
+        "curioso",
+        "curiosa"
       ],
       "rank": 1084,
       "category": "adjective"
@@ -9985,7 +9991,8 @@
       "id": 1089,
       "english": "maximum",
       "spanish": [
-        "máximo"
+        "máximo",
+        "máxima"
       ],
       "rank": 1089,
       "category": "adjective"
@@ -10012,7 +10019,8 @@
       "id": 1092,
       "english": "European",
       "spanish": [
-        "europeo"
+        "europeo",
+        "europea"
       ],
       "rank": 1092,
       "category": "adjective"
@@ -10093,7 +10101,8 @@
       "id": 1101,
       "english": "numerous",
       "spanish": [
-        "numeroso"
+        "numeroso",
+        "numerosa"
       ],
       "rank": 1101,
       "category": "adjective"
@@ -10174,7 +10183,8 @@
       "id": 1110,
       "english": "scarce, very little",
       "spanish": [
-        "escaso"
+        "escaso",
+        "escasa"
       ],
       "rank": 1110,
       "category": "adjective"
@@ -10210,7 +10220,8 @@
       "id": 1114,
       "english": "Christian",
       "spanish": [
-        "cristiano"
+        "cristiano",
+        "cristiana"
       ],
       "rank": 1114,
       "category": "adjective"
@@ -10246,7 +10257,8 @@
       "id": 1118,
       "english": "safe, sure, secure",
       "spanish": [
-        "seguro"
+        "seguro",
+        "segura"
       ],
       "rank": 1118,
       "category": "adjective"
@@ -10255,7 +10267,8 @@
       "id": 1119,
       "english": "intense, acute",
       "spanish": [
-        "intenso"
+        "intenso",
+        "intensa"
       ],
       "rank": 1119,
       "category": "adjective"
@@ -10327,7 +10340,8 @@
       "id": 1127,
       "english": "dangerous",
       "spanish": [
-        "peligroso"
+        "peligroso",
+        "peligrosa"
       ],
       "rank": 1127,
       "category": "adjective"
@@ -10336,7 +10350,8 @@
       "id": 1128,
       "english": "slow",
       "spanish": [
-        "lento"
+        "lento",
+        "lenta"
       ],
       "rank": 1128,
       "category": "adjective"
@@ -10364,7 +10379,8 @@
       "english": "car, carriage",
       "spanish": [
         "coche",
-        "carro"
+        "carro",
+        "auto"
       ],
       "rank": 1131,
       "category": "noun"
@@ -10445,7 +10461,8 @@
       "id": 1140,
       "english": "false",
       "spanish": [
-        "falso"
+        "falso",
+        "falsa"
       ],
       "rank": 1140,
       "category": "adjective"
@@ -10481,7 +10498,8 @@
       "id": 1144,
       "english": "calm, tranquil, relaxed",
       "spanish": [
-        "tranquilo"
+        "tranquilo",
+        "tranquila"
       ],
       "rank": 1144,
       "category": "adjective"
@@ -10553,7 +10571,10 @@
       "id": 1152,
       "english": "distant",
       "spanish": [
-        "lejano"
+        "lejano",
+        "lejana",
+        "distante",
+        "remoto"
       ],
       "rank": 1152,
       "category": "adjective"
@@ -10679,7 +10700,8 @@
       "id": 1166,
       "english": "to find (out)",
       "spanish": [
-        "hallar"
+        "hallar",
+        "encontrar"
       ],
       "rank": 1166,
       "category": "verb"
@@ -10715,7 +10737,8 @@
       "id": 1170,
       "english": "medical doctor",
       "spanish": [
-        "médico"
+        "médico",
+        "médica"
       ],
       "rank": 1170,
       "category": "adjective"
@@ -10760,7 +10783,8 @@
       "id": 1175,
       "english": "not belonging to",
       "spanish": [
-        "ajeno"
+        "ajeno",
+        "ajena"
       ],
       "rank": 1175,
       "category": "adjective"
@@ -10787,7 +10811,8 @@
       "id": 1178,
       "english": "dry, arid",
       "spanish": [
-        "seco"
+        "seco",
+        "seca"
       ],
       "rank": 1178,
       "category": "adjective"
@@ -10796,7 +10821,8 @@
       "id": 1179,
       "english": "fifth",
       "spanish": [
-        "quinto"
+        "quinto",
+        "quinta"
       ],
       "rank": 1179,
       "category": "adjective"
@@ -10967,7 +10993,8 @@
       "id": 1198,
       "english": "tremendous, dreadful, huge",
       "spanish": [
-        "tremendo"
+        "tremendo",
+        "tremenda"
       ],
       "rank": 1198,
       "category": "adjective"
@@ -10985,7 +11012,8 @@
       "id": 1200,
       "english": "early",
       "spanish": [
-        "temprano"
+        "temprano",
+        "temprana"
       ],
       "rank": 1200,
       "category": "adjective"
@@ -11057,7 +11085,8 @@
       "id": 1208,
       "english": "separate",
       "spanish": [
-        "separado"
+        "separado",
+        "separada"
       ],
       "rank": 1208,
       "category": "adjective"
@@ -11111,7 +11140,8 @@
       "id": 1214,
       "english": "logical",
       "spanish": [
-        "lógico"
+        "lógico",
+        "lógica"
       ],
       "rank": 1214,
       "category": "adjective"
@@ -11192,7 +11222,8 @@
       "id": 1223,
       "english": "authentic",
       "spanish": [
-        "auténtico"
+        "auténtico",
+        "auténtica"
       ],
       "rank": 1223,
       "category": "adjective"
@@ -11201,7 +11232,11 @@
       "id": 1224,
       "english": "beautiful, lovely",
       "spanish": [
-        "hermoso"
+        "hermoso",
+        "hermosa",
+        "bonito",
+        "lindo",
+        "bello"
       ],
       "rank": 1224,
       "category": "adjective"
@@ -11264,7 +11299,8 @@
       "id": 1231,
       "english": "seated",
       "spanish": [
-        "sentado"
+        "sentado",
+        "sentada"
       ],
       "rank": 1231,
       "category": "adjective"
@@ -11291,7 +11327,8 @@
       "id": 1234,
       "english": "correct, suitable",
       "spanish": [
-        "correcto"
+        "correcto",
+        "correcta"
       ],
       "rank": 1234,
       "category": "adjective"
@@ -11399,7 +11436,8 @@
       "id": 1246,
       "english": "North American",
       "spanish": [
-        "norteamericano"
+        "norteamericano",
+        "norteamericana"
       ],
       "rank": 1246,
       "category": "adjective"
@@ -11480,7 +11518,8 @@
       "id": 1255,
       "english": "obliged, required",
       "spanish": [
-        "obligado"
+        "obligado",
+        "obligada"
       ],
       "rank": 1255,
       "category": "adjective"
@@ -11534,7 +11573,8 @@
       "id": 1261,
       "english": "American",
       "spanish": [
-        "americano"
+        "americano",
+        "americana"
       ],
       "rank": 1261,
       "category": "adjective"
@@ -11615,7 +11655,8 @@
       "id": 1270,
       "english": "practical, skillful",
       "spanish": [
-        "práctico"
+        "práctico",
+        "práctica"
       ],
       "rank": 1270,
       "category": "adjective"
@@ -11687,7 +11728,8 @@
       "id": 1278,
       "english": "complex, complicated",
       "spanish": [
-        "complejo"
+        "complejo",
+        "compleja"
       ],
       "rank": 1278,
       "category": "adjective"
@@ -11714,7 +11756,8 @@
       "id": 1281,
       "english": "silver, money",
       "spanish": [
-        "plata"
+        "plata",
+        "dinero"
       ],
       "rank": 1281,
       "category": "noun"
@@ -11831,7 +11874,8 @@
       "id": 1294,
       "english": "convinced, persuaded",
       "spanish": [
-        "convencido"
+        "convencido",
+        "convencida"
       ],
       "rank": 1294,
       "category": "adjective"
@@ -11885,7 +11929,8 @@
       "id": 1300,
       "english": "future",
       "spanish": [
-        "futuro"
+        "futuro",
+        "futura"
       ],
       "rank": 1300,
       "category": "adjective"
@@ -11903,7 +11948,8 @@
       "id": 1302,
       "english": "unknown",
       "spanish": [
-        "desconocido"
+        "desconocido",
+        "desconocida"
       ],
       "rank": 1302,
       "category": "adjective"
@@ -11930,7 +11976,8 @@
       "id": 1305,
       "english": "great many",
       "spanish": [
-        "muchísimo"
+        "muchísimo",
+        "muchísima"
       ],
       "rank": 1305,
       "category": "adjective"
@@ -12137,7 +12184,8 @@
       "id": 1328,
       "english": "active",
       "spanish": [
-        "activo"
+        "activo",
+        "activa"
       ],
       "rank": 1328,
       "category": "adjective"
@@ -12146,7 +12194,8 @@
       "id": 1329,
       "english": "classic",
       "spanish": [
-        "clásico"
+        "clásico",
+        "clásica"
       ],
       "rank": 1329,
       "category": "adjective"
@@ -12182,7 +12231,8 @@
       "id": 1333,
       "english": "electric",
       "spanish": [
-        "eléctrico"
+        "eléctrico",
+        "eléctrica"
       ],
       "rank": 1333,
       "category": "adjective"
@@ -12227,7 +12277,11 @@
       "id": 1338,
       "english": "beautiful, fine",
       "spanish": [
-        "bello"
+        "bello",
+        "bella",
+        "bonito",
+        "lindo",
+        "hermoso"
       ],
       "rank": 1338,
       "category": "adjective"
@@ -12290,7 +12344,8 @@
       "id": 1345,
       "english": "feminine",
       "spanish": [
-        "femenino"
+        "femenino",
+        "femenina"
       ],
       "rank": 1345,
       "category": "adjective"
@@ -12317,7 +12372,8 @@
       "id": 1348,
       "english": "fine",
       "spanish": [
-        "fino"
+        "fino",
+        "fina"
       ],
       "rank": 1348,
       "category": "adjective"
@@ -12389,7 +12445,8 @@
       "id": 1356,
       "english": "positive",
       "spanish": [
-        "positivo"
+        "positivo",
+        "positiva"
       ],
       "rank": 1356,
       "category": "adjective"
@@ -12488,7 +12545,8 @@
       "id": 1367,
       "english": "heavy, boring, tiresome",
       "spanish": [
-        "pesado"
+        "pesado",
+        "pesada"
       ],
       "rank": 1367,
       "category": "adjective"
@@ -12497,7 +12555,9 @@
       "id": 1368,
       "english": "complicated, complex",
       "spanish": [
-        "complicado"
+        "complicado",
+        "complicada",
+        "difícil"
       ],
       "rank": 1368,
       "category": "adjective"
@@ -12578,7 +12638,8 @@
       "id": 1377,
       "english": "crazy, insane",
       "spanish": [
-        "loco"
+        "loco",
+        "loca"
       ],
       "rank": 1377,
       "category": "adjective"
@@ -12605,7 +12666,8 @@
       "id": 1380,
       "english": "delicate",
       "spanish": [
-        "delicado"
+        "delicado",
+        "delicada"
       ],
       "rank": 1380,
       "category": "adjective"
@@ -12686,7 +12748,8 @@
       "id": 1389,
       "english": "violent",
       "spanish": [
-        "violento"
+        "violento",
+        "violenta"
       ],
       "rank": 1389,
       "category": "adjective"
@@ -12731,7 +12794,8 @@
       "id": 1394,
       "english": "healthy, wholesome",
       "spanish": [
-        "sano"
+        "sano",
+        "sana"
       ],
       "rank": 1394,
       "category": "adjective"
@@ -12758,7 +12822,8 @@
       "id": 1397,
       "english": "clean",
       "spanish": [
-        "limpio"
+        "limpio",
+        "limpia"
       ],
       "rank": 1397,
       "category": "adjective"
@@ -12803,7 +12868,8 @@
       "id": 1402,
       "english": "related, regarding",
       "spanish": [
-        "relacionado"
+        "relacionado",
+        "relacionada"
       ],
       "rank": 1402,
       "category": "adjective"
@@ -12875,7 +12941,8 @@
       "id": 1410,
       "english": "nervous, uptight",
       "spanish": [
-        "nervioso"
+        "nervioso",
+        "nerviosa"
       ],
       "rank": 1410,
       "category": "adjective"
@@ -13091,7 +13158,8 @@
       "id": 1434,
       "english": "daily memoria",
       "spanish": [
-        "cotidiano"
+        "cotidiano",
+        "cotidiana"
       ],
       "rank": 1434,
       "category": "adjective"
@@ -13118,7 +13186,8 @@
       "id": 1437,
       "english": "previous",
       "spanish": [
-        "previo"
+        "previo",
+        "previa"
       ],
       "rank": 1437,
       "category": "adjective"
@@ -13181,7 +13250,8 @@
       "id": 1444,
       "english": "Chinese",
       "spanish": [
-        "chino"
+        "chino",
+        "china"
       ],
       "rank": 1444,
       "category": "adjective"
@@ -13289,7 +13359,8 @@
       "id": 1456,
       "english": "ready, clever, smart",
       "spanish": [
-        "listo"
+        "listo",
+        "lista"
       ],
       "rank": 1456,
       "category": "adjective"
@@ -13343,7 +13414,9 @@
       "id": 1462,
       "english": "department",
       "spanish": [
-        "departamento"
+        "departamento",
+        "apartamento",
+        "piso"
       ],
       "rank": 1462,
       "category": "noun"
@@ -13370,7 +13443,8 @@
       "id": 1465,
       "english": "in a row, successive",
       "spanish": [
-        "seguido"
+        "seguido",
+        "seguida"
       ],
       "rank": 1465,
       "category": "adjective"
@@ -13388,7 +13462,8 @@
       "id": 1467,
       "english": "Greek",
       "spanish": [
-        "griego"
+        "griego",
+        "griega"
       ],
       "rank": 1467,
       "category": "adjective"
@@ -13406,7 +13481,8 @@
       "id": 1469,
       "english": "master",
       "spanish": [
-        "maestro"
+        "maestro",
+        "maestra"
       ],
       "rank": 1469,
       "category": "adjective"
@@ -13415,7 +13491,8 @@
       "id": 1470,
       "english": "inexpensive",
       "spanish": [
-        "barato"
+        "barato",
+        "barata"
       ],
       "rank": 1470,
       "category": "adjective"
@@ -13496,7 +13573,8 @@
       "id": 1479,
       "english": "in charge of",
       "spanish": [
-        "encargado"
+        "encargado",
+        "encargada"
       ],
       "rank": 1479,
       "category": "adjective"
@@ -13505,7 +13583,8 @@
       "id": 1480,
       "english": "technical",
       "spanish": [
-        "técnico"
+        "técnico",
+        "técnica"
       ],
       "rank": 1480,
       "category": "adjective"
@@ -13514,7 +13593,8 @@
       "id": 1481,
       "english": "blind",
       "spanish": [
-        "ciego"
+        "ciego",
+        "ciega"
       ],
       "rank": 1481,
       "category": "adjective"
@@ -13631,7 +13711,8 @@
       "id": 1494,
       "english": "literary",
       "spanish": [
-        "literario"
+        "literario",
+        "literaria"
       ],
       "rank": 1494,
       "category": "adjective"
@@ -13703,7 +13784,8 @@
       "id": 1502,
       "english": "continuous",
       "spanish": [
-        "continuo"
+        "continuo",
+        "continua"
       ],
       "rank": 1502,
       "category": "adjective"
@@ -13793,7 +13875,8 @@
       "id": 1512,
       "english": "elevated, high, lofty",
       "spanish": [
-        "elevado"
+        "elevado",
+        "elevada"
       ],
       "rank": 1512,
       "category": "adjective"
@@ -13820,7 +13903,8 @@
       "id": 1515,
       "english": "established",
       "spanish": [
-        "establecido"
+        "establecido",
+        "establecida"
       ],
       "rank": 1515,
       "category": "adjective"
@@ -13973,7 +14057,8 @@
       "id": 1532,
       "english": "empty, vacant",
       "spanish": [
-        "vacío"
+        "vacío",
+        "vacía"
       ],
       "rank": 1532,
       "category": "adjective"
@@ -13982,7 +14067,8 @@
       "id": 1533,
       "english": "isolated",
       "spanish": [
-        "aislado"
+        "aislado",
+        "aislada"
       ],
       "rank": 1533,
       "category": "adjective"
@@ -14225,7 +14311,8 @@
       "id": 1560,
       "english": "powerful",
       "spanish": [
-        "poderoso"
+        "poderoso",
+        "poderosa"
       ],
       "rank": 1560,
       "category": "adjective"
@@ -14234,7 +14321,8 @@
       "id": 1561,
       "english": "worthy",
       "spanish": [
-        "digno"
+        "digno",
+        "digna"
       ],
       "rank": 1561,
       "category": "adjective"
@@ -14306,7 +14394,8 @@
       "id": 1569,
       "english": "solid, strong",
       "spanish": [
-        "sólido"
+        "sólido",
+        "sólida"
       ],
       "rank": 1569,
       "category": "adjective"
@@ -14324,7 +14413,8 @@
       "id": 1571,
       "english": "extreme",
       "spanish": [
-        "extremo"
+        "extremo",
+        "extrema"
       ],
       "rank": 1571,
       "category": "adjective"
@@ -14459,7 +14549,8 @@
       "id": 1586,
       "english": "yellow",
       "spanish": [
-        "amarillo"
+        "amarillo",
+        "amarilla"
       ],
       "rank": 1586,
       "category": "adjective"
@@ -14495,7 +14586,8 @@
       "id": 1590,
       "english": "to suffer",
       "spanish": [
-        "padecer"
+        "padecer",
+        "sufrir"
       ],
       "rank": 1590,
       "category": "verb"
@@ -14540,7 +14632,8 @@
       "id": 1595,
       "english": "accustomed",
       "spanish": [
-        "acostumbrado"
+        "acostumbrado",
+        "acostumbrada"
       ],
       "rank": 1595,
       "category": "adjective"
@@ -14567,7 +14660,8 @@
       "id": 1598,
       "english": "artistic",
       "spanish": [
-        "artístico"
+        "artístico",
+        "artística"
       ],
       "rank": 1598,
       "category": "adjective"
@@ -14594,7 +14688,8 @@
       "id": 1601,
       "english": "busy, occupied",
       "spanish": [
-        "ocupado"
+        "ocupado",
+        "ocupada"
       ],
       "rank": 1601,
       "category": "adjective"
@@ -14630,7 +14725,8 @@
       "id": 1605,
       "english": "interested, self-interested",
       "spanish": [
-        "interesado"
+        "interesado",
+        "interesada"
       ],
       "rank": 1605,
       "category": "adjective"
@@ -14648,7 +14744,8 @@
       "id": 1607,
       "english": "excessive",
       "spanish": [
-        "excesivo"
+        "excesivo",
+        "excesiva"
       ],
       "rank": 1607,
       "category": "adjective"
@@ -14675,7 +14772,8 @@
       "id": 1610,
       "english": "room, bedroom, habitat",
       "spanish": [
-        "habitación"
+        "habitación",
+        "cuarto"
       ],
       "rank": 1610,
       "category": "noun"
@@ -14819,7 +14917,8 @@
       "id": 1626,
       "english": "Argentine",
       "spanish": [
-        "argentino"
+        "argentino",
+        "argentina"
       ],
       "rank": 1626,
       "category": "adjective"
@@ -14828,7 +14927,8 @@
       "id": 1627,
       "english": "comfortable, convenient",
       "spanish": [
-        "cómodo"
+        "cómodo",
+        "cómoda"
       ],
       "rank": 1627,
       "category": "adjective"
@@ -14864,7 +14964,8 @@
       "id": 1631,
       "english": "negative, pessimistic",
       "spanish": [
-        "negativo"
+        "negativo",
+        "negativa"
       ],
       "rank": 1631,
       "category": "adjective"
@@ -14891,7 +14992,8 @@
       "id": 1634,
       "english": "scientific",
       "spanish": [
-        "científico"
+        "científico",
+        "científica"
       ],
       "rank": 1634,
       "category": "adjective"
@@ -14936,7 +15038,8 @@
       "id": 1639,
       "english": "armed",
       "spanish": [
-        "armado"
+        "armado",
+        "armada"
       ],
       "rank": 1639,
       "category": "adjective"
@@ -14963,7 +15066,10 @@
       "id": 1642,
       "english": "happy, content",
       "spanish": [
-        "contento"
+        "contento",
+        "contenta",
+        "feliz",
+        "alegre"
       ],
       "rank": 1642,
       "category": "adjective"
@@ -14990,7 +15096,8 @@
       "id": 1645,
       "english": "to go down, descend",
       "spanish": [
-        "descender"
+        "descender",
+        "bajar"
       ],
       "rank": 1645,
       "category": "verb"
@@ -14999,7 +15106,8 @@
       "id": 1646,
       "english": "covered",
       "spanish": [
-        "cubierto"
+        "cubierto",
+        "cubierta"
       ],
       "rank": 1646,
       "category": "adjective"
@@ -15044,7 +15152,8 @@
       "id": 1651,
       "english": "typical",
       "spanish": [
-        "típico"
+        "típico",
+        "típica"
       ],
       "rank": 1651,
       "category": "adjective"
@@ -15089,7 +15198,8 @@
       "id": 1656,
       "english": "critical",
       "spanish": [
-        "crítico"
+        "crítico",
+        "crítica"
       ],
       "rank": 1656,
       "category": "adjective"
@@ -15125,7 +15235,8 @@
       "id": 1660,
       "english": "Castilian",
       "spanish": [
-        "castellano"
+        "castellano",
+        "castellana"
       ],
       "rank": 1660,
       "category": "adjective"
@@ -15179,7 +15290,8 @@
       "id": 1666,
       "english": "nearby, neighboring",
       "spanish": [
-        "vecino"
+        "vecino",
+        "vecina"
       ],
       "rank": 1666,
       "category": "adjective"
@@ -15278,7 +15390,8 @@
       "id": 1677,
       "english": "worried, concerned",
       "spanish": [
-        "preocupado"
+        "preocupado",
+        "preocupada"
       ],
       "rank": 1677,
       "category": "adjective"
@@ -15341,7 +15454,8 @@
       "id": 1684,
       "english": "close, intimate",
       "spanish": [
-        "íntimo"
+        "íntimo",
+        "íntima"
       ],
       "rank": 1684,
       "category": "adjective"
@@ -15359,7 +15473,8 @@
       "id": 1686,
       "english": "narrow",
       "spanish": [
-        "estrecho"
+        "estrecho",
+        "estrecha"
       ],
       "rank": 1686,
       "category": "adjective"
@@ -15449,7 +15564,8 @@
       "id": 1696,
       "english": "light (in weight), slight",
       "spanish": [
-        "ligero"
+        "ligero",
+        "ligera"
       ],
       "rank": 1696,
       "category": "adjective"
@@ -15512,7 +15628,8 @@
       "id": 1703,
       "english": "left (direction)",
       "spanish": [
-        "izquierdo"
+        "izquierdo",
+        "izquierda"
       ],
       "rank": 1703,
       "category": "adjective"
@@ -15549,7 +15666,11 @@
       "id": 1707,
       "english": "pretty, nice",
       "spanish": [
-        "bonito"
+        "bonito",
+        "bonita",
+        "lindo",
+        "hermoso",
+        "bello"
       ],
       "rank": 1707,
       "category": "adjective"
@@ -15621,7 +15742,8 @@
       "id": 1715,
       "english": "primary",
       "spanish": [
-        "primario"
+        "primario",
+        "primaria"
       ],
       "rank": 1715,
       "category": "adjective"
@@ -15666,7 +15788,8 @@
       "id": 1720,
       "english": "wide",
       "spanish": [
-        "ancho"
+        "ancho",
+        "ancha"
       ],
       "rank": 1720,
       "category": "adjective"
@@ -15738,7 +15861,8 @@
       "id": 1728,
       "english": "collective, joint",
       "spanish": [
-        "colectivo"
+        "colectivo",
+        "colectiva"
       ],
       "rank": 1728,
       "category": "adjective"
@@ -15765,7 +15889,8 @@
       "id": 1731,
       "english": "secret",
       "spanish": [
-        "secreto"
+        "secreto",
+        "secreta"
       ],
       "rank": 1731,
       "category": "adjective"
@@ -15801,7 +15926,8 @@
       "id": 1735,
       "english": "satisfied",
       "spanish": [
-        "satisfecho"
+        "satisfecho",
+        "satisfecha"
       ],
       "rank": 1735,
       "category": "adjective"
@@ -15810,7 +15936,8 @@
       "id": 1736,
       "english": "reduced, limited",
       "spanish": [
-        "reducido"
+        "reducido",
+        "reducida"
       ],
       "rank": 1736,
       "category": "adjective"
@@ -15873,7 +16000,8 @@
       "id": 1743,
       "english": "wonderful, marvelous",
       "spanish": [
-        "maravilloso"
+        "maravilloso",
+        "maravillosa"
       ],
       "rank": 1743,
       "category": "adjective"
@@ -15909,7 +16037,8 @@
       "id": 1747,
       "english": "relative",
       "spanish": [
-        "relativo"
+        "relativo",
+        "relativa"
       ],
       "rank": 1747,
       "category": "adjective"
@@ -15999,7 +16128,8 @@
       "id": 1757,
       "english": "round",
       "spanish": [
-        "redondo"
+        "redondo",
+        "redonda"
       ],
       "rank": 1757,
       "category": "adjective"
@@ -16017,7 +16147,8 @@
       "id": 1759,
       "english": "fastened, subject to",
       "spanish": [
-        "sujeto"
+        "sujeto",
+        "sujeta"
       ],
       "rank": 1759,
       "category": "adjective"
@@ -16152,7 +16283,8 @@
       "id": 1774,
       "english": "Roman",
       "spanish": [
-        "romano"
+        "romano",
+        "romana"
       ],
       "rank": 1774,
       "category": "adjective"
@@ -16161,7 +16293,8 @@
       "id": 1775,
       "english": "sacred",
       "spanish": [
-        "sagrado"
+        "sagrado",
+        "sagrada"
       ],
       "rank": 1775,
       "category": "adjective"
@@ -16251,7 +16384,8 @@
       "id": 1785,
       "english": "opposite, contrary",
       "spanish": [
-        "opuesto"
+        "opuesto",
+        "opuesta"
       ],
       "rank": 1785,
       "category": "adjective"
@@ -16296,7 +16430,8 @@
       "id": 1790,
       "english": "wise, learned",
       "spanish": [
-        "sabio"
+        "sabio",
+        "sabia"
       ],
       "rank": 1790,
       "category": "adjective"
@@ -16359,7 +16494,8 @@
       "id": 1797,
       "english": "respective",
       "spanish": [
-        "respectivo"
+        "respectivo",
+        "respectiva"
       ],
       "rank": 1797,
       "category": "adjective"
@@ -16368,7 +16504,8 @@
       "id": 1798,
       "english": "situated, located",
       "spanish": [
-        "situado"
+        "situado",
+        "situada"
       ],
       "rank": 1798,
       "category": "adjective"
@@ -16395,7 +16532,8 @@
       "id": 1801,
       "english": "surrounded",
       "spanish": [
-        "rodeado"
+        "rodeado",
+        "rodeada"
       ],
       "rank": 1801,
       "category": "adjective"
@@ -16494,7 +16632,8 @@
       "id": 1812,
       "english": "magnificent, splendid",
       "spanish": [
-        "magnífico"
+        "magnífico",
+        "magnífica"
       ],
       "rank": 1812,
       "category": "adjective"
@@ -16521,7 +16660,8 @@
       "id": 1815,
       "english": "rural",
       "spanish": [
-        "campesino"
+        "campesino",
+        "campesina"
       ],
       "rank": 1815,
       "category": "adjective"
@@ -16567,7 +16707,8 @@
       "id": 1820,
       "english": "effective",
       "spanish": [
-        "efectivo"
+        "efectivo",
+        "efectiva"
       ],
       "rank": 1820,
       "category": "adjective"
@@ -16630,7 +16771,8 @@
       "id": 1827,
       "english": "applied",
       "spanish": [
-        "aplicado"
+        "aplicado",
+        "aplicada"
       ],
       "rank": 1827,
       "category": "adjective"
@@ -16657,7 +16799,8 @@
       "id": 1830,
       "english": "married",
       "spanish": [
-        "casado"
+        "casado",
+        "casada"
       ],
       "rank": 1830,
       "category": "adjective"
@@ -16675,7 +16818,8 @@
       "id": 1832,
       "english": "severe",
       "spanish": [
-        "severo"
+        "severo",
+        "severa"
       ],
       "rank": 1832,
       "category": "adjective"
@@ -16693,7 +16837,8 @@
       "id": 1834,
       "english": "fair, just",
       "spanish": [
-        "justo"
+        "justo",
+        "justa"
       ],
       "rank": 1834,
       "category": "adjective"
@@ -16738,7 +16883,8 @@
       "id": 1839,
       "english": "beautiful, precious",
       "spanish": [
-        "precioso"
+        "precioso",
+        "preciosa"
       ],
       "rank": 1839,
       "category": "adjective"
@@ -16801,7 +16947,9 @@
       "id": 1846,
       "english": "to throw, fling",
       "spanish": [
-        "arrojar"
+        "arrojar",
+        "tirar",
+        "lanzar"
       ],
       "rank": 1846,
       "category": "verb"
@@ -16855,7 +17003,8 @@
       "id": 1852,
       "english": "understood",
       "spanish": [
-        "entendido"
+        "entendido",
+        "entendida"
       ],
       "rank": 1852,
       "category": "adjective"
@@ -16891,7 +17040,8 @@
       "id": 1856,
       "english": "advanced",
       "spanish": [
-        "avanzado"
+        "avanzado",
+        "avanzada"
       ],
       "rank": 1856,
       "category": "adjective"
@@ -16945,7 +17095,8 @@
       "id": 1862,
       "english": "Latin",
       "spanish": [
-        "latino"
+        "latino",
+        "latina"
       ],
       "rank": 1862,
       "category": "adjective"
@@ -16981,7 +17132,8 @@
       "id": 1866,
       "english": "limited",
       "spanish": [
-        "limitado"
+        "limitado",
+        "limitada"
       ],
       "rank": 1866,
       "category": "adjective"
@@ -17017,7 +17169,8 @@
       "id": 1870,
       "english": "dressed",
       "spanish": [
-        "vestido"
+        "vestido",
+        "vestida"
       ],
       "rank": 1870,
       "category": "adjective"
@@ -17026,7 +17179,9 @@
       "id": 1871,
       "english": "car, cart",
       "spanish": [
-        "carro"
+        "carro",
+        "coche",
+        "auto"
       ],
       "rank": 1871,
       "category": "noun"
@@ -17035,7 +17190,8 @@
       "id": 1872,
       "english": "eternal",
       "spanish": [
-        "eterno"
+        "eterno",
+        "eterna"
       ],
       "rank": 1872,
       "category": "adjective"
@@ -17071,7 +17227,8 @@
       "id": 1876,
       "english": "expensive, difficult",
       "spanish": [
-        "caro"
+        "caro",
+        "cara"
       ],
       "rank": 1876,
       "category": "adjective"
@@ -17179,7 +17336,8 @@
       "id": 1888,
       "english": "divine",
       "spanish": [
-        "divino"
+        "divino",
+        "divina"
       ],
       "rank": 1888,
       "category": "adjective"
@@ -17233,7 +17391,8 @@
       "id": 1894,
       "english": "remote, distant, aloof",
       "spanish": [
-        "alejado"
+        "alejado",
+        "alejada"
       ],
       "rank": 1894,
       "category": "adjective"
@@ -17251,7 +17410,9 @@
       "id": 1896,
       "english": "to hold, take, catch",
       "spanish": [
-        "coger"
+        "coger",
+        "tomar",
+        "agarrar"
       ],
       "rank": 1896,
       "category": "verb"
@@ -17368,7 +17529,8 @@
       "id": 1909,
       "english": "to ascend, be promoted",
       "spanish": [
-        "ascender"
+        "ascender",
+        "subir"
       ],
       "rank": 1909,
       "category": "verb"
@@ -17395,7 +17557,8 @@
       "id": 1912,
       "english": "elderly, aged",
       "spanish": [
-        "anciano"
+        "anciano",
+        "anciana"
       ],
       "rank": 1912,
       "category": "adjective"
@@ -17413,7 +17576,8 @@
       "id": 1914,
       "english": "broken, torn",
       "spanish": [
-        "roto"
+        "roto",
+        "rota"
       ],
       "rank": 1914,
       "category": "adjective"
@@ -17620,7 +17784,8 @@
       "id": 1937,
       "english": "opportune, timely",
       "spanish": [
-        "oportuno"
+        "oportuno",
+        "oportuna"
       ],
       "rank": 1937,
       "category": "adjective"
@@ -17638,7 +17803,8 @@
       "id": 1939,
       "english": "significant, meaningful",
       "spanish": [
-        "significativo"
+        "significativo",
+        "significativa"
       ],
       "rank": 1939,
       "category": "adjective"
@@ -17656,7 +17822,8 @@
       "id": 1941,
       "english": "loose",
       "spanish": [
-        "suelto"
+        "suelto",
+        "suelta"
       ],
       "rank": 1941,
       "category": "adjective"
@@ -17711,7 +17878,8 @@
       "id": 1947,
       "english": "revolutionary",
       "spanish": [
-        "revolucionario"
+        "revolucionario",
+        "revolucionaria"
       ],
       "rank": 1947,
       "category": "adjective"
@@ -17828,7 +17996,8 @@
       "id": 1960,
       "english": "domestic",
       "spanish": [
-        "doméstico"
+        "doméstico",
+        "doméstica"
       ],
       "rank": 1960,
       "category": "adjective"
@@ -17945,7 +18114,8 @@
       "id": 1973,
       "english": "mechanical",
       "spanish": [
-        "mecánico"
+        "mecánico",
+        "mecánica"
       ],
       "rank": 1973,
       "category": "adjective"
@@ -17999,7 +18169,8 @@
       "id": 1979,
       "english": "nocturnal, evening",
       "spanish": [
-        "nocturno"
+        "nocturno",
+        "nocturna"
       ],
       "rank": 1979,
       "category": "adjective"
@@ -18080,7 +18251,8 @@
       "id": 1988,
       "english": "determined, resolute",
       "spanish": [
-        "decidido"
+        "decidido",
+        "decidida"
       ],
       "rank": 1988,
       "category": "adjective"
@@ -18135,7 +18307,8 @@
       "id": 1994,
       "english": "dirty, filthy, underhanded",
       "spanish": [
-        "sucio"
+        "sucio",
+        "sucia"
       ],
       "rank": 1994,
       "category": "adjective"
@@ -18261,7 +18434,8 @@
       "id": 2008,
       "english": "nude, naked",
       "spanish": [
-        "desnudo"
+        "desnudo",
+        "desnuda"
       ],
       "rank": 2008,
       "category": "adjective"
@@ -18270,7 +18444,8 @@
       "id": 2009,
       "english": "dear, beloved",
       "spanish": [
-        "querido"
+        "querido",
+        "querida"
       ],
       "rank": 2009,
       "category": "adjective"
@@ -18279,7 +18454,8 @@
       "id": 2010,
       "english": "absurd",
       "spanish": [
-        "absurdo"
+        "absurdo",
+        "absurda"
       ],
       "rank": 2010,
       "category": "adjective"
@@ -18288,7 +18464,8 @@
       "id": 2011,
       "english": "dramatic",
       "spanish": [
-        "dramático"
+        "dramático",
+        "dramática"
       ],
       "rank": 2011,
       "category": "adjective"
@@ -18405,7 +18582,8 @@
       "id": 2024,
       "english": "modest, humble",
       "spanish": [
-        "modesto"
+        "modesto",
+        "modesta"
       ],
       "rank": 2024,
       "category": "adjective"
@@ -18432,7 +18610,8 @@
       "id": 2027,
       "english": "objective, impartial",
       "spanish": [
-        "objetivo"
+        "objetivo",
+        "objetiva"
       ],
       "rank": 2027,
       "category": "adjective"
@@ -18450,7 +18629,8 @@
       "id": 2029,
       "english": "university",
       "spanish": [
-        "universitario"
+        "universitario",
+        "universitaria"
       ],
       "rank": 2029,
       "category": "adjective"
@@ -18531,7 +18711,8 @@
       "id": 2038,
       "english": "primitive",
       "spanish": [
-        "primitivo"
+        "primitivo",
+        "primitiva"
       ],
       "rank": 2038,
       "category": "adjective"
@@ -18540,7 +18721,8 @@
       "id": 2039,
       "english": "hidden, occult",
       "spanish": [
-        "oculto"
+        "oculto",
+        "oculta"
       ],
       "rank": 2039,
       "category": "adjective"
@@ -18576,7 +18758,8 @@
       "id": 2043,
       "english": "definite",
       "spanish": [
-        "definido"
+        "definido",
+        "definida"
       ],
       "rank": 2043,
       "category": "adjective"
@@ -18612,7 +18795,8 @@
       "id": 2047,
       "english": "external, outward",
       "spanish": [
-        "externo"
+        "externo",
+        "externa"
       ],
       "rank": 2047,
       "category": "adjective"
@@ -18621,7 +18805,9 @@
       "id": 2048,
       "english": "to choose",
       "spanish": [
-        "escoger"
+        "escoger",
+        "elegir",
+        "seleccionar"
       ],
       "rank": 2048,
       "category": "verb"
@@ -18711,7 +18897,8 @@
       "id": 2058,
       "english": "organized",
       "spanish": [
-        "organizado"
+        "organizado",
+        "organizada"
       ],
       "rank": 2058,
       "category": "adjective"
@@ -18729,7 +18916,8 @@
       "id": 2060,
       "english": "mere",
       "spanish": [
-        "mero"
+        "mero",
+        "mera"
       ],
       "rank": 2060,
       "category": "adjective"
@@ -18747,7 +18935,8 @@
       "id": 2062,
       "english": "composite, mixed",
       "spanish": [
-        "compuesto"
+        "compuesto",
+        "compuesta"
       ],
       "rank": 2062,
       "category": "adjective"
@@ -18765,7 +18954,8 @@
       "id": 2064,
       "english": "solitary, lonely",
       "spanish": [
-        "solitario"
+        "solitario",
+        "solitaria"
       ],
       "rank": 2064,
       "category": "adjective"
@@ -18855,7 +19045,9 @@
       "id": 2074,
       "english": "to grasp, catch",
       "spanish": [
-        "agarrar"
+        "agarrar",
+        "coger",
+        "tomar"
       ],
       "rank": 2074,
       "category": "verb"
@@ -18900,7 +19092,8 @@
       "id": 2079,
       "english": "strict, rigorous",
       "spanish": [
-        "estricto"
+        "estricto",
+        "estricta"
       ],
       "rank": 2079,
       "category": "adjective"
@@ -18909,7 +19102,8 @@
       "id": 2080,
       "english": "painful",
       "spanish": [
-        "doloroso"
+        "doloroso",
+        "dolorosa"
       ],
       "rank": 2080,
       "category": "adjective"
@@ -18954,7 +19148,8 @@
       "id": 2085,
       "english": "identical",
       "spanish": [
-        "idéntico"
+        "idéntico",
+        "idéntica"
       ],
       "rank": 2085,
       "category": "adjective"
@@ -18963,7 +19158,8 @@
       "id": 2086,
       "english": "foreseen, planned",
       "spanish": [
-        "previsto"
+        "previsto",
+        "prevista"
       ],
       "rank": 2086,
       "category": "adjective"
@@ -18999,7 +19195,8 @@
       "id": 2090,
       "english": "characteristic",
       "spanish": [
-        "característico"
+        "característico",
+        "característica"
       ],
       "rank": 2090,
       "category": "adjective"
@@ -19305,7 +19502,8 @@
       "id": 2124,
       "english": "cool, healthy, fresh",
       "spanish": [
-        "fresco"
+        "fresco",
+        "fresca"
       ],
       "rank": 2124,
       "category": "adjective"
@@ -19368,7 +19566,8 @@
       "id": 2131,
       "english": "attractive",
       "spanish": [
-        "atractivo"
+        "atractivo",
+        "atractiva"
       ],
       "rank": 2131,
       "category": "adjective"
@@ -19422,7 +19621,8 @@
       "id": 2137,
       "english": "Catholic",
       "spanish": [
-        "católico"
+        "católico",
+        "católica"
       ],
       "rank": 2137,
       "category": "adjective"
@@ -19467,7 +19667,8 @@
       "id": 2142,
       "english": "masculine, manly, male",
       "spanish": [
-        "masculino"
+        "masculino",
+        "masculina"
       ],
       "rank": 2142,
       "category": "adjective"
@@ -19512,7 +19713,9 @@
       "id": 2147,
       "english": "tired, tiresome",
       "spanish": [
-        "cansado"
+        "cansado",
+        "cansada",
+        "agotado"
       ],
       "rank": 2147,
       "category": "adjective"
@@ -19593,7 +19796,8 @@
       "id": 2156,
       "english": "desperate, hopeless",
       "spanish": [
-        "desesperado"
+        "desesperado",
+        "desesperada"
       ],
       "rank": 2156,
       "category": "adjective"
@@ -19701,7 +19905,8 @@
       "id": 2168,
       "english": "fallen",
       "spanish": [
-        "caído"
+        "caído",
+        "caída"
       ],
       "rank": 2168,
       "category": "adjective"
@@ -19737,7 +19942,8 @@
       "id": 2172,
       "english": "spontaneous",
       "spanish": [
-        "espontáneo"
+        "espontáneo",
+        "espontánea"
       ],
       "rank": 2172,
       "category": "adjective"
@@ -19773,7 +19979,8 @@
       "id": 2176,
       "english": "urban, city, urbane",
       "spanish": [
-        "urbano"
+        "urbano",
+        "urbana"
       ],
       "rank": 2176,
       "category": "adjective"
@@ -19791,7 +19998,8 @@
       "id": 2178,
       "english": "valuable, precious",
       "spanish": [
-        "valioso"
+        "valioso",
+        "valiosa"
       ],
       "rank": 2178,
       "category": "adjective"
@@ -19809,7 +20017,8 @@
       "id": 2180,
       "english": "sharp, acute",
       "spanish": [
-        "agudo"
+        "agudo",
+        "aguda"
       ],
       "rank": 2180,
       "category": "adjective"
@@ -19908,7 +20117,8 @@
       "id": 2191,
       "english": "stupid, dumb",
       "spanish": [
-        "tonto"
+        "tonto",
+        "tonta"
       ],
       "rank": 2191,
       "category": "adjective"
@@ -19971,7 +20181,8 @@
       "id": 2198,
       "english": "square",
       "spanish": [
-        "cuadrado"
+        "cuadrado",
+        "cuadrada"
       ],
       "rank": 2198,
       "category": "adjective"
@@ -20106,7 +20317,8 @@
       "id": 2213,
       "english": "secondary",
       "spanish": [
-        "secundario"
+        "secundario",
+        "secundaria"
       ],
       "rank": 2213,
       "category": "adjective"
@@ -20124,7 +20336,8 @@
       "id": 2215,
       "english": "infinite",
       "spanish": [
-        "infinito"
+        "infinito",
+        "infinita"
       ],
       "rank": 2215,
       "category": "adjective"
@@ -20133,7 +20346,8 @@
       "id": 2216,
       "english": "valid",
       "spanish": [
-        "válido"
+        "válido",
+        "válida"
       ],
       "rank": 2216,
       "category": "adjective"
@@ -20142,7 +20356,8 @@
       "id": 2217,
       "english": "fat, thick",
       "spanish": [
-        "gordo"
+        "gordo",
+        "gorda"
       ],
       "rank": 2217,
       "category": "adjective"
@@ -20367,7 +20582,8 @@
       "id": 2242,
       "english": "aggressive",
       "spanish": [
-        "agresivo"
+        "agresivo",
+        "agresiva"
       ],
       "rank": 2242,
       "category": "adjective"
@@ -20385,7 +20601,8 @@
       "id": 2244,
       "english": "stopped, standing",
       "spanish": [
-        "parado"
+        "parado",
+        "parada"
       ],
       "rank": 2244,
       "category": "adjective"
@@ -20466,7 +20683,8 @@
       "id": 2253,
       "english": "exclusive",
       "spanish": [
-        "exclusivo"
+        "exclusivo",
+        "exclusiva"
       ],
       "rank": 2253,
       "category": "adjective"
@@ -20502,7 +20720,8 @@
       "id": 2257,
       "english": "prohibited",
       "spanish": [
-        "prohibido"
+        "prohibido",
+        "prohibida"
       ],
       "rank": 2257,
       "category": "adjective"
@@ -20520,7 +20739,9 @@
       "id": 2259,
       "english": "auto, car",
       "spanish": [
-        "auto"
+        "auto",
+        "carro",
+        "coche"
       ],
       "rank": 2259,
       "category": "noun"
@@ -20547,7 +20768,8 @@
       "id": 2262,
       "english": "thick",
       "spanish": [
-        "grueso"
+        "grueso",
+        "gruesa"
       ],
       "rank": 2262,
       "category": "adjective"
@@ -20628,7 +20850,8 @@
       "id": 2271,
       "english": "democratic",
       "spanish": [
-        "democrático"
+        "democrático",
+        "democrática"
       ],
       "rank": 2271,
       "category": "adjective"
@@ -20844,7 +21067,8 @@
       "id": 2295,
       "english": "basic, essential",
       "spanish": [
-        "básico"
+        "básico",
+        "básica"
       ],
       "rank": 2295,
       "category": "adjective"
@@ -20871,7 +21095,8 @@
       "id": 2298,
       "english": "abandoned",
       "spanish": [
-        "abandonado"
+        "abandonado",
+        "abandonada"
       ],
       "rank": 2298,
       "category": "adjective"
@@ -20907,7 +21132,8 @@
       "id": 2302,
       "english": "indigenous, native",
       "spanish": [
-        "indígena"
+        "indígena",
+        "indígeno"
       ],
       "rank": 2302,
       "category": "adjective"
@@ -20916,7 +21142,8 @@
       "id": 2303,
       "english": "dark, brown",
       "spanish": [
-        "moreno"
+        "moreno",
+        "morena"
       ],
       "rank": 2303,
       "category": "adjective"
@@ -20925,7 +21152,9 @@
       "id": 2304,
       "english": "happy, lively, cheerful",
       "spanish": [
-        "alegre"
+        "alegre",
+        "contento",
+        "feliz"
       ],
       "rank": 2304,
       "category": "adjective"
@@ -20943,7 +21172,8 @@
       "id": 2306,
       "english": "extensive",
       "spanish": [
-        "extenso"
+        "extenso",
+        "extensa"
       ],
       "rank": 2306,
       "category": "adjective"
@@ -20952,7 +21182,8 @@
       "id": 2307,
       "english": "Russian",
       "spanish": [
-        "ruso"
+        "ruso",
+        "rusa"
       ],
       "rank": 2307,
       "category": "adjective"
@@ -21006,7 +21237,9 @@
       "id": 2313,
       "english": "remote, far-off",
       "spanish": [
-        "remoto"
+        "remoto",
+        "remota",
+        "lejano"
       ],
       "rank": 2313,
       "category": "adjective"
@@ -21024,7 +21257,8 @@
       "id": 2315,
       "english": "Communist",
       "spanish": [
-        "comunista"
+        "comunista",
+        "comunisto"
       ],
       "rank": 2315,
       "category": "adjective"
@@ -21060,7 +21294,8 @@
       "id": 2319,
       "english": "Jewish",
       "spanish": [
-        "judío"
+        "judío",
+        "judía"
       ],
       "rank": 2319,
       "category": "adjective"
@@ -21123,7 +21358,8 @@
       "id": 2326,
       "english": "mutual",
       "spanish": [
-        "mutuo"
+        "mutuo",
+        "mutua"
       ],
       "rank": 2326,
       "category": "adjective"
@@ -21231,7 +21467,8 @@
       "id": 2338,
       "english": "romantic",
       "spanish": [
-        "romántico"
+        "romántico",
+        "romántica"
       ],
       "rank": 2338,
       "category": "adjective"
@@ -21312,7 +21549,8 @@
       "id": 2347,
       "english": "painted",
       "spanish": [
-        "pintado"
+        "pintado",
+        "pintada"
       ],
       "rank": 2347,
       "category": "adjective"
@@ -21348,7 +21586,8 @@
       "id": 2351,
       "english": "distant, far, remote",
       "spanish": [
-        "distante"
+        "distante",
+        "lejano"
       ],
       "rank": 2351,
       "category": "adjective"
@@ -21366,7 +21605,8 @@
       "id": 2353,
       "english": "mistaken, wrong",
       "spanish": [
-        "equivocado"
+        "equivocado",
+        "equivocada"
       ],
       "rank": 2353,
       "category": "adjective"
@@ -21429,7 +21669,8 @@
       "id": 2360,
       "english": "fantastic, unreal",
       "spanish": [
-        "fantástico"
+        "fantástico",
+        "fantástica"
       ],
       "rank": 2360,
       "category": "adjective"
@@ -21510,7 +21751,8 @@
       "id": 2369,
       "english": "developed, grown",
       "spanish": [
-        "desarrollado"
+        "desarrollado",
+        "desarrollada"
       ],
       "rank": 2369,
       "category": "adjective"
@@ -21537,7 +21779,8 @@
       "id": 2372,
       "english": "specific",
       "spanish": [
-        "específico"
+        "específico",
+        "específica"
       ],
       "rank": 2372,
       "category": "adjective"
@@ -21573,7 +21816,8 @@
       "id": 2376,
       "english": "locked (up)",
       "spanish": [
-        "encerrado"
+        "encerrado",
+        "encerrada"
       ],
       "rank": 2376,
       "category": "adjective"
@@ -21591,7 +21835,8 @@
       "id": 2378,
       "english": "unfair, unjust",
       "spanish": [
-        "injusto"
+        "injusto",
+        "injusta"
       ],
       "rank": 2378,
       "category": "adjective"
@@ -21600,7 +21845,8 @@
       "id": 2379,
       "english": "successive, following",
       "spanish": [
-        "sucesivo"
+        "sucesivo",
+        "sucesiva"
       ],
       "rank": 2379,
       "category": "adjective"
@@ -21618,7 +21864,8 @@
       "id": 2381,
       "english": "ugly, nasty, rude",
       "spanish": [
-        "feo"
+        "feo",
+        "fea"
       ],
       "rank": 2381,
       "category": "adjective"
@@ -21681,7 +21928,8 @@
       "id": 2388,
       "english": "proud, arrogant",
       "spanish": [
-        "orgulloso"
+        "orgulloso",
+        "orgullosa"
       ],
       "rank": 2388,
       "category": "adjective"
@@ -21771,7 +22019,8 @@
       "id": 2398,
       "english": "generous",
       "spanish": [
-        "generoso"
+        "generoso",
+        "generosa"
       ],
       "rank": 2398,
       "category": "adjective"
@@ -21780,7 +22029,8 @@
       "id": 2399,
       "english": "academic",
       "spanish": [
-        "académico"
+        "académico",
+        "académica"
       ],
       "rank": 2399,
       "category": "adjective"
@@ -21888,7 +22138,8 @@
       "id": 2411,
       "english": "rigid, stiff, firm",
       "spanish": [
-        "rígido"
+        "rígido",
+        "rígida"
       ],
       "rank": 2411,
       "category": "adjective"
@@ -21942,7 +22193,8 @@
       "id": 2417,
       "english": "organized, clean",
       "spanish": [
-        "ordenado"
+        "ordenado",
+        "ordenada"
       ],
       "rank": 2417,
       "category": "adjective"
@@ -21987,7 +22239,8 @@
       "id": 2422,
       "english": "appropriate",
       "spanish": [
-        "apropiado"
+        "apropiado",
+        "apropiada"
       ],
       "rank": 2422,
       "category": "adjective"
@@ -22041,7 +22294,8 @@
       "id": 2428,
       "english": "resolved",
       "spanish": [
-        "resuelto"
+        "resuelto",
+        "resuelta"
       ],
       "rank": 2428,
       "category": "adjective"
@@ -22356,7 +22610,8 @@
       "id": 2463,
       "english": "little bit",
       "spanish": [
-        "poquito"
+        "poquito",
+        "poquita"
       ],
       "rank": 2463,
       "category": "adjective"
@@ -22365,7 +22620,8 @@
       "id": 2464,
       "english": "varied, mixed",
       "spanish": [
-        "variado"
+        "variado",
+        "variada"
       ],
       "rank": 2464,
       "category": "adjective"
@@ -22428,7 +22684,8 @@
       "id": 2471,
       "english": "repeated",
       "spanish": [
-        "repetido"
+        "repetido",
+        "repetida"
       ],
       "rank": 2471,
       "category": "adjective"
@@ -22446,7 +22703,8 @@
       "id": 2473,
       "english": "wrapped",
       "spanish": [
-        "envuelto"
+        "envuelto",
+        "envuelta"
       ],
       "rank": 2473,
       "category": "adjective"
@@ -22482,7 +22740,8 @@
       "id": 2477,
       "english": "parallel",
       "spanish": [
-        "paralelo"
+        "paralelo",
+        "paralela"
       ],
       "rank": 2477,
       "category": "adjective"
@@ -22491,7 +22750,8 @@
       "id": 2478,
       "english": "ordinary",
       "spanish": [
-        "ordinario"
+        "ordinario",
+        "ordinaria"
       ],
       "rank": 2478,
       "category": "adjective"
@@ -22680,7 +22940,8 @@
       "id": 2499,
       "english": "anonymous",
       "spanish": [
-        "anónimo"
+        "anónimo",
+        "anónima"
       ],
       "rank": 2499,
       "category": "adjective"
@@ -22698,7 +22959,8 @@
       "id": 2501,
       "english": "tragic",
       "spanish": [
-        "trágico"
+        "trágico",
+        "trágica"
       ],
       "rank": 2501,
       "category": "adjective"
@@ -22752,7 +23014,9 @@
       "id": 2507,
       "english": "to converse, talk",
       "spanish": [
-        "conversar"
+        "conversar",
+        "hablar",
+        "platicar"
       ],
       "rank": 2507,
       "category": "verb"
@@ -22941,7 +23205,8 @@
       "id": 2528,
       "english": "rigorous, severe",
       "spanish": [
-        "riguroso"
+        "riguroso",
+        "rigurosa"
       ],
       "rank": 2528,
       "category": "adjective"
@@ -22977,7 +23242,8 @@
       "id": 2532,
       "english": "attentive, polite",
       "spanish": [
-        "atento"
+        "atento",
+        "atenta"
       ],
       "rank": 2532,
       "category": "adjective"
@@ -23004,7 +23270,8 @@
       "id": 2535,
       "english": "uncomfortable",
       "spanish": [
-        "incómodo"
+        "incómodo",
+        "incómoda"
       ],
       "rank": 2535,
       "category": "adjective"
@@ -23103,7 +23370,8 @@
       "id": 2546,
       "english": "hidden",
       "spanish": [
-        "escondido"
+        "escondido",
+        "escondida"
       ],
       "rank": 2546,
       "category": "adjective"
@@ -23130,7 +23398,8 @@
       "id": 2549,
       "english": "deep",
       "spanish": [
-        "hondo"
+        "hondo",
+        "honda"
       ],
       "rank": 2549,
       "category": "adjective"
@@ -23166,7 +23435,8 @@
       "id": 2553,
       "english": "funny, amusing",
       "spanish": [
-        "divertido"
+        "divertido",
+        "divertida"
       ],
       "rank": 2553,
       "category": "adjective"
@@ -23274,7 +23544,8 @@
       "id": 2565,
       "english": "to frighten, scare",
       "spanish": [
-        "asustar"
+        "asustar",
+        "espantar"
       ],
       "rank": 2565,
       "category": "verb"
@@ -23283,7 +23554,8 @@
       "id": 2566,
       "english": "mid, middle",
       "spanish": [
-        "mediado"
+        "mediado",
+        "mediada"
       ],
       "rank": 2566,
       "category": "adjective"
@@ -23310,7 +23582,8 @@
       "id": 2569,
       "english": "esthetic",
       "spanish": [
-        "estético"
+        "estético",
+        "estética"
       ],
       "rank": 2569,
       "category": "adjective"
@@ -23337,7 +23610,8 @@
       "id": 2572,
       "english": "fierce, angry",
       "spanish": [
-        "bravo"
+        "bravo",
+        "brava"
       ],
       "rank": 2572,
       "category": "adjective"
@@ -23391,7 +23665,8 @@
       "id": 2578,
       "english": "mature, ripe",
       "spanish": [
-        "maduro"
+        "maduro",
+        "madura"
       ],
       "rank": 2578,
       "category": "adjective"
@@ -23400,7 +23675,8 @@
       "id": 2579,
       "english": "mixed",
       "spanish": [
-        "mezclado"
+        "mezclado",
+        "mezclada"
       ],
       "rank": 2579,
       "category": "adjective"
@@ -23427,7 +23703,11 @@
       "id": 2582,
       "english": "pretty, nice, lovely",
       "spanish": [
-        "lindo"
+        "lindo",
+        "linda",
+        "bonito",
+        "hermoso",
+        "bello"
       ],
       "rank": 2582,
       "category": "adjective"
@@ -23463,7 +23743,8 @@
       "id": 2586,
       "english": "obvious",
       "spanish": [
-        "obvio"
+        "obvio",
+        "obvia"
       ],
       "rank": 2586,
       "category": "adjective"
@@ -23499,7 +23780,8 @@
       "id": 2590,
       "english": "nice, likeable, friendly",
       "spanish": [
-        "simpático"
+        "simpático",
+        "simpática"
       ],
       "rank": 2590,
       "category": "adjective"
@@ -23517,7 +23799,8 @@
       "id": 2592,
       "english": "exquisite, superb",
       "spanish": [
-        "exquisito"
+        "exquisito",
+        "exquisita"
       ],
       "rank": 2592,
       "category": "adjective"
@@ -23589,7 +23872,8 @@
       "id": 2600,
       "english": "fed up with",
       "spanish": [
-        "harto"
+        "harto",
+        "harta"
       ],
       "rank": 2600,
       "category": "adjective"
@@ -23616,7 +23900,8 @@
       "id": 2603,
       "english": "exaggerated",
       "spanish": [
-        "exagerado"
+        "exagerado",
+        "exagerada"
       ],
       "rank": 2603,
       "category": "adjective"
@@ -23886,7 +24171,8 @@
       "id": 2633,
       "english": "supreme",
       "spanish": [
-        "supremo"
+        "supremo",
+        "suprema"
       ],
       "rank": 2633,
       "category": "adjective"
@@ -23895,7 +24181,8 @@
       "id": 2634,
       "english": "confused, mixed up",
       "spanish": [
-        "confuso"
+        "confuso",
+        "confusa"
       ],
       "rank": 2634,
       "category": "adjective"
@@ -23931,7 +24218,8 @@
       "id": 2638,
       "english": "decisive, conclusive",
       "spanish": [
-        "decisivo"
+        "decisivo",
+        "decisiva"
       ],
       "rank": 2638,
       "category": "adjective"
@@ -23967,7 +24255,8 @@
       "id": 2642,
       "english": "brutal, coarse, clumsy",
       "spanish": [
-        "bruto"
+        "bruto",
+        "bruta"
       ],
       "rank": 2642,
       "category": "adjective"
@@ -24012,7 +24301,8 @@
       "id": 2647,
       "english": "wounded, injured",
       "spanish": [
-        "herido"
+        "herido",
+        "herida"
       ],
       "rank": 2647,
       "category": "adjective"
@@ -24048,7 +24338,8 @@
       "id": 2651,
       "english": "bright, luminous",
       "spanish": [
-        "luminoso"
+        "luminoso",
+        "luminosa"
       ],
       "rank": 2651,
       "category": "adjective"
@@ -24174,7 +24465,8 @@
       "id": 2665,
       "english": "humid, damp",
       "spanish": [
-        "húmedo"
+        "húmedo",
+        "húmeda"
       ],
       "rank": 2665,
       "category": "adjective"
@@ -24291,7 +24583,8 @@
       "id": 2678,
       "english": "realistic",
       "spanish": [
-        "realista"
+        "realista",
+        "realisto"
       ],
       "rank": 2678,
       "category": "adjective"
@@ -24327,7 +24620,8 @@
       "id": 2682,
       "english": "borrowed, lent",
       "spanish": [
-        "prestado"
+        "prestado",
+        "prestada"
       ],
       "rank": 2682,
       "category": "adjective"
@@ -24354,7 +24648,8 @@
       "id": 2685,
       "english": "adult, grown-up",
       "spanish": [
-        "adulto"
+        "adulto",
+        "adulta"
       ],
       "rank": 2685,
       "category": "adjective"
@@ -24453,7 +24748,8 @@
       "id": 2696,
       "english": "golden, gold-plated",
       "spanish": [
-        "dorado"
+        "dorado",
+        "dorada"
       ],
       "rank": 2696,
       "category": "adjective"
@@ -24480,7 +24776,8 @@
       "id": 2699,
       "english": "favorite",
       "spanish": [
-        "favorito"
+        "favorito",
+        "favorita"
       ],
       "rank": 2699,
       "category": "adjective"
@@ -24525,7 +24822,8 @@
       "id": 2704,
       "english": "warm",
       "spanish": [
-        "cálido"
+        "cálido",
+        "cálida"
       ],
       "rank": 2704,
       "category": "adjective"
@@ -24561,7 +24859,8 @@
       "id": 2708,
       "english": "magic, magical",
       "spanish": [
-        "mágico"
+        "mágico",
+        "mágica"
       ],
       "rank": 2708,
       "category": "adjective"
@@ -24579,7 +24878,8 @@
       "id": 2710,
       "english": "bitter, sour, painful",
       "spanish": [
-        "amargo"
+        "amargo",
+        "amarga"
       ],
       "rank": 2710,
       "category": "adjective"
@@ -24633,7 +24933,8 @@
       "id": 2716,
       "english": "philosophical",
       "spanish": [
-        "filosófico"
+        "filosófico",
+        "filosófica"
       ],
       "rank": 2716,
       "category": "adjective"
@@ -24669,7 +24970,8 @@
       "id": 2720,
       "english": "marine, naval",
       "spanish": [
-        "marino"
+        "marino",
+        "marina"
       ],
       "rank": 2720,
       "category": "adjective"
@@ -24714,7 +25016,8 @@
       "id": 2725,
       "english": "cultured, educated",
       "spanish": [
-        "culto"
+        "culto",
+        "culta"
       ],
       "rank": 2725,
       "category": "adjective"
@@ -24795,7 +25098,8 @@
       "id": 2734,
       "english": "thought-out",
       "spanish": [
-        "pensado"
+        "pensado",
+        "pensada"
       ],
       "rank": 2734,
       "category": "adjective"
@@ -25002,7 +25306,8 @@
       "id": 2757,
       "english": "savage, horrible",
       "spanish": [
-        "bárbaro"
+        "bárbaro",
+        "bárbara"
       ],
       "rank": 2757,
       "category": "adjective"
@@ -25038,7 +25343,8 @@
       "id": 2761,
       "english": "autonomous",
       "spanish": [
-        "autónomo"
+        "autónomo",
+        "autónoma"
       ],
       "rank": 2761,
       "category": "adjective"
@@ -25047,7 +25353,8 @@
       "id": 2762,
       "english": "loud, resounding",
       "spanish": [
-        "sonoro"
+        "sonoro",
+        "sonora"
       ],
       "rank": 2762,
       "category": "adjective"
@@ -25110,7 +25417,8 @@
       "id": 2769,
       "english": "legal, juridical",
       "spanish": [
-        "jurídico"
+        "jurídico",
+        "jurídica"
       ],
       "rank": 2769,
       "category": "adjective"
@@ -25236,7 +25544,8 @@
       "id": 2783,
       "english": "soft, limp, gentle",
       "spanish": [
-        "blando"
+        "blando",
+        "blanda"
       ],
       "rank": 2783,
       "category": "adjective"
@@ -25263,7 +25572,8 @@
       "id": 2786,
       "english": "asleep, sleeping",
       "spanish": [
-        "dormido"
+        "dormido",
+        "dormida"
       ],
       "rank": 2786,
       "category": "adjective"
@@ -25344,7 +25654,8 @@
       "id": 2795,
       "english": "timid, shy, half-hearted",
       "spanish": [
-        "tímido"
+        "tímido",
+        "tímida"
       ],
       "rank": 2795,
       "category": "adjective"
@@ -25381,7 +25692,8 @@
       "id": 2799,
       "english": "vast, immense, huge",
       "spanish": [
-        "vasto"
+        "vasto",
+        "vasta"
       ],
       "rank": 2799,
       "category": "adjective"
@@ -25399,7 +25711,8 @@
       "id": 2801,
       "english": "frustrated",
       "spanish": [
-        "frustrado"
+        "frustrado",
+        "frustrada"
       ],
       "rank": 2801,
       "category": "adjective"
@@ -25417,7 +25730,8 @@
       "id": 2803,
       "english": "committed, engaged",
       "spanish": [
-        "comprometido"
+        "comprometido",
+        "comprometida"
       ],
       "rank": 2803,
       "category": "adjective"
@@ -25507,7 +25821,8 @@
       "id": 2813,
       "english": "boring, bored",
       "spanish": [
-        "aburrido"
+        "aburrido",
+        "aburrida"
       ],
       "rank": 2813,
       "category": "adjective"
@@ -25534,7 +25849,8 @@
       "id": 2816,
       "english": "right, straight, honest",
       "spanish": [
-        "recto"
+        "recto",
+        "recta"
       ],
       "rank": 2816,
       "category": "adjective"
@@ -25570,7 +25886,8 @@
       "id": 2820,
       "english": "socialist",
       "spanish": [
-        "socialista"
+        "socialista",
+        "socialisto"
       ],
       "rank": 2820,
       "category": "adjective"
@@ -25588,7 +25905,8 @@
       "id": 2822,
       "english": "splendid",
       "spanish": [
-        "espléndido"
+        "espléndido",
+        "espléndida"
       ],
       "rank": 2822,
       "category": "adjective"
@@ -25705,7 +26023,8 @@
       "id": 2835,
       "english": "inclined, slanting",
       "spanish": [
-        "inclinado"
+        "inclinado",
+        "inclinada"
       ],
       "rank": 2835,
       "category": "adjective"
@@ -25768,7 +26087,8 @@
       "id": 2842,
       "english": "metallic",
       "spanish": [
-        "metálico"
+        "metálico",
+        "metálica"
       ],
       "rank": 2842,
       "category": "adjective"
@@ -25831,7 +26151,8 @@
       "id": 2849,
       "english": "mysterious",
       "spanish": [
-        "misterioso"
+        "misterioso",
+        "misteriosa"
       ],
       "rank": 2849,
       "category": "adjective"
@@ -25849,7 +26170,8 @@
       "id": 2851,
       "english": "working class",
       "spanish": [
-        "obrero"
+        "obrero",
+        "obrera"
       ],
       "rank": 2851,
       "category": "adjective"
@@ -25858,7 +26180,8 @@
       "id": 2852,
       "english": "administrative",
       "spanish": [
-        "administrativo"
+        "administrativo",
+        "administrativa"
       ],
       "rank": 2852,
       "category": "adjective"
@@ -25930,7 +26253,8 @@
       "id": 2860,
       "english": "raw, crude, natural",
       "spanish": [
-        "crudo"
+        "crudo",
+        "cruda"
       ],
       "rank": 2860,
       "category": "adjective"
@@ -25939,7 +26263,9 @@
       "id": 2861,
       "english": "tired, used up, sold out",
       "spanish": [
-        "agotado"
+        "agotado",
+        "agotada",
+        "cansado"
       ],
       "rank": 2861,
       "category": "adjective"
@@ -25948,7 +26274,8 @@
       "id": 2862,
       "english": "sports, sporty",
       "spanish": [
-        "deportivo"
+        "deportivo",
+        "deportiva"
       ],
       "rank": 2862,
       "category": "adjective"
@@ -25966,7 +26293,8 @@
       "id": 2864,
       "english": "chemical paseo",
       "spanish": [
-        "químico"
+        "químico",
+        "química"
       ],
       "rank": 2864,
       "category": "adjective"
@@ -25984,7 +26312,8 @@
       "id": 2866,
       "english": "theoretical",
       "spanish": [
-        "teórico"
+        "teórico",
+        "teórica"
       ],
       "rank": 2866,
       "category": "adjective"
@@ -26137,7 +26466,8 @@
       "id": 2883,
       "english": "community, citizen",
       "spanish": [
-        "ciudadano"
+        "ciudadano",
+        "ciudadana"
       ],
       "rank": 2883,
       "category": "adjective"
@@ -26182,7 +26512,8 @@
       "id": 2888,
       "english": "telephone",
       "spanish": [
-        "telefónico"
+        "telefónico",
+        "telefónica"
       ],
       "rank": 2888,
       "category": "adjective"
@@ -26326,7 +26657,8 @@
       "id": 2904,
       "english": "unexpected, unforeseen",
       "spanish": [
-        "inesperado"
+        "inesperado",
+        "inesperada"
       ],
       "rank": 2904,
       "category": "adjective"
@@ -26398,7 +26730,9 @@
       "id": 2912,
       "english": "to select",
       "spanish": [
-        "seleccionar"
+        "seleccionar",
+        "elegir",
+        "escoger"
       ],
       "rank": 2912,
       "category": "verb"
@@ -26425,7 +26759,8 @@
       "id": 2915,
       "english": "sincere",
       "spanish": [
-        "sincero"
+        "sincero",
+        "sincera"
       ],
       "rank": 2915,
       "category": "adjective"
@@ -26443,7 +26778,8 @@
       "id": 2917,
       "english": "ideological",
       "spanish": [
-        "ideológico"
+        "ideológico",
+        "ideológica"
       ],
       "rank": 2917,
       "category": "adjective"
@@ -26524,7 +26860,8 @@
       "id": 2926,
       "english": "linked, joined",
       "spanish": [
-        "ligado"
+        "ligado",
+        "ligada"
       ],
       "rank": 2926,
       "category": "adjective"
@@ -26551,7 +26888,8 @@
       "id": 2929,
       "english": "prolonged, lengthy",
       "spanish": [
-        "prolongado"
+        "prolongado",
+        "prolongada"
       ],
       "rank": 2929,
       "category": "adjective"
@@ -26587,7 +26925,8 @@
       "id": 2933,
       "english": "deaf, dull",
       "spanish": [
-        "sordo"
+        "sordo",
+        "sorda"
       ],
       "rank": 2933,
       "category": "adjective"
@@ -26767,7 +27106,8 @@
       "id": 2953,
       "english": "voluntary, volunteer",
       "spanish": [
-        "voluntario"
+        "voluntario",
+        "voluntaria"
       ],
       "rank": 2953,
       "category": "adjective"
@@ -26830,7 +27170,8 @@
       "id": 2960,
       "english": "reserved, booked",
       "spanish": [
-        "reservado"
+        "reservado",
+        "reservada"
       ],
       "rank": 2960,
       "category": "adjective"
@@ -26884,7 +27225,8 @@
       "id": 2966,
       "english": "legitimate",
       "spanish": [
-        "legítimo"
+        "legítimo",
+        "legítima"
       ],
       "rank": 2966,
       "category": "adjective"
@@ -26920,7 +27262,8 @@
       "id": 2970,
       "english": "giant, gigantic",
       "spanish": [
-        "gigantesco"
+        "gigantesco",
+        "gigantesca"
       ],
       "rank": 2970,
       "category": "adjective"
@@ -26947,7 +27290,8 @@
       "id": 2973,
       "english": "tender, soft",
       "spanish": [
-        "tierno"
+        "tierno",
+        "tierna"
       ],
       "rank": 2973,
       "category": "adjective"
@@ -26965,7 +27309,8 @@
       "id": 2975,
       "english": "aerial, air",
       "spanish": [
-        "aéreo"
+        "aéreo",
+        "aérea"
       ],
       "rank": 2975,
       "category": "adjective"
@@ -27046,7 +27391,8 @@
       "id": 2984,
       "english": "automatic",
       "spanish": [
-        "automático"
+        "automático",
+        "automática"
       ],
       "rank": 2984,
       "category": "adjective"
@@ -27064,7 +27410,8 @@
       "id": 2986,
       "english": "restless, anxious",
       "spanish": [
-        "inquieto"
+        "inquieto",
+        "inquieta"
       ],
       "rank": 2986,
       "category": "adjective"
@@ -27073,7 +27420,8 @@
       "id": 2987,
       "english": "iced, freezing, icy",
       "spanish": [
-        "helado"
+        "helado",
+        "helada"
       ],
       "rank": 2987,
       "category": "adjective"
@@ -27082,7 +27430,8 @@
       "id": 2988,
       "english": "plastic",
       "spanish": [
-        "plástico"
+        "plástico",
+        "plástica"
       ],
       "rank": 2988,
       "category": "adjective"
@@ -27199,7 +27548,8 @@
       "id": 3001,
       "english": "outstanding, leading",
       "spanish": [
-        "destacado"
+        "destacado",
+        "destacada"
       ],
       "rank": 3001,
       "category": "adjective"
@@ -27208,7 +27558,8 @@
       "id": 3002,
       "english": "turned on, burning",
       "spanish": [
-        "encendido"
+        "encendido",
+        "encendida"
       ],
       "rank": 3002,
       "category": "adjective"
@@ -27235,7 +27586,8 @@
       "id": 3005,
       "english": "flat, plain, even, level",
       "spanish": [
-        "plano"
+        "plano",
+        "plana"
       ],
       "rank": 3005,
       "category": "adjective"
@@ -27253,7 +27605,8 @@
       "id": 3007,
       "english": "obligatory, compulsory",
       "spanish": [
-        "obligatorio"
+        "obligatorio",
+        "obligatoria"
       ],
       "rank": 3007,
       "category": "adjective"
@@ -27271,7 +27624,8 @@
       "id": 3009,
       "english": "contemporary",
       "spanish": [
-        "contemporáneo"
+        "contemporáneo",
+        "contemporánea"
       ],
       "rank": 3009,
       "category": "adjective"
@@ -27289,7 +27643,9 @@
       "id": 3011,
       "english": "to end, finalize",
       "spanish": [
-        "finalizar"
+        "finalizar",
+        "terminar",
+        "acabar"
       ],
       "rank": 3011,
       "category": "verb"
@@ -27415,7 +27771,8 @@
       "id": 3025,
       "english": "discreet, tactful",
       "spanish": [
-        "discreto"
+        "discreto",
+        "discreta"
       ],
       "rank": 3025,
       "category": "adjective"
@@ -27442,7 +27799,8 @@
       "id": 3028,
       "english": "loving, affectionate",
       "spanish": [
-        "amoroso"
+        "amoroso",
+        "amorosa"
       ],
       "rank": 3028,
       "category": "adjective"
@@ -27460,7 +27818,8 @@
       "id": 3030,
       "english": "optimistic",
       "spanish": [
-        "optimista"
+        "optimista",
+        "optimisto"
       ],
       "rank": 3030,
       "category": "adjective"
@@ -27542,7 +27901,8 @@
       "id": 3039,
       "english": "thin, skinny",
       "spanish": [
-        "delgado"
+        "delgado",
+        "delgada"
       ],
       "rank": 3039,
       "category": "adjective"
@@ -27578,7 +27938,8 @@
       "id": 3043,
       "english": "tight, tense",
       "spanish": [
-        "tenso"
+        "tenso",
+        "tensa"
       ],
       "rank": 3043,
       "category": "adjective"
@@ -27740,7 +28101,8 @@
       "id": 3061,
       "english": "indirect",
       "spanish": [
-        "indirecto"
+        "indirecto",
+        "indirecta"
       ],
       "rank": 3061,
       "category": "adjective"
@@ -27776,7 +28138,8 @@
       "id": 3065,
       "english": "executive",
       "spanish": [
-        "ejecutivo"
+        "ejecutivo",
+        "ejecutiva"
       ],
       "rank": 3065,
       "category": "adjective"
@@ -27938,7 +28301,8 @@
       "id": 3083,
       "english": "endowed, gifted",
       "spanish": [
-        "dotado"
+        "dotado",
+        "dotada"
       ],
       "rank": 3083,
       "category": "adjective"
@@ -28046,7 +28410,8 @@
       "id": 3095,
       "english": "quiet, reserved",
       "spanish": [
-        "callado"
+        "callado",
+        "callada"
       ],
       "rank": 3095,
       "category": "adjective"
@@ -28118,7 +28483,8 @@
       "id": 3103,
       "english": "average, medium, ordinary",
       "spanish": [
-        "mediano"
+        "mediano",
+        "mediana"
       ],
       "rank": 3103,
       "category": "adjective"
@@ -28136,7 +28502,8 @@
       "id": 3105,
       "english": "peaceful",
       "spanish": [
-        "pacífico"
+        "pacífico",
+        "pacífica"
       ],
       "rank": 3105,
       "category": "adjective"
@@ -28154,7 +28521,8 @@
       "id": 3107,
       "english": "contradictory",
       "spanish": [
-        "contradictorio"
+        "contradictorio",
+        "contradictoria"
       ],
       "rank": 3107,
       "category": "adjective"
@@ -28253,7 +28621,8 @@
       "id": 3118,
       "english": "mute, silent",
       "spanish": [
-        "mudo"
+        "mudo",
+        "muda"
       ],
       "rank": 3118,
       "category": "adjective"
@@ -28271,7 +28640,8 @@
       "id": 3120,
       "english": "surprised",
       "spanish": [
-        "sorprendido"
+        "sorprendido",
+        "sorprendida"
       ],
       "rank": 3120,
       "category": "adjective"
@@ -28298,7 +28668,8 @@
       "id": 3123,
       "english": "psychological",
       "spanish": [
-        "psicológico"
+        "psicológico",
+        "psicológica"
       ],
       "rank": 3123,
       "category": "adjective"
@@ -28379,7 +28750,8 @@
       "id": 3132,
       "english": "delicious",
       "spanish": [
-        "delicioso"
+        "delicioso",
+        "deliciosa"
       ],
       "rank": 3132,
       "category": "adjective"
@@ -28433,7 +28805,8 @@
       "id": 3138,
       "english": "notorious, noticeable",
       "spanish": [
-        "notorio"
+        "notorio",
+        "notoria"
       ],
       "rank": 3138,
       "category": "adjective"
@@ -28451,7 +28824,8 @@
       "id": 3140,
       "english": "sixth",
       "spanish": [
-        "sexto"
+        "sexto",
+        "sexta"
       ],
       "rank": 3140,
       "category": "adjective"
@@ -28532,7 +28906,8 @@
       "id": 3149,
       "english": "electronic",
       "spanish": [
-        "electrónico"
+        "electrónico",
+        "electrónica"
       ],
       "rank": 3149,
       "category": "adjective"
@@ -28577,7 +28952,8 @@
       "id": 3154,
       "english": "still, motionless, calm",
       "spanish": [
-        "quieto"
+        "quieto",
+        "quieta"
       ],
       "rank": 3154,
       "category": "adjective"
@@ -28640,7 +29016,8 @@
       "id": 3161,
       "english": "pale, ghastly, faded",
       "spanish": [
-        "pálido"
+        "pálido",
+        "pálida"
       ],
       "rank": 3161,
       "category": "adjective"
@@ -28658,7 +29035,8 @@
       "id": 3163,
       "english": "excited, lively",
       "spanish": [
-        "animado"
+        "animado",
+        "animada"
       ],
       "rank": 3163,
       "category": "adjective"
@@ -28667,7 +29045,8 @@
       "id": 3164,
       "english": "Chilean",
       "spanish": [
-        "chileno"
+        "chileno",
+        "chilena"
       ],
       "rank": 3164,
       "category": "adjective"
@@ -28694,7 +29073,8 @@
       "id": 3167,
       "english": "maternal",
       "spanish": [
-        "materno"
+        "materno",
+        "materna"
       ],
       "rank": 3167,
       "category": "adjective"
@@ -28766,7 +29146,8 @@
       "id": 3175,
       "english": "single, not married",
       "spanish": [
-        "soltero"
+        "soltero",
+        "soltera"
       ],
       "rank": 3175,
       "category": "adjective"
@@ -28820,7 +29201,8 @@
       "id": 3181,
       "english": "connected",
       "spanish": [
-        "vinculado"
+        "vinculado",
+        "vinculada"
       ],
       "rank": 3181,
       "category": "adjective"
@@ -28856,7 +29238,8 @@
       "id": 3185,
       "english": "hanging",
       "spanish": [
-        "colgado"
+        "colgado",
+        "colgada"
       ],
       "rank": 3185,
       "category": "adjective"
@@ -28937,7 +29320,8 @@
       "id": 3194,
       "english": "geographical",
       "spanish": [
-        "geográfico"
+        "geográfico",
+        "geográfica"
       ],
       "rank": 3194,
       "category": "adjective"
@@ -29072,7 +29456,8 @@
       "id": 3209,
       "english": "ridiculous, absurd",
       "spanish": [
-        "ridículo"
+        "ridículo",
+        "ridícula"
       ],
       "rank": 3209,
       "category": "adjective"
@@ -29180,7 +29565,8 @@
       "id": 3221,
       "english": "funny, charming, amusing",
       "spanish": [
-        "gracioso"
+        "gracioso",
+        "graciosa"
       ],
       "rank": 3221,
       "category": "adjective"
@@ -29198,7 +29584,8 @@
       "id": 3223,
       "english": "interim, intermediate",
       "spanish": [
-        "intermedio"
+        "intermedio",
+        "intermedia"
       ],
       "rank": 3223,
       "category": "adjective"
@@ -29243,7 +29630,8 @@
       "id": 3228,
       "english": "distinguished",
       "spanish": [
-        "distinguido"
+        "distinguido",
+        "distinguida"
       ],
       "rank": 3228,
       "category": "adjective"
@@ -29261,7 +29649,8 @@
       "id": 3230,
       "english": "doubtful, dubious",
       "spanish": [
-        "dudoso"
+        "dudoso",
+        "dudosa"
       ],
       "rank": 3230,
       "category": "adjective"
@@ -29423,7 +29812,8 @@
       "id": 3248,
       "english": "unnecessary",
       "spanish": [
-        "innecesario"
+        "innecesario",
+        "innecesaria"
       ],
       "rank": 3248,
       "category": "adjective"
@@ -29522,7 +29912,8 @@
       "id": 3259,
       "english": "intact",
       "spanish": [
-        "intacto"
+        "intacto",
+        "intacta"
       ],
       "rank": 3259,
       "category": "adjective"
@@ -29567,7 +29958,8 @@
       "id": 3264,
       "english": "pleased",
       "spanish": [
-        "encantado"
+        "encantado",
+        "encantada"
       ],
       "rank": 3264,
       "category": "adjective"
@@ -29576,7 +29968,8 @@
       "id": 3265,
       "english": "British",
       "spanish": [
-        "británico"
+        "británico",
+        "británica"
       ],
       "rank": 3265,
       "category": "adjective"
@@ -29612,7 +30005,8 @@
       "id": 3269,
       "english": "blonde, fair",
       "spanish": [
-        "rubio"
+        "rubio",
+        "rubia"
       ],
       "rank": 3269,
       "category": "adjective"
@@ -29657,7 +30051,8 @@
       "id": 3274,
       "english": "in love",
       "spanish": [
-        "enamorado"
+        "enamorado",
+        "enamorada"
       ],
       "rank": 3274,
       "category": "adjective"
@@ -29702,7 +30097,8 @@
       "id": 3279,
       "english": "sustained, steady",
       "spanish": [
-        "sostenido"
+        "sostenido",
+        "sostenida"
       ],
       "rank": 3279,
       "category": "adjective"
@@ -29720,7 +30116,8 @@
       "id": 3281,
       "english": "frightening, dreadful",
       "spanish": [
-        "espantoso"
+        "espantoso",
+        "espantosa"
       ],
       "rank": 3281,
       "category": "adjective"
@@ -29792,7 +30189,8 @@
       "id": 3289,
       "english": "financial",
       "spanish": [
-        "financiero"
+        "financiero",
+        "financiera"
       ],
       "rank": 3289,
       "category": "adjective"
@@ -29882,7 +30280,8 @@
       "id": 3299,
       "english": "free, arbitrary, gratuitous",
       "spanish": [
-        "gratuito"
+        "gratuito",
+        "gratuita"
       ],
       "rank": 3299,
       "category": "adjective"
@@ -29936,7 +30335,8 @@
       "id": 3305,
       "english": "worn out, old, used",
       "spanish": [
-        "usado"
+        "usado",
+        "usada"
       ],
       "rank": 3305,
       "category": "adjective"
@@ -29981,7 +30381,8 @@
       "id": 3310,
       "english": "ambitious, greedy",
       "spanish": [
-        "ambicioso"
+        "ambicioso",
+        "ambiciosa"
       ],
       "rank": 3310,
       "category": "adjective"
@@ -29999,7 +30400,8 @@
       "id": 3312,
       "english": "poetic",
       "spanish": [
-        "poético"
+        "poético",
+        "poética"
       ],
       "rank": 3312,
       "category": "adjective"
@@ -30035,7 +30437,8 @@
       "id": 3316,
       "english": "satisfactory",
       "spanish": [
-        "satisfactorio"
+        "satisfactorio",
+        "satisfactoria"
       ],
       "rank": 3316,
       "category": "adjective"
@@ -30053,7 +30456,8 @@
       "id": 3318,
       "english": "vague",
       "spanish": [
-        "vago"
+        "vago",
+        "vaga"
       ],
       "rank": 3318,
       "category": "adjective"
@@ -30062,7 +30466,8 @@
       "id": 3319,
       "english": "stupid, idiotic",
       "spanish": [
-        "estúpido"
+        "estúpido",
+        "estúpida"
       ],
       "rank": 3319,
       "category": "adjective"
@@ -30125,7 +30530,8 @@
       "id": 3326,
       "english": "honest",
       "spanish": [
-        "honesto"
+        "honesto",
+        "honesta"
       ],
       "rank": 3326,
       "category": "adjective"
@@ -30179,7 +30585,8 @@
       "id": 3332,
       "english": "brusque, abrupt, sudden",
       "spanish": [
-        "brusco"
+        "brusco",
+        "brusca"
       ],
       "rank": 3332,
       "category": "adjective"
@@ -30269,7 +30676,8 @@
       "id": 3342,
       "english": "illuminated",
       "spanish": [
-        "iluminado"
+        "iluminado",
+        "iluminada"
       ],
       "rank": 3342,
       "category": "adjective"
@@ -30332,7 +30740,8 @@
       "id": 3349,
       "english": "symbolic",
       "spanish": [
-        "simbólico"
+        "simbólico",
+        "simbólica"
       ],
       "rank": 3349,
       "category": "adjective"
@@ -30350,7 +30759,8 @@
       "id": 3351,
       "english": "heroic",
       "spanish": [
-        "heroico"
+        "heroico",
+        "heroica"
       ],
       "rank": 3351,
       "category": "adjective"
@@ -30386,7 +30796,8 @@
       "id": 3355,
       "english": "tenth",
       "spanish": [
-        "décimo"
+        "décimo",
+        "décima"
       ],
       "rank": 3355,
       "category": "adjective"
@@ -30476,7 +30887,8 @@
       "id": 3365,
       "english": "burned, burnt",
       "spanish": [
-        "quemado"
+        "quemado",
+        "quemada"
       ],
       "rank": 3365,
       "category": "adjective"
@@ -30494,7 +30906,8 @@
       "id": 3367,
       "english": "vain, useless",
       "spanish": [
-        "vano"
+        "vano",
+        "vana"
       ],
       "rank": 3367,
       "category": "adjective"
@@ -30521,7 +30934,8 @@
       "id": 3370,
       "english": "homemade",
       "spanish": [
-        "casero"
+        "casero",
+        "casera"
       ],
       "rank": 3370,
       "category": "adjective"
@@ -30530,7 +30944,10 @@
       "id": 3371,
       "english": "annoyed, bothered, upset",
       "spanish": [
-        "molesto"
+        "molesto",
+        "molesta",
+        "enojado",
+        "enfadado"
       ],
       "rank": 3371,
       "category": "adjective"
@@ -30557,7 +30974,8 @@
       "id": 3374,
       "english": "quiet, silent",
       "spanish": [
-        "silencioso"
+        "silencioso",
+        "silenciosa"
       ],
       "rank": 3374,
       "category": "adjective"
@@ -30620,7 +31038,8 @@
       "id": 3381,
       "english": "native",
       "spanish": [
-        "nativo"
+        "nativo",
+        "nativa"
       ],
       "rank": 3381,
       "category": "adjective"
@@ -30683,7 +31102,8 @@
       "id": 3388,
       "english": "categorical",
       "spanish": [
-        "rotundo"
+        "rotundo",
+        "rotunda"
       ],
       "rank": 3388,
       "category": "adjective"
@@ -30737,7 +31157,8 @@
       "id": 3394,
       "english": "sudden",
       "spanish": [
-        "repentino"
+        "repentino",
+        "repentina"
       ],
       "rank": 3394,
       "category": "adjective"
@@ -30746,7 +31167,8 @@
       "id": 3395,
       "english": "anxious, eager",
       "spanish": [
-        "ansioso"
+        "ansioso",
+        "ansiosa"
       ],
       "rank": 3395,
       "category": "adjective"
@@ -30773,7 +31195,8 @@
       "id": 3398,
       "english": "slow, slowly",
       "spanish": [
-        "despacio"
+        "despacio",
+        "despacia"
       ],
       "rank": 3398,
       "category": "adjective"
@@ -31169,7 +31592,8 @@
       "id": 3442,
       "english": "agreeable, pleasant",
       "spanish": [
-        "grato"
+        "grato",
+        "grata"
       ],
       "rank": 3442,
       "category": "adjective"
@@ -31295,7 +31719,8 @@
       "id": 3456,
       "english": "to pass away (to die)",
       "spanish": [
-        "fallecer"
+        "fallecer",
+        "morir"
       ],
       "rank": 3456,
       "category": "verb"
@@ -31322,7 +31747,8 @@
       "id": 3459,
       "english": "energetic, vigorous",
       "spanish": [
-        "enérgico"
+        "enérgico",
+        "enérgica"
       ],
       "rank": 3459,
       "category": "adjective"
@@ -31448,7 +31874,8 @@
       "id": 3473,
       "english": "learned, illustrated",
       "spanish": [
-        "ilustrado"
+        "ilustrado",
+        "ilustrada"
       ],
       "rank": 3473,
       "category": "adjective"
@@ -31484,7 +31911,8 @@
       "id": 3477,
       "english": "very high, tall",
       "spanish": [
-        "altísimo"
+        "altísimo",
+        "altísima"
       ],
       "rank": 3477,
       "category": "adjective"
@@ -31493,7 +31921,8 @@
       "id": 3478,
       "english": "marvelous, stupendous",
       "spanish": [
-        "estupendo"
+        "estupendo",
+        "estupenda"
       ],
       "rank": 3478,
       "category": "adjective"
@@ -31556,7 +31985,8 @@
       "id": 3485,
       "english": "comic",
       "spanish": [
-        "cómico"
+        "cómico",
+        "cómica"
       ],
       "rank": 3485,
       "category": "adjective"
@@ -31574,7 +32004,8 @@
       "id": 3487,
       "english": "late, belated",
       "spanish": [
-        "tardío"
+        "tardío",
+        "tardía"
       ],
       "rank": 3487,
       "category": "adjective"
