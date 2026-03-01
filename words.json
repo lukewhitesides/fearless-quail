@@ -2560,7 +2560,8 @@
       "id": 279,
       "english": "neither, nor, either",
       "spanish": [
-        "tampoco"
+        "tampoco",
+        "ninguno"
       ],
       "rank": 279,
       "category": "adverb"
@@ -2651,7 +2652,7 @@
     },
     {
       "id": 289,
-      "english": "to bring, carry",
+      "english": "to bring (towards the speaker), carry",
       "spanish": [
         "traer"
       ],
@@ -4435,7 +4436,9 @@
       "id": 483,
       "english": "back, behind",
       "spanish": [
-        "atrás"
+        "atrás",
+        "detras",
+        "tras"
       ],
       "rank": 483,
       "category": "adverb"
@@ -4600,7 +4603,8 @@
       "id": 501,
       "english": "to show",
       "spanish": [
-        "demostrar"
+        "demostrar",
+        "mostrar"
       ],
       "rank": 501,
       "category": "verb"
@@ -5734,7 +5738,8 @@
       "id": 625,
       "english": "half, middle",
       "spanish": [
-        "mitad"
+        "mitad",
+        "medio"
       ],
       "rank": 625,
       "category": "noun"
@@ -6434,7 +6439,9 @@
       "id": 701,
       "english": "behind",
       "spanish": [
-        "detrás"
+        "detrás",
+        "atrás,
+        "tras"
       ],
       "rank": 701,
       "category": "adverb"
@@ -6616,7 +6623,8 @@
       "id": 721,
       "english": "group, set",
       "spanish": [
-        "conjunto"
+        "conjunto",
+        "grupo"
       ],
       "rank": 721,
       "category": "noun"
@@ -6691,7 +6699,9 @@
       "english": "together",
       "spanish": [
         "junto",
-        "junta"
+        "junta",
+        "juntos",
+        "juntas"
       ],
       "rank": 729,
       "category": "adjective"
@@ -6780,7 +6790,7 @@
     },
     {
       "id": 739,
-      "english": "precise, necessary",
+      "english": "precise",
       "spanish": [
         "preciso",
         "precisa"
@@ -6976,7 +6986,9 @@
       "english": "entire, whole, complete",
       "spanish": [
         "entero",
-        "entera"
+        "entera",
+        "completo",
+        "total"
       ],
       "rank": 760,
       "category": "adjective"
@@ -7684,7 +7696,9 @@
       "english": "similar",
       "spanish": [
         "parecido",
-        "parecida"
+        "parecida",
+        "semejante",
+        "similar"
       ],
       "rank": 837,
       "category": "adjective"
@@ -8807,7 +8821,9 @@
       "id": 959,
       "english": "to take",
       "spanish": [
-        "tardar"
+        "tardar",
+        "tomar",
+        "coger"
       ],
       "rank": 959,
       "category": "verb"
@@ -11040,7 +11056,8 @@
       "id": 1203,
       "english": "to go, leave, march",
       "spanish": [
-        "marchar"
+        "marchar",
+        "andar",
       ],
       "rank": 1203,
       "category": "verb"
