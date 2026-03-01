@@ -174,9 +174,11 @@
     },
     {
       "id": 20,
-      "english": "the (+ n)",
+      "english": "the",
       "spanish": [
-        "lo"
+        "lo",
+        "el",
+        "la"
       ],
       "rank": 20,
       "category": "article"
@@ -320,7 +322,7 @@
     },
     {
       "id": 36,
-      "english": "already, still",
+      "english": "already",
       "spanish": [
         "ya"
       ],
@@ -423,7 +425,8 @@
       "id": 47,
       "english": "what, which",
       "spanish": [
-        "qué"
+        "qué",
+        "cuál"
       ],
       "rank": 47,
       "category": "pronoun"
@@ -572,7 +575,9 @@
       "id": 63,
       "english": "that",
       "spanish": [
-        "eso"
+        "eso",
+        "ese",
+        "esa",
       ],
       "rank": 63,
       "category": "pronoun"
