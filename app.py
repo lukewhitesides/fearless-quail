@@ -171,58 +171,40 @@ def get_next_word():
         }
     })
 
+@app.route('/api/words')
+def get_all_words():
+    words = load_words()
+    return jsonify({'words': [
+        {
+            'id': w['id'],
+            'english': w['english'],
+            'rank': w['rank'],
+            'category': w['category'],
+            'hint': w.get('hint', '')
+        }
+        for w in words
+    ]})
+
 @app.route('/api/check-answer', methods=['POST'])
 def check_user_answer():
     data = request.json
     word_id = str(data.get('word_id'))
     user_answer = data.get('answer', '')
+    strictness = data.get('strictness', 'high')
 
     words = load_words()
-    progress = load_progress()
 
     # Find the word
     word = next((w for w in words if str(w['id']) == word_id), None)
     if not word:
         return jsonify({'error': 'Word not found'}), 404
 
-    # Check the answer using current strictness setting
-    strictness = progress.get('settings', {}).get('strictness', 'high')
     result = check_answer_match(user_answer, word['spanish'], strictness)
-    is_correct = result['correct']
-    accent_only_miss = result['accent_only_miss']
-
-    # Get current word progress
-    wp = progress['word_progress'].get(word_id, {
-        'times_shown': 0,
-        'times_correct': 0,
-        'streak': 0,
-        'mastered': False,
-        'first_attempt_correct': None
-    })
-
-    # Track first attempt result
-    if wp['times_shown'] == 0:
-        wp['first_attempt_correct'] = is_correct
-
-    wp['times_shown'] += 1
-    if is_correct:
-        wp['times_correct'] += 1
-        wp['streak'] += 1
-    else:
-        wp['streak'] = 0
-
-    # Check if now mastered
-    wp['mastered'] = is_mastered(wp)
-
-    # Save progress
-    save_progress(word_id, wp, is_correct)
 
     return jsonify({
-        'correct': is_correct,
-        'accent_only_miss': accent_only_miss,
+        'correct': result['correct'],
+        'accent_only_miss': result['accent_only_miss'],
         'valid_answers': word['spanish'],
-        'mastered': wp['mastered'],
-        'streak': wp['streak']
     })
 
 @app.route('/api/active-words')
