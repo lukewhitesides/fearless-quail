@@ -6,6 +6,7 @@ let reviewMode = false;
 let reviewedWordIds = [];
 let currentStrictness = 'high';
 let currentTheme = 'default';
+let currentLevel = 1;
 let allWords = [];
 let localProgress = null;
 
@@ -21,6 +22,9 @@ const feedbackText = document.getElementById('feedback-text');
 const correctAnswersEl = document.getElementById('correct-answers');
 const nextBtn = document.getElementById('next-btn');
 const completionEl = document.getElementById('completion');
+const completionTitleEl = document.getElementById('completion-title');
+const completionMsgEl = document.getElementById('completion-msg');
+const nextLevelBtn = document.getElementById('next-level-btn');
 const flashcardEl = document.getElementById('flashcard');
 const progressFill = document.getElementById('progress-fill');
 const masteredCount = document.getElementById('mastered-count');
@@ -40,6 +44,8 @@ const accentMissNoteEl = document.getElementById('accent-miss-note');
 const themeOpenBtn = document.getElementById('theme-open-btn');
 const themeModalOverlay = document.getElementById('theme-modal-overlay');
 const themeModalClose = document.getElementById('theme-modal-close');
+const levelRangeHint = document.getElementById('level-range-hint');
+const levelBtns = document.querySelectorAll('.level-option');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -66,15 +72,54 @@ function initProgress() {
                 total_correct: 0,
                 session_count: 1,
                 last_session: new Date().toISOString()
-            }
+            },
+            settings: { level: 1 }
         };
     }
+    if (!localProgress.settings) localProgress.settings = {};
+    currentLevel = localProgress.settings.level || 1;
 }
 
 function saveLocalProgress() {
     localProgress.user_stats.last_session = new Date().toISOString();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(localProgress));
 }
+
+// --- Level helpers ---
+
+function getLevelRange(level) {
+    return { min: (level - 1) * 1000 + 1, max: level * 1000 };
+}
+
+function getLevelWords() {
+    const { min, max } = getLevelRange(currentLevel);
+    return allWords.filter(w => w.rank >= min && w.rank <= max);
+}
+
+function setLevel(level) {
+    currentLevel = level;
+    localProgress.settings.level = level;
+    saveLocalProgress();
+    updateLevelUI();
+    // Exit review mode when switching levels
+    if (reviewMode) {
+        reviewMode = false;
+        reviewedWordIds = [];
+        reviewModeIndicator.style.display = 'none';
+    }
+    displayProgress();
+    loadNextWord();
+}
+
+function updateLevelUI() {
+    levelBtns.forEach(btn => {
+        btn.classList.toggle('active', Number(btn.dataset.level) === currentLevel);
+    });
+    const { min, max } = getLevelRange(currentLevel);
+    levelRangeHint.textContent = `ranks ${min.toLocaleString()}–${max.toLocaleString()}`;
+}
+
+// --- Mastery ---
 
 function isMastered(wp) {
     const timesShown = wp.times_shown || 0;
@@ -86,11 +131,14 @@ function isMastered(wp) {
     return false;
 }
 
+// --- Word selection ---
+
 function selectNextWord() {
+    const levelWords = getLevelWords();
     const wp = localProgress.word_progress;
     const active = [], newWords = [], review = [];
 
-    for (const word of allWords) {
+    for (const word of levelWords) {
         const wordWp = wp[String(word.id)] || {};
         if (wordWp.mastered) {
             if (wordWp.first_attempt_correct === false) review.push(word);
@@ -116,11 +164,12 @@ function selectNextWord() {
 }
 
 function selectNextReviewWord(excludeIds) {
+    const levelWords = getLevelWords();
     const wp = localProgress.word_progress;
     const excludeSet = new Set(excludeIds.map(String));
     const active = [];
 
-    for (const word of allWords) {
+    for (const word of levelWords) {
         const wordId = String(word.id);
         if (excludeSet.has(wordId)) continue;
         const wordWp = wp[wordId] || {};
@@ -133,11 +182,14 @@ function selectNextReviewWord(excludeIds) {
     return { word: active[Math.floor(Math.random() * active.length)], remaining: active.length };
 }
 
+// --- Startup ---
+
 async function loadWordsAndStart() {
     try {
         const response = await fetch('/api/words');
         const data = await response.json();
         allWords = data.words;
+        updateLevelUI();
         displayProgress();
         loadNextWord();
     } catch (error) {
@@ -151,12 +203,17 @@ function setupEventListeners() {
     nextBtn.addEventListener('click', loadNextWord);
     resetBtn.addEventListener('click', resetProgress);
     resetProgressBtn.addEventListener('click', confirmReset);
+    nextLevelBtn.addEventListener('click', () => setLevel(currentLevel + 1));
 
     reviewBtn.addEventListener('click', enterReviewMode);
     exitReviewBtn.addEventListener('click', exitReviewMode);
 
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
     strictnessLowBtn.addEventListener('click', () => setStrictness('low'));
+
+    levelBtns.forEach(btn => {
+        btn.addEventListener('click', () => setLevel(Number(btn.dataset.level)));
+    });
 
     themeOpenBtn.addEventListener('click', openThemeModal);
     themeModalClose.addEventListener('click', closeThemeModal);
@@ -193,11 +250,7 @@ function setupEventListeners() {
             const start = input.selectionStart;
             const end = input.selectionEnd;
             const text = input.value;
-
-            // Insert character at cursor position
             input.value = text.substring(0, start) + char + text.substring(end);
-
-            // Move cursor after inserted character
             input.selectionStart = input.selectionEnd = start + 1;
             input.focus();
         });
@@ -222,7 +275,7 @@ async function loadNextWord() {
     flashcardEl.style.display = 'block';
     completionEl.style.display = 'none';
 
-    if (!allWords.length) return; // Words not loaded yet
+    if (!allWords.length) return;
 
     let selected;
     if (reviewMode) {
@@ -254,20 +307,13 @@ async function loadNextWord() {
 
 async function checkAnswer() {
     const userAnswer = answerInput.value.trim();
-
-    if (!userAnswer) {
-        answerInput.focus();
-        return;
-    }
-
+    if (!userAnswer) { answerInput.focus(); return; }
     if (!currentWord) return;
 
     try {
         const response = await fetch('/api/check-answer', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 word_id: currentWord.id,
                 answer: userAnswer,
@@ -288,9 +334,7 @@ async function checkAnswer() {
             first_attempt_correct: null
         };
 
-        if (wp.times_shown === 0) {
-            wp.first_attempt_correct = data.correct;
-        }
+        if (wp.times_shown === 0) wp.first_attempt_correct = data.correct;
         wp.times_shown += 1;
         if (data.correct) {
             wp.times_correct += 1;
@@ -323,7 +367,6 @@ async function checkAnswer() {
             }
             feedbackText.textContent = text;
 
-            // Show accent-miss note if the only mistake was a missing accent
             if (data.accent_only_miss) {
                 const correctForm = data.valid_answers.find(
                     a => a.toLowerCase().replace(/[^\w\s]/g, '') !== a.toLowerCase() ||
@@ -336,7 +379,6 @@ async function checkAnswer() {
                 accentMissNoteEl.style.display = 'none';
             }
 
-            // Show other accepted answers (synonyms) if there are any
             const otherAnswers = data.valid_answers.filter(
                 a => a.toLowerCase() !== userAnswer.toLowerCase()
             );
@@ -347,15 +389,12 @@ async function checkAnswer() {
                     span.textContent = answer;
                     correctAnswersEl.appendChild(span);
                 });
-                // Give more time to read synonyms / accent note
                 autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
             } else if (data.accent_only_miss) {
                 correctAnswersEl.innerHTML = '';
-                // Give time to read the accent miss note
                 autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
             } else {
                 correctAnswersEl.innerHTML = '';
-                // Auto-advance after 1 second for correct answers with no synonyms
                 autoAdvanceTimeout = setTimeout(() => loadNextWord(), 1000);
             }
         } else {
@@ -372,9 +411,7 @@ async function checkAnswer() {
             });
         }
 
-        // Update progress display
         displayProgress();
-
         nextBtn.focus();
     } catch (error) {
         console.error('Error checking answer:', error);
@@ -384,23 +421,30 @@ async function checkAnswer() {
 function displayProgress() {
     if (!localProgress || !allWords.length) return;
 
+    const levelWords = getLevelWords();
     const wp = localProgress.word_progress;
-    const masteredCountVal = Object.values(wp).filter(w => w.mastered).length;
-    masteredCount.textContent = masteredCountVal;
-    totalCount.textContent = allWords.length;
 
-    const { total_practiced, total_correct } = localProgress.user_stats;
-    const accuracy = total_practiced > 0
-        ? Math.round(total_correct / total_practiced * 1000) / 10
+    const masteredCountVal = levelWords.filter(w => wp[String(w.id)]?.mastered).length;
+    masteredCount.textContent = masteredCountVal;
+    totalCount.textContent = levelWords.length;
+
+    // Level-specific accuracy from word_progress totals
+    let levelPracticed = 0, levelCorrect = 0;
+    for (const word of levelWords) {
+        const wordWp = wp[String(word.id)] || {};
+        levelPracticed += wordWp.times_shown || 0;
+        levelCorrect += wordWp.times_correct || 0;
+    }
+    const accuracy = levelPracticed > 0
+        ? Math.round(levelCorrect / levelPracticed * 1000) / 10
         : 0;
     accuracyEl.textContent = accuracy;
 
-    const percentage = allWords.length > 0 ? (masteredCountVal / allWords.length) * 100 : 0;
+    const percentage = levelWords.length > 0 ? (masteredCountVal / levelWords.length) * 100 : 0;
     progressFill.style.width = `${percentage}%`;
 
-    // Update active word count and review button
     let activeCount = 0;
-    for (const word of allWords) {
+    for (const word of levelWords) {
         const wordWp = wp[String(word.id)] || {};
         if (!wordWp.mastered && (wordWp.times_shown || 0) > 0) activeCount++;
     }
@@ -408,13 +452,27 @@ function displayProgress() {
     reviewBtn.style.display = activeCount > 0 ? 'inline-block' : 'none';
 }
 
-// Kept for compatibility — now delegates to displayProgress
-function loadProgress() {
-    displayProgress();
-}
+function loadProgress() { displayProgress(); }
+function loadActiveWordCount() { displayProgress(); }
 
-function loadActiveWordCount() {
-    displayProgress();
+function showCompletion() {
+    flashcardEl.style.display = 'none';
+    answerSection.style.display = 'none';
+    feedbackEl.style.display = 'none';
+
+    if (currentLevel < 5) {
+        completionTitleEl.textContent = `Level ${currentLevel} Complete!`;
+        completionMsgEl.textContent =
+            `You've mastered all ${getLevelWords().length} words in Level ${currentLevel}!`;
+        nextLevelBtn.textContent = `Go to Level ${currentLevel + 1}`;
+        nextLevelBtn.style.display = 'inline-block';
+    } else {
+        completionTitleEl.textContent = 'Amazing!';
+        completionMsgEl.textContent = "You've mastered all 5000 Spanish words!";
+        nextLevelBtn.style.display = 'none';
+    }
+
+    completionEl.style.display = 'block';
 }
 
 function enterReviewMode() {
@@ -466,20 +524,13 @@ async function setStrictness(value) {
     }
 }
 
-function openThemeModal() {
-    themeModalOverlay.style.display = 'flex';
-}
-
-function closeThemeModal() {
-    themeModalOverlay.style.display = 'none';
-}
+function openThemeModal() { themeModalOverlay.style.display = 'flex'; }
+function closeThemeModal() { themeModalOverlay.style.display = 'none'; }
 
 function applyTheme(theme) {
     const themes = ['spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic'];
     themes.forEach(t => document.body.classList.remove(`theme-${t}`));
-    if (theme !== 'default') {
-        document.body.classList.add(`theme-${theme}`);
-    }
+    if (theme !== 'default') document.body.classList.add(`theme-${theme}`);
 }
 
 function updateThemeUI() {
@@ -504,13 +555,6 @@ async function setTheme(theme) {
     }
 }
 
-function showCompletion() {
-    flashcardEl.style.display = 'none';
-    answerSection.style.display = 'none';
-    feedbackEl.style.display = 'none';
-    completionEl.style.display = 'block';
-}
-
 function confirmReset() {
     if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
         resetProgress();
@@ -522,12 +566,14 @@ async function resetProgress() {
         localStorage.removeItem(STORAGE_KEY);
         initProgress();
         await fetch('/api/reset', { method: 'POST' });
+        updateLevelUI();
         displayProgress();
         loadNextWord();
     } catch (error) {
         console.error('Error resetting progress:', error);
         localStorage.removeItem(STORAGE_KEY);
         initProgress();
+        updateLevelUI();
         displayProgress();
         loadNextWord();
     }

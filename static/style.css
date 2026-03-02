@@ -145,6 +145,50 @@ header h1 {
     flex-wrap: wrap;
 }
 
+.level-setting {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.level-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.level-option {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+}
+
+.level-option:hover {
+    background: rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+.level-option.active {
+    background: rgba(255, 255, 255, 0.92);
+    color: #c0392b;
+    border-color: white;
+}
+
+.level-range-hint {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
 .strictness-label {
     color: rgba(255, 255, 255, 0.9);
 }
@@ -503,6 +547,30 @@ main {
     margin-bottom: 25px;
 }
 
+.completion-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.next-level-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.next-level-btn:hover {
+    transform: scale(1.05);
+}
+
 .reset-btn {
     background: var(--warm);
     color: white;
@@ -605,6 +673,22 @@ footer {
 
     .header-divider {
         display: none;
+    }
+
+    .level-setting {
+        font-size: 0.75rem;
+        gap: 5px;
+        margin-top: 6px;
+    }
+
+    .level-option {
+        padding: 3px 9px;
+        font-size: 0.75rem;
+        min-width: 28px;
+    }
+
+    .level-range-hint {
+        font-size: 0.7rem;
     }
 
     main {
