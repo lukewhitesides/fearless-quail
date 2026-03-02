@@ -25,6 +25,8 @@
                     <span class="strictness-label">Strictness:</span>
                     <button class="strictness-option" id="btn-strictness-high" data-value="high">High</button>
                     <button class="strictness-option" id="btn-strictness-low" data-value="low">Low</button>
+                    <span class="header-divider">|</span>
+                    <button class="theme-open-btn" id="theme-open-btn">🎨 Theme</button>
                 </div>
             </div>
         </header>
@@ -83,6 +85,48 @@
             </div>
         </main>
 
+    </div>
+
+    <!-- Theme Picker Modal -->
+    <div class="theme-modal-overlay" id="theme-modal-overlay">
+        <div class="theme-modal">
+            <div class="theme-modal-header">
+                <h3>Choose Your Theme</h3>
+                <button class="theme-modal-close" id="theme-modal-close">✕</button>
+            </div>
+            <div class="theme-options">
+                <button class="theme-option" data-theme="default">
+                    <div class="theme-preview default-preview"></div>
+                    <span class="theme-flag">🌐</span>
+                    <span class="theme-name">Default</span>
+                </button>
+                <button class="theme-option" data-theme="spain">
+                    <div class="theme-preview spain-preview"></div>
+                    <span class="theme-flag">🇪🇸</span>
+                    <span class="theme-name">Spain</span>
+                </button>
+                <button class="theme-option" data-theme="mexico">
+                    <div class="theme-preview mexico-preview"></div>
+                    <span class="theme-flag">🇲🇽</span>
+                    <span class="theme-name">Mexico</span>
+                </button>
+                <button class="theme-option" data-theme="costa-rica">
+                    <div class="theme-preview costa-rica-preview"></div>
+                    <span class="theme-flag">🇨🇷</span>
+                    <span class="theme-name">Costa Rica</span>
+                </button>
+                <button class="theme-option" data-theme="colombia">
+                    <div class="theme-preview colombia-preview"></div>
+                    <span class="theme-flag">🇨🇴</span>
+                    <span class="theme-name">Colombia</span>
+                </button>
+                <button class="theme-option" data-theme="dominican-republic">
+                    <div class="theme-preview dominican-republic-preview"></div>
+                    <span class="theme-flag">🇩🇴</span>
+                    <span class="theme-name">Dominican Republic</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="/static/app.js"></script>
