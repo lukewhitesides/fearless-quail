@@ -6,6 +6,10 @@ let reviewMode = false;
 let reviewedWordIds = [];
 let currentStrictness = 'high';
 let currentTheme = 'default';
+let allWords = [];
+let localProgress = null;
+
+const STORAGE_KEY = 'fearless_quail_progress';
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
@@ -39,12 +43,108 @@ const themeModalClose = document.getElementById('theme-modal-close');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    loadNextWord();
-    loadProgress();
-    loadActiveWordCount();
+    initProgress();
+    loadWordsAndStart();
     loadSettings();
     setupEventListeners();
 });
+
+function initProgress() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+        try {
+            localProgress = JSON.parse(stored);
+        } catch (e) {
+            localProgress = null;
+        }
+    }
+    if (!localProgress) {
+        localProgress = {
+            word_progress: {},
+            user_stats: {
+                total_practiced: 0,
+                total_correct: 0,
+                session_count: 1,
+                last_session: new Date().toISOString()
+            }
+        };
+    }
+}
+
+function saveLocalProgress() {
+    localProgress.user_stats.last_session = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(localProgress));
+}
+
+function isMastered(wp) {
+    const timesShown = wp.times_shown || 0;
+    const timesCorrect = wp.times_correct || 0;
+    const streak = wp.streak || 0;
+    if (timesShown === 1 && timesCorrect === 1) return true;
+    if (streak >= 3) return true;
+    if (timesShown >= 5 && timesCorrect / timesShown >= 0.8) return true;
+    return false;
+}
+
+function selectNextWord() {
+    const wp = localProgress.word_progress;
+    const active = [], newWords = [], review = [];
+
+    for (const word of allWords) {
+        const wordWp = wp[String(word.id)] || {};
+        if (wordWp.mastered) {
+            if (wordWp.first_attempt_correct === false) review.push(word);
+            continue;
+        }
+        if ((wordWp.times_shown || 0) > 0) active.push(word);
+        else newWords.push(word);
+    }
+
+    if (!active.length && !newWords.length) return null;
+
+    if (review.length && Math.random() < 0.05) {
+        return review[Math.floor(Math.random() * review.length)];
+    }
+    if (active.length && newWords.length) {
+        if (Math.random() < 0.2) return active[Math.floor(Math.random() * active.length)];
+        newWords.sort((a, b) => a.rank - b.rank);
+        return newWords[0];
+    }
+    if (active.length) return active[Math.floor(Math.random() * active.length)];
+    newWords.sort((a, b) => a.rank - b.rank);
+    return newWords[0];
+}
+
+function selectNextReviewWord(excludeIds) {
+    const wp = localProgress.word_progress;
+    const excludeSet = new Set(excludeIds.map(String));
+    const active = [];
+
+    for (const word of allWords) {
+        const wordId = String(word.id);
+        if (excludeSet.has(wordId)) continue;
+        const wordWp = wp[wordId] || {};
+        if (!wordWp.mastered && (wordWp.times_shown || 0) > 0) {
+            active.push(word);
+        }
+    }
+
+    if (!active.length) return null;
+    return { word: active[Math.floor(Math.random() * active.length)], remaining: active.length };
+}
+
+async function loadWordsAndStart() {
+    try {
+        const response = await fetch('/api/words');
+        const data = await response.json();
+        allWords = data.words;
+        displayProgress();
+        loadNextWord();
+    } catch (error) {
+        console.error('Error loading words:', error);
+        englishWordEl.textContent = 'Error loading words. Please refresh.';
+    }
+}
 
 function setupEventListeners() {
     submitBtn.addEventListener('click', checkAnswer);
@@ -105,65 +205,51 @@ function setupEventListeners() {
 }
 
 async function loadNextWord() {
-    // Clear any pending auto-advance timeout
     if (autoAdvanceTimeout) {
         clearTimeout(autoAdvanceTimeout);
         autoAdvanceTimeout = null;
     }
 
-    try {
-        // Reset UI
-        isAnswered = false;
-        feedbackEl.style.display = 'none';
-        feedbackEl.classList.remove('correct', 'incorrect', 'show');
-        accentMissNoteEl.style.display = 'none';
-        answerInput.value = '';
-        answerInput.disabled = false;
-        submitBtn.style.display = 'inline-block';
-        answerSection.style.display = 'flex';
-        flashcardEl.style.display = 'block';
-        completionEl.style.display = 'none';
+    // Reset UI
+    isAnswered = false;
+    feedbackEl.style.display = 'none';
+    feedbackEl.classList.remove('correct', 'incorrect', 'show');
+    accentMissNoteEl.style.display = 'none';
+    answerInput.value = '';
+    answerInput.disabled = false;
+    submitBtn.style.display = 'inline-block';
+    answerSection.style.display = 'flex';
+    flashcardEl.style.display = 'block';
+    completionEl.style.display = 'none';
 
-        let url;
-        if (reviewMode) {
-            const excludeParam = reviewedWordIds.length > 0 ? `?exclude=${reviewedWordIds.join(',')}` : '';
-            url = `/api/next-review-word${excludeParam}`;
-        } else {
-            url = '/api/next-word';
+    if (!allWords.length) return; // Words not loaded yet
+
+    let selected;
+    if (reviewMode) {
+        const result = selectNextReviewWord(reviewedWordIds);
+        if (!result) {
+            exitReviewMode();
+            return;
         }
-
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if (data.done) {
-            if (reviewMode) {
-                exitReviewMode();
-                return;
-            }
+        selected = result.word;
+        reviewedWordIds.push(String(selected.id));
+        const remaining = result.remaining - 1;
+        reviewRemainingEl.textContent = `${remaining} word${remaining !== 1 ? 's' : ''} remaining`;
+    } else {
+        selected = selectNextWord();
+        if (!selected) {
             showCompletion();
             return;
         }
-
-        if (reviewMode) {
-            reviewRemainingEl.textContent = `${data.remaining} word${data.remaining !== 1 ? 's' : ''} remaining`;
-        }
-
-        currentWord = data.word;
-        if (reviewMode) {
-            reviewedWordIds.push(String(currentWord.id));
-        }
-        englishWordEl.textContent = currentWord.english;
-
-        // Ensure focus on input (with delay for reliability)
-        setTimeout(() => {
-            answerInput.focus();
-            // Scroll input into view on mobile when keyboard opens
-            answerInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 50);
-    } catch (error) {
-        console.error('Error loading word:', error);
-        englishWordEl.textContent = 'Error loading word. Please refresh.';
     }
+
+    currentWord = selected;
+    englishWordEl.textContent = currentWord.english;
+
+    setTimeout(() => {
+        answerInput.focus();
+        answerInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 50);
 }
 
 async function checkAnswer() {
@@ -184,12 +270,40 @@ async function checkAnswer() {
             },
             body: JSON.stringify({
                 word_id: currentWord.id,
-                answer: userAnswer
+                answer: userAnswer,
+                strictness: currentStrictness
             })
         });
 
         const data = await response.json();
         isAnswered = true;
+
+        // Update local progress
+        const wordId = String(currentWord.id);
+        const wp = localProgress.word_progress[wordId] || {
+            times_shown: 0,
+            times_correct: 0,
+            streak: 0,
+            mastered: false,
+            first_attempt_correct: null
+        };
+
+        if (wp.times_shown === 0) {
+            wp.first_attempt_correct = data.correct;
+        }
+        wp.times_shown += 1;
+        if (data.correct) {
+            wp.times_correct += 1;
+            wp.streak += 1;
+        } else {
+            wp.streak = 0;
+        }
+        wp.mastered = isMastered(wp);
+
+        localProgress.word_progress[wordId] = wp;
+        localProgress.user_stats.total_practiced += 1;
+        if (data.correct) localProgress.user_stats.total_correct += 1;
+        saveLocalProgress();
 
         // Show feedback
         feedbackEl.style.display = 'block';
@@ -202,10 +316,10 @@ async function checkAnswer() {
             feedbackIcon.textContent = '✓';
 
             let text = 'Correct!';
-            if (data.mastered) {
+            if (wp.mastered) {
                 text += ' Word mastered!';
-            } else if (data.streak > 1) {
-                text += ` Streak: ${data.streak}`;
+            } else if (wp.streak > 1) {
+                text += ` Streak: ${wp.streak}`;
             }
             feedbackText.textContent = text;
 
@@ -258,8 +372,8 @@ async function checkAnswer() {
             });
         }
 
-        // Update progress
-        loadProgress();
+        // Update progress display
+        displayProgress();
 
         nextBtn.focus();
     } catch (error) {
@@ -267,33 +381,40 @@ async function checkAnswer() {
     }
 }
 
-async function loadProgress() {
-    try {
-        const response = await fetch('/api/progress');
-        const data = await response.json();
+function displayProgress() {
+    if (!localProgress || !allWords.length) return;
 
-        masteredCount.textContent = data.mastered;
-        totalCount.textContent = data.total_words;
-        accuracyEl.textContent = data.accuracy;
+    const wp = localProgress.word_progress;
+    const masteredCountVal = Object.values(wp).filter(w => w.mastered).length;
+    masteredCount.textContent = masteredCountVal;
+    totalCount.textContent = allWords.length;
 
-        const percentage = (data.mastered / data.total_words) * 100;
-        progressFill.style.width = `${percentage}%`;
+    const { total_practiced, total_correct } = localProgress.user_stats;
+    const accuracy = total_practiced > 0
+        ? Math.round(total_correct / total_practiced * 1000) / 10
+        : 0;
+    accuracyEl.textContent = accuracy;
 
-        loadActiveWordCount();
-    } catch (error) {
-        console.error('Error loading progress:', error);
+    const percentage = allWords.length > 0 ? (masteredCountVal / allWords.length) * 100 : 0;
+    progressFill.style.width = `${percentage}%`;
+
+    // Update active word count and review button
+    let activeCount = 0;
+    for (const word of allWords) {
+        const wordWp = wp[String(word.id)] || {};
+        if (!wordWp.mastered && (wordWp.times_shown || 0) > 0) activeCount++;
     }
+    activeCountEl.textContent = activeCount;
+    reviewBtn.style.display = activeCount > 0 ? 'inline-block' : 'none';
 }
 
-async function loadActiveWordCount() {
-    try {
-        const response = await fetch('/api/active-words');
-        const data = await response.json();
-        activeCountEl.textContent = data.active_count;
-        reviewBtn.style.display = data.active_count > 0 ? 'inline-block' : 'none';
-    } catch (error) {
-        console.error('Error loading active word count:', error);
-    }
+// Kept for compatibility — now delegates to displayProgress
+function loadProgress() {
+    displayProgress();
+}
+
+function loadActiveWordCount() {
+    displayProgress();
 }
 
 function enterReviewMode() {
@@ -308,7 +429,7 @@ function exitReviewMode() {
     reviewMode = false;
     reviewedWordIds = [];
     reviewModeIndicator.style.display = 'none';
-    loadActiveWordCount();
+    displayProgress();
     loadNextWord();
 }
 
@@ -398,10 +519,16 @@ function confirmReset() {
 
 async function resetProgress() {
     try {
+        localStorage.removeItem(STORAGE_KEY);
+        initProgress();
         await fetch('/api/reset', { method: 'POST' });
-        loadProgress();
+        displayProgress();
         loadNextWord();
     } catch (error) {
         console.error('Error resetting progress:', error);
+        localStorage.removeItem(STORAGE_KEY);
+        initProgress();
+        displayProgress();
+        loadNextWord();
     }
 }
