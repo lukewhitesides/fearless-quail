@@ -5,6 +5,7 @@ let autoAdvanceTimeout = null;
 let reviewMode = false;
 let reviewedWordIds = [];
 let currentStrictness = 'high';
+let currentTheme = 'default';
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
@@ -32,6 +33,9 @@ const exitReviewBtn = document.getElementById('exit-review-btn');
 const strictnessHighBtn = document.getElementById('btn-strictness-high');
 const strictnessLowBtn = document.getElementById('btn-strictness-low');
 const accentMissNoteEl = document.getElementById('accent-miss-note');
+const themeOpenBtn = document.getElementById('theme-open-btn');
+const themeModalOverlay = document.getElementById('theme-modal-overlay');
+const themeModalClose = document.getElementById('theme-modal-close');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,6 +57,15 @@ function setupEventListeners() {
 
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
     strictnessLowBtn.addEventListener('click', () => setStrictness('low'));
+
+    themeOpenBtn.addEventListener('click', openThemeModal);
+    themeModalClose.addEventListener('click', closeThemeModal);
+    themeModalOverlay.addEventListener('click', (e) => {
+        if (e.target === themeModalOverlay) closeThemeModal();
+    });
+    document.querySelectorAll('.theme-option').forEach(btn => {
+        btn.addEventListener('click', () => setTheme(btn.dataset.theme));
+    });
 
     answerInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -304,7 +317,10 @@ async function loadSettings() {
         const response = await fetch('/api/settings');
         const data = await response.json();
         currentStrictness = data.strictness;
+        currentTheme = data.theme || 'default';
         updateStrictnessUI();
+        applyTheme(currentTheme);
+        updateThemeUI();
     } catch (error) {
         console.error('Error loading settings:', error);
     }
@@ -326,6 +342,44 @@ async function setStrictness(value) {
         updateStrictnessUI();
     } catch (error) {
         console.error('Error saving settings:', error);
+    }
+}
+
+function openThemeModal() {
+    themeModalOverlay.style.display = 'flex';
+}
+
+function closeThemeModal() {
+    themeModalOverlay.style.display = 'none';
+}
+
+function applyTheme(theme) {
+    const themes = ['spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic'];
+    themes.forEach(t => document.body.classList.remove(`theme-${t}`));
+    if (theme !== 'default') {
+        document.body.classList.add(`theme-${theme}`);
+    }
+}
+
+function updateThemeUI() {
+    document.querySelectorAll('.theme-option').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === currentTheme);
+    });
+}
+
+async function setTheme(theme) {
+    try {
+        await fetch('/api/settings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ theme })
+        });
+        currentTheme = theme;
+        applyTheme(theme);
+        updateThemeUI();
+        closeThemeModal();
+    } catch (error) {
+        console.error('Error saving theme:', error);
     }
 }
 

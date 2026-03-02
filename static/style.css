@@ -1,3 +1,70 @@
+/* === THEME VARIABLES === */
+:root {
+    --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --warm: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --accent: #667eea;
+    --warm-shadow: rgba(241, 39, 17, 0.3);
+    --primary-shadow: rgba(102, 126, 234, 0.4);
+    --char-shadow: rgba(102, 126, 234, 0.3);
+}
+
+/* Spain: passion red & golden saffron */
+body.theme-spain {
+    --bg: linear-gradient(135deg, #f5af19 0%, #e8341c 100%);
+    --warm: linear-gradient(135deg, #c60b1e 0%, #7d0000 100%);
+    --primary: linear-gradient(135deg, #c60b1e 0%, #9b000e 100%);
+    --accent: #c60b1e;
+    --warm-shadow: rgba(198, 11, 30, 0.3);
+    --primary-shadow: rgba(198, 11, 30, 0.4);
+    --char-shadow: rgba(198, 11, 30, 0.3);
+}
+
+/* Mexico: forest green & aztec red */
+body.theme-mexico {
+    --bg: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+    --warm: linear-gradient(135deg, #ce1126 0%, #9b1b00 100%);
+    --primary: linear-gradient(135deg, #40916c 0%, #2d6a4f 100%);
+    --accent: #40916c;
+    --warm-shadow: rgba(206, 17, 38, 0.3);
+    --primary-shadow: rgba(64, 145, 108, 0.4);
+    --char-shadow: rgba(64, 145, 108, 0.3);
+}
+
+/* Costa Rica: ocean blue & pura vida red */
+body.theme-costa-rica {
+    --bg: linear-gradient(135deg, #023e8a 0%, #0077b6 100%);
+    --warm: linear-gradient(135deg, #ce1126 0%, #a50020 100%);
+    --primary: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    --accent: #0077b6;
+    --warm-shadow: rgba(206, 17, 38, 0.3);
+    --primary-shadow: rgba(0, 119, 182, 0.4);
+    --char-shadow: rgba(0, 119, 182, 0.3);
+}
+
+/* Colombia: golden yellow, navy & crimson */
+body.theme-colombia {
+    --bg: linear-gradient(135deg, #fcd116 0%, #e09000 100%);
+    --warm: linear-gradient(135deg, #003087 0%, #001a5e 100%);
+    --primary: linear-gradient(135deg, #ce1126 0%, #9b000e 100%);
+    --accent: #003087;
+    --warm-shadow: rgba(0, 48, 135, 0.3);
+    --primary-shadow: rgba(206, 17, 38, 0.4);
+    --char-shadow: rgba(0, 48, 135, 0.3);
+}
+
+/* Dominican Republic: Caribbean navy & crimson */
+body.theme-dominican-republic {
+    --bg: linear-gradient(135deg, #002D62 0%, #0055a5 100%);
+    --warm: linear-gradient(135deg, #CE1126 0%, #8b0000 100%);
+    --primary: linear-gradient(135deg, #0055a5 0%, #002D62 100%);
+    --accent: #0055a5;
+    --warm-shadow: rgba(206, 17, 38, 0.3);
+    --primary-shadow: rgba(0, 85, 165, 0.4);
+    --char-shadow: rgba(0, 85, 165, 0.3);
+}
+
+/* === BASE STYLES === */
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +73,13 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--bg);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    transition: background 0.4s ease;
 }
 
 .container {
@@ -24,10 +92,11 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    background: var(--warm);
     color: white;
     padding: 30px;
     text-align: center;
+    transition: background 0.4s ease;
 }
 
 header h1 {
@@ -73,6 +142,7 @@ header h1 {
     justify-content: center;
     gap: 8px;
     font-size: 0.85rem;
+    flex-wrap: wrap;
 }
 
 .strictness-label {
@@ -102,6 +172,28 @@ header h1 {
     border-color: white;
 }
 
+.header-divider {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+}
+
+.theme-open-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 4px 14px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-open-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
 main {
     padding: 40px 30px;
 }
@@ -113,7 +205,7 @@ main {
 }
 
 .review-btn {
-    background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    background: var(--warm);
     color: white;
     border: none;
     padding: 10px 24px;
@@ -126,7 +218,7 @@ main {
 
 .review-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(241, 39, 17, 0.3);
+    box-shadow: 0 5px 15px var(--warm-shadow);
 }
 
 .review-btn:active {
@@ -202,7 +294,7 @@ main {
 
 .category {
     display: inline-block;
-    background: #667eea;
+    background: var(--accent);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -217,8 +309,8 @@ main {
 
 .hint-btn {
     background: transparent;
-    border: 1px solid #667eea;
-    color: #667eea;
+    border: 1px solid var(--accent);
+    color: var(--accent);
     padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;
@@ -227,7 +319,7 @@ main {
 }
 
 .hint-btn:hover {
-    background: #667eea;
+    background: var(--accent);
     color: white;
 }
 
@@ -262,11 +354,11 @@ main {
 }
 
 .char-btn:hover {
-    background: linear-gradient(145deg, #667eea 0%, #764ba2 100%);
-    border-color: #667eea;
+    background: var(--primary);
+    border-color: var(--accent);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 12px var(--char-shadow);
 }
 
 .char-btn:active {
@@ -290,11 +382,11 @@ main {
 
 #answer-input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: var(--accent);
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--primary);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -307,7 +399,7 @@ main {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px var(--primary-shadow);
 }
 
 .submit-btn:active {
@@ -381,7 +473,7 @@ main {
 }
 
 .next-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--primary);
     color: white;
     border: none;
     padding: 12px 30px;
@@ -412,7 +504,7 @@ main {
 }
 
 .reset-btn {
-    background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+    background: var(--warm);
     color: white;
     border: none;
     padding: 15px 40px;
@@ -504,6 +596,15 @@ footer {
     .strictness-option {
         padding: 3px 10px;
         font-size: 0.75rem;
+    }
+
+    .theme-open-btn {
+        padding: 3px 10px;
+        font-size: 0.75rem;
+    }
+
+    .header-divider {
+        display: none;
     }
 
     main {
@@ -612,4 +713,148 @@ footer {
     font-size: 0.75rem;
     margin-left: 10px;
     vertical-align: middle;
+}
+
+/* === THEME MODAL === */
+.theme-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.theme-modal {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    animation: modalSlideIn 0.25s ease;
+}
+
+@keyframes modalSlideIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.theme-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.theme-modal-header h3 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.theme-modal-close {
+    background: #f0f0f0;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-modal-close:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.theme-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 14px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.theme-option:hover {
+    border-color: #bbb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.theme-option.active {
+    border-color: #333;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.theme-option.active::after {
+    content: '✓';
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: white;
+    background: #333;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-preview {
+    width: 100%;
+    height: 32px;
+    border-radius: 8px;
+    margin-bottom: 2px;
+}
+
+.default-preview            { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.spain-preview              { background: linear-gradient(135deg, #c60b1e 0%, #ffc400 100%); }
+.mexico-preview             { background: linear-gradient(135deg, #006847 0%, #ce1126 100%); }
+.costa-rica-preview         { background: linear-gradient(135deg, #023e8a 0%, #ce1126 100%); }
+.colombia-preview           { background: linear-gradient(90deg, #fcd116 33%, #003087 33% 66%, #ce1126 66%); }
+.dominican-republic-preview { background: linear-gradient(135deg, #002D62 0%, #CE1126 100%); }
+
+.theme-flag {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.theme-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    line-height: 1.2;
+}
+
+@media (max-width: 400px) {
+    .theme-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
