@@ -4,7 +4,7 @@ let isAnswered = false;
 let autoAdvanceTimeout = null;
 let reviewMode = false;
 let reviewedWordIds = [];
-let currentStrictness = 'high';
+let currentStrictness = 'medium';
 let currentTheme = 'default';
 let currentLevel = 1;
 let allWords = [];
@@ -39,8 +39,10 @@ const reviewModeIndicator = document.getElementById('review-mode-indicator');
 const reviewRemainingEl = document.getElementById('review-remaining');
 const exitReviewBtn = document.getElementById('exit-review-btn');
 const strictnessHighBtn = document.getElementById('btn-strictness-high');
+const strictnessMediumBtn = document.getElementById('btn-strictness-medium');
 const strictnessLowBtn = document.getElementById('btn-strictness-low');
 const accentMissNoteEl = document.getElementById('accent-miss-note');
+const articleMissNoteEl = document.getElementById('article-miss-note');
 const themeOpenBtn = document.getElementById('theme-open-btn');
 const themeModalOverlay = document.getElementById('theme-modal-overlay');
 const themeModalClose = document.getElementById('theme-modal-close');
@@ -211,6 +213,7 @@ function setupEventListeners() {
     exitReviewBtn.addEventListener('click', exitReviewMode);
 
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
+    strictnessMediumBtn.addEventListener('click', () => setStrictness('medium'));
     strictnessLowBtn.addEventListener('click', () => setStrictness('low'));
 
     levelBtns.forEach(btn => {
@@ -270,6 +273,7 @@ async function loadNextWord() {
     feedbackEl.style.display = 'none';
     feedbackEl.classList.remove('correct', 'incorrect', 'show');
     accentMissNoteEl.style.display = 'none';
+    articleMissNoteEl.style.display = 'none';
     answerInput.value = '';
     answerInput.disabled = false;
     submitBtn.style.display = 'inline-block';
@@ -300,6 +304,13 @@ async function loadNextWord() {
 
     currentWord = selected;
     englishWordEl.textContent = currentWord.english;
+
+    // Update placeholder hint for high strictness nouns
+    if (currentStrictness === 'high' && currentWord.category === 'noun' && currentWord.article) {
+        answerInput.placeholder = `Type "${currentWord.article} ..."`;
+    } else {
+        answerInput.placeholder = 'Type Spanish translation...';
+    }
 
     setTimeout(() => {
         answerInput.focus();
@@ -380,6 +391,7 @@ async function checkAnswer() {
             } else {
                 accentMissNoteEl.style.display = 'none';
             }
+            articleMissNoteEl.style.display = 'none';
 
             const otherAnswers = data.valid_answers.filter(
                 a => a.toLowerCase() !== userAnswer.toLowerCase()
@@ -402,8 +414,17 @@ async function checkAnswer() {
         } else {
             feedbackEl.classList.add('incorrect');
             feedbackIcon.textContent = '✗';
-            feedbackText.textContent = 'Not quite right';
             accentMissNoteEl.style.display = 'none';
+
+            if (data.article_miss) {
+                feedbackText.textContent = 'Missing article!';
+                articleMissNoteEl.textContent =
+                    `Don't forget the article! High Strictness requires "el" or "la" before nouns. Correct: "${data.valid_answers[0]}"`;
+                articleMissNoteEl.style.display = 'block';
+            } else {
+                feedbackText.textContent = 'Not quite right';
+                articleMissNoteEl.style.display = 'none';
+            }
 
             correctAnswersEl.innerHTML = '<strong>Correct answers:</strong>';
             data.valid_answers.forEach(answer => {
@@ -509,6 +530,7 @@ async function loadSettings() {
 
 function updateStrictnessUI() {
     strictnessHighBtn.classList.toggle('active', currentStrictness === 'high');
+    strictnessMediumBtn.classList.toggle('active', currentStrictness === 'medium');
     strictnessLowBtn.classList.toggle('active', currentStrictness === 'low');
 }
 
@@ -521,6 +543,14 @@ async function setStrictness(value) {
         });
         currentStrictness = value;
         updateStrictnessUI();
+        // Update placeholder if a noun is currently shown
+        if (currentWord && currentWord.category === 'noun' && currentWord.article) {
+            if (value === 'high') {
+                answerInput.placeholder = `Type "${currentWord.article} ..."`;
+            } else {
+                answerInput.placeholder = 'Type Spanish translation...';
+            }
+        }
     } catch (error) {
         console.error('Error saving settings:', error);
     }

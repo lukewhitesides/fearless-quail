@@ -25,12 +25,12 @@ def load_progress_json():
                 'last_session': datetime.now().isoformat()
             },
             'word_progress': {},
-            'settings': {'strictness': 'high'}
+            'settings': {'strictness': 'medium'}
         }
     with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
         progress = json.load(f)
     if 'settings' not in progress:
-        progress['settings'] = {'strictness': 'high'}
+        progress['settings'] = {'strictness': 'medium'}
     if 'theme' not in progress['settings']:
         progress['settings']['theme'] = 'default'
     return progress
@@ -81,24 +81,47 @@ def remove_accents(text):
     nfkd = unicodedata.normalize('NFKD', text)
     return ''.join(c for c in nfkd if not unicodedata.combining(c))
 
-def check_answer_match(user_answer, correct_answers, strictness='high'):
+def build_article_answers(correct_answers, article):
+    """Return correct answers prefixed with the required article."""
+    return [f"{article} {ans}" for ans in correct_answers]
+
+def check_answer_match(user_answer, correct_answers, strictness='high', word=None):
     """Check if user's answer matches any correct answer.
 
-    Returns a dict: {'correct': bool, 'accent_only_miss': bool}.
+    Returns a dict: {'correct': bool, 'accent_only_miss': bool, 'article_miss': bool}.
     accent_only_miss is True when the answer would be correct if accents are ignored.
+    article_miss is True when the noun answer is correct but the article was missing/wrong.
     """
     normalized_user = normalize_answer(user_answer)
+
+    # For high strictness on nouns: require correct article prefix
+    if strictness == 'high' and word and word.get('category') == 'noun' and word.get('article'):
+        article = word['article']
+        article_answers = build_article_answers(correct_answers, article)
+
+        for correct in article_answers:
+            if normalize_answer(correct) == normalized_user:
+                return {'correct': True, 'accent_only_miss': False, 'article_miss': False}
+
+        # Check if they got the noun right but forgot the article
+        for correct in correct_answers:
+            if normalize_answer(correct) == normalized_user:
+                return {'correct': False, 'accent_only_miss': False, 'article_miss': True}
+
+        return {'correct': False, 'accent_only_miss': False, 'article_miss': False}
+
+    # Medium and low strictness: standard matching without article requirement
     for correct in correct_answers:
         if normalize_answer(correct) == normalized_user:
-            return {'correct': True, 'accent_only_miss': False}
+            return {'correct': True, 'accent_only_miss': False, 'article_miss': False}
 
     if strictness == 'low':
         user_no_accents = remove_accents(normalized_user)
         for correct in correct_answers:
             if remove_accents(normalize_answer(correct)) == user_no_accents:
-                return {'correct': True, 'accent_only_miss': True}
+                return {'correct': True, 'accent_only_miss': True, 'article_miss': False}
 
-    return {'correct': False, 'accent_only_miss': False}
+    return {'correct': False, 'accent_only_miss': False, 'article_miss': False}
 
 @app.route('/')
 def index():
@@ -167,7 +190,8 @@ def get_next_word():
             'english': selected['english'],
             'category': selected['category'],
             'hint': selected.get('hint', ''),
-            'rank': selected['rank']
+            'rank': selected['rank'],
+            'article': selected.get('article'),
         }
     })
 
@@ -180,7 +204,8 @@ def get_all_words():
             'english': w['english'],
             'rank': w['rank'],
             'category': w['category'],
-            'hint': w.get('hint', '')
+            'hint': w.get('hint', ''),
+            'article': w.get('article'),
         }
         for w in words
     ]})
@@ -199,12 +224,18 @@ def check_user_answer():
     if not word:
         return jsonify({'error': 'Word not found'}), 404
 
-    result = check_answer_match(user_answer, word['spanish'], strictness)
+    result = check_answer_match(user_answer, word['spanish'], strictness, word)
+
+    valid_answers = word['spanish']
+    if strictness == 'high' and word.get('category') == 'noun' and word.get('article'):
+        valid_answers = build_article_answers(word['spanish'], word['article'])
 
     return jsonify({
         'correct': result['correct'],
         'accent_only_miss': result['accent_only_miss'],
-        'valid_answers': word['spanish'],
+        'article_miss': result['article_miss'],
+        'valid_answers': valid_answers,
+        'article': word.get('article'),
     })
 
 @app.route('/api/active-words')
@@ -257,7 +288,8 @@ def get_next_review_word():
             'english': selected['english'],
             'category': selected['category'],
             'hint': selected.get('hint', ''),
-            'rank': selected['rank']
+            'rank': selected['rank'],
+            'article': selected.get('article'),
         },
         'remaining': len(active_words)
     })
@@ -285,7 +317,7 @@ def handle_settings():
     progress = load_progress_json()
     if request.method == 'POST':
         data = request.get_json()
-        if 'strictness' in data and data['strictness'] in ('low', 'high'):
+        if 'strictness' in data and data['strictness'] in ('low', 'medium', 'high'):
             progress['settings']['strictness'] = data['strictness']
         valid_themes = ('default', 'spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic')
         if 'theme' in data and data['theme'] in valid_themes:
