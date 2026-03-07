@@ -5,7 +5,8 @@
       "english": "the",
       "spanish": [
         "el",
-        "la"
+        "la",
+        "lo"
       ],
       "rank": 1,
       "category": "article"
@@ -173,17 +174,6 @@
       "category": "pronoun"
     },
     {
-      "id": 20,
-      "english": "the",
-      "spanish": [
-        "lo",
-        "el",
-        "la"
-      ],
-      "rank": 20,
-      "category": "article"
-    },
-    {
       "id": 21,
       "english": "him/it [direct object]",
       "spanish": [
@@ -260,7 +250,8 @@
       "id": 29,
       "english": "this",
       "spanish": [
-        "este"
+        "este",
+        "esto"
       ],
       "rank": 29,
       "category": "adjective"
@@ -288,7 +279,9 @@
       "id": 32,
       "english": "that",
       "spanish": [
-        "ese"
+        "ese",
+        "eso",
+        "esa"
       ],
       "rank": 32,
       "category": "adjective"
@@ -444,7 +437,8 @@
       "id": 49,
       "english": "my",
       "spanish": [
-        "mi"
+        "mi",
+        "mí"
       ],
       "rank": 49,
       "category": "adjective"
@@ -570,17 +564,6 @@
       ],
       "rank": 62,
       "category": "adjective"
-    },
-    {
-      "id": 63,
-      "english": "that",
-      "spanish": [
-        "eso",
-        "ese",
-        "esa"
-      ],
-      "rank": 63,
-      "category": "pronoun"
     },
     {
       "id": 64,
@@ -953,7 +936,8 @@
       "id": 104,
       "english": "to call, name",
       "spanish": [
-        "llamar"
+        "llamar",
+        "denominar"
       ],
       "rank": 104,
       "category": "verb"
@@ -1003,15 +987,6 @@
       ],
       "rank": 109,
       "category": "conjunction"
-    },
-    {
-      "id": 110,
-      "english": "this",
-      "spanish": [
-        "esto"
-      ],
-      "rank": 110,
-      "category": "pronoun"
     },
     {
       "id": 111,
@@ -1518,7 +1493,8 @@
       "id": 165,
       "english": "side",
       "spanish": [
-        "lado"
+        "lado",
+        "lateral"
       ],
       "rank": 165,
       "category": "noun"
@@ -1536,7 +1512,8 @@
       "id": 167,
       "english": "there, over there",
       "spanish": [
-        "allí"
+        "allí",
+        "allá"
       ],
       "rank": 167,
       "category": "adverb"
@@ -1599,7 +1576,8 @@
       "id": 174,
       "english": "inside",
       "spanish": [
-        "dentro"
+        "dentro",
+        "adentro"
       ],
       "rank": 174,
       "category": "adverb"
@@ -1911,7 +1889,8 @@
       "id": 208,
       "english": "half, middle",
       "spanish": [
-        "medio"
+        "medio",
+        "mitad"
       ],
       "rank": 208,
       "category": "adjective"
@@ -1938,7 +1917,8 @@
       "id": 211,
       "english": "still, yet",
       "spanish": [
-        "todavía"
+        "todavía",
+        "aún"
       ],
       "rank": 211,
       "category": "adverb"
@@ -1975,7 +1955,8 @@
       "id": 215,
       "english": "to remember, remind",
       "spanish": [
-        "recordar"
+        "recordar",
+        "acordar"
       ],
       "rank": 215,
       "category": "verb"
@@ -2046,16 +2027,6 @@
         "lograr"
       ],
       "rank": 222,
-      "category": "verb"
-    },
-    {
-      "id": 223,
-      "english": "to begin, start",
-      "spanish": [
-        "comenzar",
-        "empezar"
-      ],
-      "rank": 223,
       "category": "verb"
     },
     {
@@ -2409,7 +2380,8 @@
       "id": 262,
       "english": "friend",
       "spanish": [
-        "amigo"
+        "amigo",
+        "amiga"
       ],
       "rank": 262,
       "category": "noun"
@@ -2592,15 +2564,6 @@
       "category": "adjective"
     },
     {
-      "id": 282,
-      "english": "still, yet",
-      "spanish": [
-        "aún"
-      ],
-      "rank": 282,
-      "category": "adverb"
-    },
-    {
       "id": 283,
       "english": "theme, subject, topic",
       "spanish": [
@@ -2762,7 +2725,8 @@
       "id": 300,
       "english": "hundred",
       "spanish": [
-        "ciento"
+        "ciento",
+        "centenar"
       ],
       "rank": 300,
       "category": "number"
@@ -2810,16 +2774,6 @@
         "suponer"
       ],
       "rank": 305,
-      "category": "verb"
-    },
-    {
-      "id": 306,
-      "english": "to understand",
-      "spanish": [
-        "comprender",
-        "entender"
-      ],
-      "rank": 306,
       "category": "verb"
     },
     {
@@ -2981,15 +2935,6 @@
       "category": "verb"
     },
     {
-      "id": 324,
-      "english": "there, over there",
-      "spanish": [
-        "allá"
-      ],
-      "rank": 324,
-      "category": "adverb"
-    },
-    {
       "id": 325,
       "english": "to touch, play (instrument)",
       "spanish": [
@@ -3093,18 +3038,10 @@
       "id": 336,
       "english": "only",
       "spanish": [
-        "solamente"
+        "solamente",
+        "únicamente"
       ],
       "rank": 336,
-      "category": "adverb"
-    },
-    {
-      "id": 337,
-      "english": "well",
-      "spanish": [
-        "bien"
-      ],
-      "rank": 337,
       "category": "adverb"
     },
     {
@@ -3167,7 +3104,8 @@
       "id": 344,
       "english": "lack, shortage",
       "spanish": [
-        "falta"
+        "falta",
+        "carencia"
       ],
       "rank": 344,
       "category": "noun"
@@ -3238,15 +3176,6 @@
       "category": "noun"
     },
     {
-      "id": 352,
-      "english": "to be",
-      "spanish": [
-        "ser"
-      ],
-      "rank": 352,
-      "category": "noun"
-    },
-    {
       "id": 353,
       "english": "to be pleasing to",
       "spanish": [
@@ -3281,15 +3210,6 @@
       ],
       "rank": 356,
       "category": "noun"
-    },
-    {
-      "id": 357,
-      "english": "my",
-      "spanish": [
-        "mí"
-      ],
-      "rank": 357,
-      "category": "pronoun"
     },
     {
       "id": 358,
@@ -3340,7 +3260,8 @@
       "id": 363,
       "english": "to complete",
       "spanish": [
-        "cumplir"
+        "cumplir",
+        "completar"
       ],
       "rank": 363,
       "category": "verb"
@@ -3604,7 +3525,8 @@
       "english": "to show",
       "spanish": [
         "mostrar",
-        "enseñar"
+        "enseñar",
+        "demostrar"
       ],
       "rank": 392,
       "category": "verb"
@@ -3623,7 +3545,8 @@
       "english": "third",
       "spanish": [
         "tercero",
-        "tercera"
+        "tercera",
+        "tercio"
       ],
       "rank": 394,
       "category": "adjective"
@@ -3986,7 +3909,8 @@
       "id": 434,
       "english": "knowledge",
       "spanish": [
-        "conocimiento"
+        "conocimiento",
+        "saber"
       ],
       "rank": 434,
       "category": "noun"
@@ -4099,7 +4023,8 @@
       "id": 446,
       "english": "to avoid, prevent",
       "spanish": [
-        "evitar"
+        "evitar",
+        "prevenir"
       ],
       "rank": 446,
       "category": "verb"
@@ -4135,7 +4060,8 @@
       "id": 450,
       "english": "fear",
       "spanish": [
-        "miedo"
+        "miedo",
+        "temor"
       ],
       "rank": 450,
       "category": "noun"
@@ -4479,7 +4405,8 @@
       "id": 487,
       "english": "to be accustomed to",
       "spanish": [
-        "soler"
+        "soler",
+        "acostumbrar"
       ],
       "rank": 487,
       "category": "verb"
@@ -4602,16 +4529,6 @@
         "proponer"
       ],
       "rank": 500,
-      "category": "verb"
-    },
-    {
-      "id": 501,
-      "english": "to show",
-      "spanish": [
-        "demostrar",
-        "mostrar"
-      ],
-      "rank": 501,
       "category": "verb"
     },
     {
@@ -5189,7 +5106,8 @@
       "id": 564,
       "english": "medical doctor",
       "spanish": [
-        "médico"
+        "médico",
+        "médica"
       ],
       "rank": 564,
       "category": "noun"
@@ -5303,15 +5221,6 @@
       ],
       "rank": 576,
       "category": "verb"
-    },
-    {
-      "id": 577,
-      "english": "second",
-      "spanish": [
-        "segundo"
-      ],
-      "rank": 577,
-      "category": "noun"
     },
     {
       "id": 578,
@@ -5465,15 +5374,6 @@
       ],
       "rank": 594,
       "category": "noun"
-    },
-    {
-      "id": 595,
-      "english": "to remember, remind",
-      "spanish": [
-        "acordar"
-      ],
-      "rank": 595,
-      "category": "verb"
     },
     {
       "id": 596,
@@ -5725,7 +5625,8 @@
       "id": 623,
       "english": "future",
       "spanish": [
-        "futuro"
+        "futuro",
+        "futura"
       ],
       "rank": 623,
       "category": "noun"
@@ -5737,16 +5638,6 @@
         "oportunidad"
       ],
       "rank": 624,
-      "category": "noun"
-    },
-    {
-      "id": 625,
-      "english": "half, middle",
-      "spanish": [
-        "mitad",
-        "medio"
-      ],
-      "rank": 625,
       "category": "noun"
     },
     {
@@ -5817,7 +5708,8 @@
       "id": 633,
       "english": "to increase",
       "spanish": [
-        "aumentar"
+        "aumentar",
+        "incrementar"
       ],
       "rank": 633,
       "category": "verb"
@@ -6127,15 +6019,6 @@
       "category": "noun"
     },
     {
-      "id": 667,
-      "english": "well",
-      "spanish": [
-        "bien"
-      ],
-      "rank": 667,
-      "category": "noun"
-    },
-    {
       "id": 668,
       "english": "matter, subject",
       "spanish": [
@@ -6426,7 +6309,8 @@
       "id": 699,
       "english": "to insist on",
       "spanish": [
-        "insistir"
+        "insistir",
+        "empeñarse"
       ],
       "rank": 699,
       "category": "verb"
@@ -6676,7 +6560,8 @@
       "id": 726,
       "english": "to cross",
       "spanish": [
-        "cruzar"
+        "cruzar",
+        "atravesar"
       ],
       "rank": 726,
       "category": "verb"
@@ -7247,16 +7132,6 @@
       "category": "noun"
     },
     {
-      "id": 788,
-      "english": "never",
-      "spanish": [
-        "jamás",
-        "nunca"
-      ],
-      "rank": 788,
-      "category": "adverb"
-    },
-    {
       "id": 789,
       "english": "thought, thinking",
       "spanish": [
@@ -7291,15 +7166,6 @@
       ],
       "rank": 792,
       "category": "verb"
-    },
-    {
-      "id": 793,
-      "english": "saint",
-      "spanish": [
-        "santa"
-      ],
-      "rank": 793,
-      "category": "noun"
     },
     {
       "id": 794,
@@ -7941,7 +7807,8 @@
       "id": 863,
       "english": "recent",
       "spanish": [
-        "recién"
+        "recién",
+        "reciente"
       ],
       "rank": 863,
       "category": "adverb"
@@ -8022,7 +7889,8 @@
       "id": 872,
       "english": "mine",
       "spanish": [
-        "mío"
+        "mío",
+        "mina"
       ],
       "rank": 872,
       "category": "pronoun"
@@ -8290,15 +8158,6 @@
         "pareja"
       ],
       "rank": 901,
-      "category": "noun"
-    },
-    {
-      "id": 902,
-      "english": "past",
-      "spanish": [
-        "pasado"
-      ],
-      "rank": 902,
       "category": "noun"
     },
     {
@@ -8615,15 +8474,6 @@
       ],
       "rank": 936,
       "category": "adverb"
-    },
-    {
-      "id": 937,
-      "english": "to cross",
-      "spanish": [
-        "atravesar"
-      ],
-      "rank": 937,
-      "category": "verb"
     },
     {
       "id": 938,
@@ -9013,7 +8863,8 @@
       "english": "daily",
       "spanish": [
         "diario",
-        "diaria"
+        "diaria",
+        "diariamente"
       ],
       "rank": 979,
       "category": "adjective"
@@ -9232,7 +9083,10 @@
       "id": 1003,
       "english": "to return, give back",
       "spanish": [
-        "devolver"
+        "devolver",
+        "retornar",
+        "regresar",
+        "volver"
       ],
       "rank": 1003,
       "category": "verb"
@@ -9530,7 +9384,8 @@
       "id": 1036,
       "english": "extreme",
       "spanish": [
-        "extremo"
+        "extremo",
+        "extrema"
       ],
       "rank": 1036,
       "category": "noun"
@@ -9539,7 +9394,8 @@
       "id": 1037,
       "english": "individual",
       "spanish": [
-        "individuo"
+        "individuo",
+        "individual"
       ],
       "rank": 1037,
       "category": "noun"
@@ -9711,7 +9567,8 @@
       "id": 1056,
       "english": "hair",
       "spanish": [
-        "pelo"
+        "pelo",
+        "cabello"
       ],
       "rank": 1056,
       "category": "noun"
@@ -9922,7 +9779,8 @@
       "english": "boy",
       "spanish": [
         "chico",
-        "pequeño"
+        "pequeño",
+        "muchacho"
       ],
       "rank": 1079,
       "category": "noun"
@@ -10052,7 +9910,8 @@
       "id": 1093,
       "english": "owner",
       "spanish": [
-        "dueño"
+        "dueño",
+        "propietario"
       ],
       "rank": 1093,
       "category": "noun"
@@ -10297,15 +10156,6 @@
       "category": "adjective"
     },
     {
-      "id": 1120,
-      "english": "cold",
-      "spanish": [
-        "frío"
-      ],
-      "rank": 1120,
-      "category": "noun"
-    },
-    {
       "id": 1121,
       "english": "Sunday",
       "spanish": [
@@ -10531,7 +10381,8 @@
       "id": 1145,
       "english": "speed, velocity",
       "spanish": [
-        "velocidad"
+        "velocidad",
+        "rapidez"
       ],
       "rank": 1145,
       "category": "noun"
@@ -10610,15 +10461,6 @@
       ],
       "rank": 1153,
       "category": "adjective"
-    },
-    {
-      "id": 1154,
-      "english": "fear",
-      "spanish": [
-        "temor"
-      ],
-      "rank": 1154,
-      "category": "noun"
     },
     {
       "id": 1155,
@@ -10756,16 +10598,6 @@
       ],
       "rank": 1169,
       "category": "verb"
-    },
-    {
-      "id": 1170,
-      "english": "medical doctor",
-      "spanish": [
-        "médico",
-        "médica"
-      ],
-      "rank": 1170,
-      "category": "adjective"
     },
     {
       "id": 1171,
@@ -10981,7 +10813,8 @@
       "id": 1194,
       "english": "star",
       "spanish": [
-        "estrella"
+        "estrella",
+        "astro"
       ],
       "rank": 1194,
       "category": "noun"
@@ -11147,7 +10980,8 @@
       "id": 1212,
       "english": "mountain",
       "spanish": [
-        "montaña"
+        "montaña",
+        "monte"
       ],
       "rank": 1212,
       "category": "noun"
@@ -11618,15 +11452,6 @@
       "category": "noun"
     },
     {
-      "id": 1263,
-      "english": "interior, inside",
-      "spanish": [
-        "interior"
-      ],
-      "rank": 1263,
-      "category": "adjective"
-    },
-    {
       "id": 1264,
       "english": "surprise",
       "spanish": [
@@ -11648,7 +11473,8 @@
       "id": 1266,
       "english": "characteristic",
       "spanish": [
-        "característica"
+        "característica",
+        "característico"
       ],
       "rank": 1266,
       "category": "noun"
@@ -11675,7 +11501,8 @@
       "id": 1269,
       "english": "to enjoy",
       "spanish": [
-        "disfrutar"
+        "disfrutar",
+        "gozar"
       ],
       "rank": 1269,
       "category": "verb"
@@ -11955,16 +11782,6 @@
       "category": "noun"
     },
     {
-      "id": 1300,
-      "english": "future",
-      "spanish": [
-        "futuro",
-        "futura"
-      ],
-      "rank": 1300,
-      "category": "adjective"
-    },
-    {
       "id": 1301,
       "english": "to accumulate",
       "spanish": [
@@ -11990,15 +11807,6 @@
         "practicar"
       ],
       "rank": 1303,
-      "category": "verb"
-    },
-    {
-      "id": 1304,
-      "english": "to enjoy",
-      "spanish": [
-        "gozar"
-      ],
-      "rank": 1304,
       "category": "verb"
     },
     {
@@ -12183,15 +11991,6 @@
       "category": "noun"
     },
     {
-      "id": 1325,
-      "english": "similar",
-      "spanish": [
-        "similar"
-      ],
-      "rank": 1325,
-      "category": "adjective"
-    },
-    {
       "id": 1326,
       "english": "to consume, take in",
       "spanish": [
@@ -12246,15 +12045,6 @@
       ],
       "rank": 1331,
       "category": "verb"
-    },
-    {
-      "id": 1332,
-      "english": "recent",
-      "spanish": [
-        "reciente"
-      ],
-      "rank": 1332,
-      "category": "adjective"
     },
     {
       "id": 1333,
@@ -12631,7 +12421,8 @@
       "id": 1373,
       "english": "you",
       "spanish": [
-        "os"
+        "os",
+        "vos"
       ],
       "rank": 1373,
       "category": "pronoun"
@@ -12824,7 +12615,8 @@
       "english": "healthy, wholesome",
       "spanish": [
         "sano",
-        "sana"
+        "sana",
+        "saludable"
       ],
       "rank": 1394,
       "category": "adjective"
@@ -12874,15 +12666,6 @@
       ],
       "rank": 1399,
       "category": "adjective"
-    },
-    {
-      "id": 1400,
-      "english": "general",
-      "spanish": [
-        "general"
-      ],
-      "rank": 1400,
-      "category": "noun"
     },
     {
       "id": 1401,
@@ -12956,15 +12739,6 @@
       ],
       "rank": 1408,
       "category": "verb"
-    },
-    {
-      "id": 1409,
-      "english": "only",
-      "spanish": [
-        "únicamente"
-      ],
-      "rank": 1409,
-      "category": "adverb"
     },
     {
       "id": 1410,
@@ -13629,15 +13403,6 @@
       "category": "adjective"
     },
     {
-      "id": 1482,
-      "english": "individual",
-      "spanish": [
-        "individual"
-      ],
-      "rank": 1482,
-      "category": "adjective"
-    },
-    {
       "id": 1483,
       "english": "to appreciate",
       "spanish": [
@@ -13695,7 +13460,8 @@
       "id": 1489,
       "english": "oh",
       "spanish": [
-        "ah"
+        "ah",
+        "oh"
       ],
       "rank": 1489,
       "category": "interjection"
@@ -13704,7 +13470,8 @@
       "id": 1490,
       "english": "fruit",
       "spanish": [
-        "fruto"
+        "fruto",
+        "fruta"
       ],
       "rank": 1490,
       "category": "noun"
@@ -13713,7 +13480,9 @@
       "id": 1491,
       "english": "representative",
       "spanish": [
-        "representante"
+        "representante",
+        "representativo",
+        "representativa"
       ],
       "rank": 1491,
       "category": "noun"
@@ -14124,7 +13893,8 @@
       "id": 1536,
       "english": "to register, record",
       "spanish": [
-        "registrar"
+        "registrar",
+        "inscribir"
       ],
       "rank": 1536,
       "category": "verb"
@@ -14313,7 +14083,8 @@
       "id": 1557,
       "english": "return",
       "spanish": [
-        "regreso"
+        "regreso",
+        "retorno"
       ],
       "rank": 1557,
       "category": "noun"
@@ -14387,7 +14158,8 @@
       "id": 1565,
       "english": "advance, progress",
       "spanish": [
-        "avance"
+        "avance",
+        "adelanto"
       ],
       "rank": 1565,
       "category": "noun"
@@ -14439,16 +14211,6 @@
       "category": "adjective"
     },
     {
-      "id": 1571,
-      "english": "extreme",
-      "spanish": [
-        "extremo",
-        "extrema"
-      ],
-      "rank": 1571,
-      "category": "adjective"
-    },
-    {
       "id": 1572,
       "english": "in agreement",
       "spanish": [
@@ -14461,7 +14223,8 @@
       "id": 1573,
       "english": "essential",
       "spanish": [
-        "esencial"
+        "esencial",
+        "imprescindible"
       ],
       "rank": 1573,
       "category": "adjective"
@@ -14934,15 +14697,6 @@
       "category": "noun"
     },
     {
-      "id": 1625,
-      "english": "knowledge",
-      "spanish": [
-        "saber"
-      ],
-      "rank": 1625,
-      "category": "noun"
-    },
-    {
       "id": 1626,
       "english": "Argentine",
       "spanish": [
@@ -14961,15 +14715,6 @@
       ],
       "rank": 1627,
       "category": "adjective"
-    },
-    {
-      "id": 1628,
-      "english": "to be accustomed to",
-      "spanish": [
-        "acostumbrar"
-      ],
-      "rank": 1628,
-      "category": "verb"
     },
     {
       "id": 1629,
@@ -15072,15 +14817,6 @@
       ],
       "rank": 1639,
       "category": "adjective"
-    },
-    {
-      "id": 1640,
-      "english": "long",
-      "spanish": [
-        "largo"
-      ],
-      "rank": 1640,
-      "category": "noun"
     },
     {
       "id": 1641,
@@ -15401,7 +15137,8 @@
       "id": 1675,
       "english": "reflection",
       "spanish": [
-        "reflejo"
+        "reflejo",
+        "reflexión"
       ],
       "rank": 1675,
       "category": "noun"
@@ -15507,15 +15244,6 @@
       ],
       "rank": 1686,
       "category": "adjective"
-    },
-    {
-      "id": 1687,
-      "english": "boy",
-      "spanish": [
-        "muchacho"
-      ],
-      "rank": 1687,
-      "category": "noun"
     },
     {
       "id": 1688,
@@ -15636,15 +15364,6 @@
       "category": "noun"
     },
     {
-      "id": 1701,
-      "english": "fruit",
-      "spanish": [
-        "fruta"
-      ],
-      "rank": 1701,
-      "category": "noun"
-    },
-    {
       "id": 1702,
       "english": "ideal, goal",
       "spanish": [
@@ -15762,7 +15481,8 @@
       "id": 1714,
       "english": "worker",
       "spanish": [
-        "trabajador"
+        "trabajador",
+        "obrero"
       ],
       "rank": 1714,
       "category": "noun"
@@ -15796,15 +15516,6 @@
       "category": "adjective"
     },
     {
-      "id": 1718,
-      "english": "to complete",
-      "spanish": [
-        "completar"
-      ],
-      "rank": 1718,
-      "category": "verb"
-    },
-    {
       "id": 1719,
       "english": "cloth, fabric",
       "spanish": [
@@ -15827,7 +15538,8 @@
       "id": 1721,
       "english": "production",
       "spanish": [
-        "producción"
+        "producción",
+        "elaboración"
       ],
       "rank": 1721,
       "category": "noun"
@@ -15928,7 +15640,10 @@
       "id": 1732,
       "english": "understanding",
       "spanish": [
-        "comprensión"
+        "comprensión",
+        "entendimiento",
+        "comprensivo",
+        "comprensiva"
       ],
       "rank": 1732,
       "category": "noun"
@@ -16067,7 +15782,9 @@
       "english": "relative",
       "spanish": [
         "relativo",
-        "relativa"
+        "relativa",
+        "familiar",
+        "pariente"
       ],
       "rank": 1747,
       "category": "adjective"
@@ -16085,7 +15802,8 @@
       "id": 1749,
       "english": "to investigate",
       "spanish": [
-        "investigar"
+        "investigar",
+        "indagar"
       ],
       "rank": 1749,
       "category": "verb"
@@ -16158,7 +15876,8 @@
       "english": "round",
       "spanish": [
         "redondo",
-        "redonda"
+        "redonda",
+        "ronda"
       ],
       "rank": 1757,
       "category": "adjective"
@@ -16502,15 +16221,6 @@
       "category": "noun"
     },
     {
-      "id": 1795,
-      "english": "exterior, outside",
-      "spanish": [
-        "exterior"
-      ],
-      "rank": 1795,
-      "category": "noun"
-    },
-    {
       "id": 1796,
       "english": "sexual",
       "spanish": [
@@ -16575,15 +16285,6 @@
       ],
       "rank": 1802,
       "category": "verb"
-    },
-    {
-      "id": 1803,
-      "english": "when",
-      "spanish": [
-        "cuando"
-      ],
-      "rank": 1803,
-      "category": "adverb"
     },
     {
       "id": 1804,
@@ -16705,16 +16406,6 @@
       "category": "noun"
     },
     {
-      "id": 1817,
-      "english": "friend",
-      "spanish": [
-        "amiga",
-        "amigo"
-      ],
-      "rank": 1817,
-      "category": "noun"
-    },
-    {
       "id": 1818,
       "english": "highway, road",
       "spanish": [
@@ -16737,7 +16428,8 @@
       "english": "effective",
       "spanish": [
         "efectivo",
-        "efectiva"
+        "efectiva",
+        "eficaz"
       ],
       "rank": 1820,
       "category": "adjective"
@@ -16773,7 +16465,8 @@
       "id": 1824,
       "english": "bird",
       "spanish": [
-        "pájaro"
+        "pájaro",
+        "ave"
       ],
       "rank": 1824,
       "category": "noun"
@@ -16785,15 +16478,6 @@
         "biblioteca"
       ],
       "rank": 1825,
-      "category": "noun"
-    },
-    {
-      "id": 1826,
-      "english": "reflection",
-      "spanish": [
-        "reflexión"
-      ],
-      "rank": 1826,
       "category": "noun"
     },
     {
@@ -16952,15 +16636,6 @@
         "privilegio"
       ],
       "rank": 1843,
-      "category": "noun"
-    },
-    {
-      "id": 1844,
-      "english": "mountain",
-      "spanish": [
-        "monte"
-      ],
-      "rank": 1844,
       "category": "noun"
     },
     {
@@ -17125,7 +16800,8 @@
       "english": "Latin",
       "spanish": [
         "latino",
-        "latina"
+        "latina",
+        "latín"
       ],
       "rank": 1862,
       "category": "adjective"
@@ -17184,15 +16860,6 @@
       ],
       "rank": 1868,
       "category": "adverb"
-    },
-    {
-      "id": 1869,
-      "english": "to call, name",
-      "spanish": [
-        "denominar"
-      ],
-      "rank": 1869,
-      "category": "verb"
     },
     {
       "id": 1870,
@@ -17462,15 +17129,6 @@
         "composición"
       ],
       "rank": 1898,
-      "category": "noun"
-    },
-    {
-      "id": 1899,
-      "english": "speed, velocity",
-      "spanish": [
-        "rapidez"
-      ],
-      "rank": 1899,
       "category": "noun"
     },
     {
@@ -17783,15 +17441,6 @@
       "category": "noun"
     },
     {
-      "id": 1934,
-      "english": "relative",
-      "spanish": [
-        "familiar"
-      ],
-      "rank": 1934,
-      "category": "noun"
-    },
-    {
       "id": 1935,
       "english": "worth, merit",
       "spanish": [
@@ -17965,15 +17614,6 @@
         "desastre"
       ],
       "rank": 1953,
-      "category": "noun"
-    },
-    {
-      "id": 1954,
-      "english": "secret",
-      "spanish": [
-        "secreto"
-      ],
-      "rank": 1954,
       "category": "noun"
     },
     {
@@ -18168,15 +17808,6 @@
       "category": "adverb"
     },
     {
-      "id": 1976,
-      "english": "effective",
-      "spanish": [
-        "eficaz"
-      ],
-      "rank": 1976,
-      "category": "adjective"
-    },
-    {
       "id": 1977,
       "english": "lesson",
       "spanish": [
@@ -18368,15 +17999,6 @@
       ],
       "rank": 1997,
       "category": "noun"
-    },
-    {
-      "id": 1998,
-      "english": "to insist on",
-      "spanish": [
-        "empeñarse"
-      ],
-      "rank": 1998,
-      "category": "verb"
     },
     {
       "id": 1999,
@@ -19132,7 +18754,9 @@
       "english": "painful",
       "spanish": [
         "doloroso",
-        "dolorosa"
+        "dolorosa",
+        "penoso",
+        "penosa"
       ],
       "rank": 2080,
       "category": "adjective"
@@ -19163,15 +18787,6 @@
       ],
       "rank": 2083,
       "category": "noun"
-    },
-    {
-      "id": 2084,
-      "english": "inside",
-      "spanish": [
-        "adentro"
-      ],
-      "rank": 2084,
-      "category": "adverb"
     },
     {
       "id": 2085,
@@ -19219,16 +18834,6 @@
       ],
       "rank": 2089,
       "category": "verb"
-    },
-    {
-      "id": 2090,
-      "english": "characteristic",
-      "spanish": [
-        "característico",
-        "característica"
-      ],
-      "rank": 2090,
-      "category": "adjective"
     },
     {
       "id": 2091,
@@ -19632,7 +19237,9 @@
       "id": 2135,
       "english": "native",
       "spanish": [
-        "patria"
+        "patria",
+        "nativo",
+        "nativa"
       ],
       "rank": 2135,
       "category": "noun"
@@ -20229,7 +19836,8 @@
       "id": 2200,
       "english": "adult, grown-up",
       "spanish": [
-        "adulto"
+        "adulto",
+        "adulta"
       ],
       "rank": 2200,
       "category": "noun"
@@ -20286,15 +19894,6 @@
         "vergüenza"
       ],
       "rank": 2206,
-      "category": "noun"
-    },
-    {
-      "id": 2207,
-      "english": "bird",
-      "spanish": [
-        "ave"
-      ],
-      "rank": 2207,
       "category": "noun"
     },
     {
@@ -20618,15 +20217,6 @@
       "category": "adjective"
     },
     {
-      "id": 2243,
-      "english": "worker",
-      "spanish": [
-        "obrero"
-      ],
-      "rank": 2243,
-      "category": "noun"
-    },
-    {
       "id": 2244,
       "english": "stopped, standing",
       "spanish": [
@@ -20722,7 +20312,8 @@
       "id": 2254,
       "english": "to behave",
       "spanish": [
-        "portarse"
+        "portarse",
+        "comportar"
       ],
       "rank": 2254,
       "category": "verb"
@@ -20798,7 +20389,9 @@
       "english": "thick",
       "spanish": [
         "grueso",
-        "gruesa"
+        "gruesa",
+        "espeso",
+        "espesa"
       ],
       "rank": 2262,
       "category": "adjective"
@@ -21084,15 +20677,6 @@
       "category": "noun"
     },
     {
-      "id": 2294,
-      "english": "to behave",
-      "spanish": [
-        "comportar"
-      ],
-      "rank": 2294,
-      "category": "verb"
-    },
-    {
       "id": 2295,
       "english": "basic, essential",
       "spanish": [
@@ -21112,15 +20696,6 @@
       "category": "noun"
     },
     {
-      "id": 2297,
-      "english": "relative",
-      "spanish": [
-        "pariente"
-      ],
-      "rank": 2297,
-      "category": "noun"
-    },
-    {
       "id": 2298,
       "english": "abandoned",
       "spanish": [
@@ -21134,7 +20709,8 @@
       "id": 2299,
       "english": "distribution",
       "spanish": [
-        "distribución"
+        "distribución",
+        "reparto"
       ],
       "rank": 2299,
       "category": "noun"
@@ -21216,15 +20792,6 @@
       ],
       "rank": 2307,
       "category": "adjective"
-    },
-    {
-      "id": 2308,
-      "english": "maximum",
-      "spanish": [
-        "máximo"
-      ],
-      "rank": 2308,
-      "category": "noun"
     },
     {
       "id": 2309,
@@ -21539,15 +21106,6 @@
       "category": "noun"
     },
     {
-      "id": 2343,
-      "english": "minimum",
-      "spanish": [
-        "mínimo"
-      ],
-      "rank": 2343,
-      "category": "noun"
-    },
-    {
       "id": 2344,
       "english": "two hundred",
       "spanish": [
@@ -21639,15 +21197,6 @@
       ],
       "rank": 2353,
       "category": "adjective"
-    },
-    {
-      "id": 2354,
-      "english": "double",
-      "spanish": [
-        "doble"
-      ],
-      "rank": 2354,
-      "category": "noun"
     },
     {
       "id": 2355,
@@ -21958,7 +21507,9 @@
       "english": "proud, arrogant",
       "spanish": [
         "orgulloso",
-        "orgullosa"
+        "orgullosa",
+        "soberbio",
+        "soberbia"
       ],
       "rank": 2388,
       "category": "adjective"
@@ -22186,7 +21737,8 @@
       "id": 2413,
       "english": "East",
       "spanish": [
-        "oriente"
+        "oriente",
+        "este"
       ],
       "rank": 2413,
       "category": "noun"
@@ -23213,15 +22765,6 @@
       "category": "noun"
     },
     {
-      "id": 2526,
-      "english": "owner",
-      "spanish": [
-        "propietario"
-      ],
-      "rank": 2526,
-      "category": "noun"
-    },
-    {
       "id": 2527,
       "english": "piece, chunk",
       "spanish": [
@@ -24053,15 +23596,6 @@
       "category": "noun"
     },
     {
-      "id": 2617,
-      "english": "essential",
-      "spanish": [
-        "imprescindible"
-      ],
-      "rank": 2617,
-      "category": "adjective"
-    },
-    {
       "id": 2618,
       "english": "noon, midday observaba",
       "spanish": [
@@ -24674,16 +24208,6 @@
       "category": "noun"
     },
     {
-      "id": 2685,
-      "english": "adult, grown-up",
-      "spanish": [
-        "adulto",
-        "adulta"
-      ],
-      "rank": 2685,
-      "category": "adjective"
-    },
-    {
       "id": 2686,
       "english": "municipal, town",
       "spanish": [
@@ -24990,7 +24514,8 @@
       "id": 2719,
       "english": "previously",
       "spanish": [
-        "anteriormente"
+        "anteriormente",
+        "previamente"
       ],
       "rank": 2719,
       "category": "adverb"
@@ -25143,15 +24668,6 @@
       "category": "noun"
     },
     {
-      "id": 2736,
-      "english": "oh",
-      "spanish": [
-        "oh"
-      ],
-      "rank": 2736,
-      "category": "interjection"
-    },
-    {
       "id": 2737,
       "english": "pretext, excuse",
       "spanish": [
@@ -25206,15 +24722,6 @@
       "category": "noun"
     },
     {
-      "id": 2743,
-      "english": "East",
-      "spanish": [
-        "este"
-      ],
-      "rank": 2743,
-      "category": "noun"
-    },
-    {
       "id": 2744,
       "english": "nerve",
       "spanish": [
@@ -25239,15 +24746,6 @@
         "peculiar"
       ],
       "rank": 2746,
-      "category": "adjective"
-    },
-    {
-      "id": 2747,
-      "english": "exemplary, model",
-      "spanish": [
-        "ejemplar"
-      ],
-      "rank": 2747,
       "category": "adjective"
     },
     {
@@ -26566,15 +26064,6 @@
       "category": "adjective"
     },
     {
-      "id": 2891,
-      "english": "previously",
-      "spanish": [
-        "previamente"
-      ],
-      "rank": 2891,
-      "category": "adverb"
-    },
-    {
       "id": 2892,
       "english": "to draw, trace",
       "spanish": [
@@ -26832,15 +26321,6 @@
       "category": "noun"
     },
     {
-      "id": 2920,
-      "english": "hair",
-      "spanish": [
-        "cabello"
-      ],
-      "rank": 2920,
-      "category": "noun"
-    },
-    {
       "id": 2921,
       "english": "usefulness, utility",
       "spanish": [
@@ -27081,7 +26561,8 @@
       "id": 2947,
       "english": "plastic",
       "spanish": [
-        "plástico"
+        "plástico",
+        "plástica"
       ],
       "rank": 2947,
       "category": "noun"
@@ -27456,16 +26937,6 @@
       "category": "adjective"
     },
     {
-      "id": 2988,
-      "english": "plastic",
-      "spanish": [
-        "plástico",
-        "plástica"
-      ],
-      "rank": 2988,
-      "category": "adjective"
-    },
-    {
       "id": 2989,
       "english": "feeding, food",
       "spanish": [
@@ -27689,15 +27160,6 @@
       "category": "verb"
     },
     {
-      "id": 3013,
-      "english": "mine",
-      "spanish": [
-        "mina"
-      ],
-      "rank": 3013,
-      "category": "noun"
-    },
-    {
       "id": 3014,
       "english": "restaurant",
       "spanish": [
@@ -27890,15 +27352,6 @@
       "category": "noun"
     },
     {
-      "id": 3035,
-      "english": "return",
-      "spanish": [
-        "retorno"
-      ],
-      "rank": 3035,
-      "category": "noun"
-    },
-    {
       "id": 3036,
       "english": "to smell",
       "spanish": [
@@ -27935,15 +27388,6 @@
       ],
       "rank": 3039,
       "category": "adjective"
-    },
-    {
-      "id": 3040,
-      "english": "Latin",
-      "spanish": [
-        "latín"
-      ],
-      "rank": 3040,
-      "category": "noun"
     },
     {
       "id": 3041,
@@ -28204,7 +27648,8 @@
       "id": 3069,
       "english": "prisoner",
       "spanish": [
-        "preso"
+        "preso",
+        "prisionero"
       ],
       "rank": 3069,
       "category": "noun"
@@ -28249,7 +27694,8 @@
       "id": 3074,
       "english": "stupidity, stupid thing",
       "spanish": [
-        "tontería"
+        "tontería",
+        "estupidez"
       ],
       "rank": 3074,
       "category": "noun"
@@ -28641,7 +28087,8 @@
       "id": 3117,
       "english": "decline",
       "spanish": [
-        "decadencia"
+        "decadencia",
+        "descenso"
       ],
       "rank": 3117,
       "category": "noun"
@@ -28960,15 +28407,6 @@
       "category": "noun"
     },
     {
-      "id": 3152,
-      "english": "understanding",
-      "spanish": [
-        "entendimiento"
-      ],
-      "rank": 3152,
-      "category": "noun"
-    },
-    {
       "id": 3153,
       "english": "to turn/knock over, empty",
       "spanish": [
@@ -29182,19 +28620,12 @@
       "category": "adjective"
     },
     {
-      "id": 3176,
-      "english": "prisoner",
-      "spanish": [
-        "prisionero"
-      ],
-      "rank": 3176,
-      "category": "noun"
-    },
-    {
       "id": 3177,
       "english": "tourist",
       "spanish": [
-        "turista"
+        "turista",
+        "turístico",
+        "turística"
       ],
       "rank": 3177,
       "category": "noun"
@@ -29390,15 +28821,6 @@
       ],
       "rank": 3198,
       "category": "verb"
-    },
-    {
-      "id": 3199,
-      "english": "lack, shortage",
-      "spanish": [
-        "carencia"
-      ],
-      "rank": 3199,
-      "category": "noun"
     },
     {
       "id": 3200,
@@ -30039,15 +29461,6 @@
       ],
       "rank": 3269,
       "category": "adjective"
-    },
-    {
-      "id": 3270,
-      "english": "to avoid, prevent",
-      "spanish": [
-        "prevenir"
-      ],
-      "rank": 3270,
-      "category": "verb"
     },
     {
       "id": 3271,
@@ -31064,16 +30477,6 @@
       "category": "noun"
     },
     {
-      "id": 3381,
-      "english": "native",
-      "spanish": [
-        "nativo",
-        "nativa"
-      ],
-      "rank": 3381,
-      "category": "adjective"
-    },
-    {
       "id": 3382,
       "english": "bedroom, dormitory",
       "spanish": [
@@ -31187,7 +30590,9 @@
       "english": "sudden",
       "spanish": [
         "repentino",
-        "repentina"
+        "repentina",
+        "súbito",
+        "súbita"
       ],
       "rank": 3394,
       "category": "adjective"
@@ -31510,15 +30915,6 @@
       "category": "noun"
     },
     {
-      "id": 3430,
-      "english": "you",
-      "spanish": [
-        "vos"
-      ],
-      "rank": 3430,
-      "category": "pronoun"
-    },
-    {
       "id": 3431,
       "english": "Wednesday",
       "spanish": [
@@ -31570,15 +30966,6 @@
         "civil"
       ],
       "rank": 3436,
-      "category": "noun"
-    },
-    {
-      "id": 3437,
-      "english": "distribution",
-      "spanish": [
-        "reparto"
-      ],
-      "rank": 3437,
       "category": "noun"
     },
     {
@@ -31644,15 +31031,6 @@
       ],
       "rank": 3444,
       "category": "verb"
-    },
-    {
-      "id": 3445,
-      "english": "key",
-      "spanish": [
-        "clave"
-      ],
-      "rank": 3445,
-      "category": "adjective"
     },
     {
       "id": 3446,
@@ -31963,15 +31341,6 @@
         "pesadilla"
       ],
       "rank": 3479,
-      "category": "noun"
-    },
-    {
-      "id": 3480,
-      "english": "hundred",
-      "spanish": [
-        "centenar"
-      ],
-      "rank": 3480,
       "category": "noun"
     },
     {
@@ -32369,15 +31738,6 @@
       "category": "noun"
     },
     {
-      "id": 3524,
-      "english": "daily",
-      "spanish": [
-        "diariamente"
-      ],
-      "rank": 3524,
-      "category": "adverb"
-    },
-    {
       "id": 3525,
       "english": "climax",
       "spanish": [
@@ -32486,16 +31846,6 @@
         "incierta"
       ],
       "rank": 3536,
-      "category": "adjective"
-    },
-    {
-      "id": 3537,
-      "english": "thick",
-      "spanish": [
-        "espeso",
-        "espesa"
-      ],
-      "rank": 3537,
       "category": "adjective"
     },
     {
@@ -32894,15 +32244,6 @@
       "category": "verb"
     },
     {
-      "id": 3581,
-      "english": "original",
-      "spanish": [
-        "original"
-      ],
-      "rank": 3581,
-      "category": "noun"
-    },
-    {
       "id": 3582,
       "english": "machinery",
       "spanish": [
@@ -32936,15 +32277,6 @@
         "tortura"
       ],
       "rank": 3585,
-      "category": "noun"
-    },
-    {
-      "id": 3586,
-      "english": "human",
-      "spanish": [
-        "humano"
-      ],
-      "rank": 3586,
       "category": "noun"
     },
     {
@@ -33442,15 +32774,6 @@
       "category": "noun"
     },
     {
-      "id": 3641,
-      "english": "decline",
-      "spanish": [
-        "descenso"
-      ],
-      "rank": 3641,
-      "category": "noun"
-    },
-    {
       "id": 3642,
       "english": "to classify, sort, file",
       "spanish": [
@@ -33642,15 +32965,6 @@
       ],
       "rank": 3662,
       "category": "verb"
-    },
-    {
-      "id": 3663,
-      "english": "production",
-      "spanish": [
-        "elaboración"
-      ],
-      "rank": 3663,
-      "category": "noun"
     },
     {
       "id": 3664,
@@ -34322,16 +33636,6 @@
       "category": "noun"
     },
     {
-      "id": 3737,
-      "english": "painful",
-      "spanish": [
-        "penoso",
-        "penosa"
-      ],
-      "rank": 3737,
-      "category": "adjective"
-    },
-    {
       "id": 3738,
       "english": "insecurity",
       "spanish": [
@@ -34475,17 +33779,6 @@
       ],
       "rank": 3753,
       "category": "adverb"
-    },
-    {
-      "id": 3754,
-      "english": "to return, give back",
-      "spanish": [
-        "retornar",
-        "regresar",
-        "volver"
-      ],
-      "rank": 3754,
-      "category": "verb"
     },
     {
       "id": 3755,
@@ -34770,15 +34063,6 @@
       "category": "noun"
     },
     {
-      "id": 3786,
-      "english": "round",
-      "spanish": [
-        "ronda"
-      ],
-      "rank": 3786,
-      "category": "noun"
-    },
-    {
       "id": 3787,
       "english": "to mobilize",
       "spanish": [
@@ -34922,15 +34206,6 @@
       ],
       "rank": 3802,
       "category": "noun"
-    },
-    {
-      "id": 3803,
-      "english": "healthy, wholesome",
-      "spanish": [
-        "saludable"
-      ],
-      "rank": 3803,
-      "category": "adjective"
     },
     {
       "id": 3804,
@@ -35626,15 +34901,6 @@
       "category": "adjective"
     },
     {
-      "id": 3880,
-      "english": "uniform",
-      "spanish": [
-        "uniforme"
-      ],
-      "rank": 3880,
-      "category": "adjective"
-    },
-    {
       "id": 3881,
       "english": "hymn, anthem",
       "spanish": [
@@ -36083,16 +35349,6 @@
       "category": "noun"
     },
     {
-      "id": 3930,
-      "english": "representative",
-      "spanish": [
-        "representativo",
-        "representativa"
-      ],
-      "rank": 3930,
-      "category": "adjective"
-    },
-    {
       "id": 3931,
       "english": "to honor",
       "spanish": [
@@ -36253,7 +35509,8 @@
       "english": "additional",
       "spanish": [
         "complementario",
-        "complementaria"
+        "complementaria",
+        "adicional"
       ],
       "rank": 3948,
       "category": "adjective"
@@ -36337,7 +35594,8 @@
       "id": 3957,
       "english": "contribution",
       "spanish": [
-        "aporte"
+        "aporte",
+        "contribución"
       ],
       "rank": 3957,
       "category": "noun"
@@ -36395,15 +35653,6 @@
         "disipar"
       ],
       "rank": 3963,
-      "category": "verb"
-    },
-    {
-      "id": 3964,
-      "english": "to increase",
-      "spanish": [
-        "incrementar"
-      ],
-      "rank": 3964,
       "category": "verb"
     },
     {
@@ -36617,15 +35866,6 @@
       "category": "noun"
     },
     {
-      "id": 3988,
-      "english": "third",
-      "spanish": [
-        "tercio"
-      ],
-      "rank": 3988,
-      "category": "noun"
-    },
-    {
       "id": 3989,
       "english": "illumination, lighting",
       "spanish": [
@@ -36660,15 +35900,6 @@
       ],
       "rank": 3992,
       "category": "noun"
-    },
-    {
-      "id": 3993,
-      "english": "to register, record",
-      "spanish": [
-        "inscribir"
-      ],
-      "rank": 3993,
-      "category": "verb"
     },
     {
       "id": 3994,
@@ -36787,15 +36018,6 @@
       ],
       "rank": 4006,
       "category": "noun"
-    },
-    {
-      "id": 4007,
-      "english": "side",
-      "spanish": [
-        "lateral"
-      ],
-      "rank": 4007,
-      "category": "adjective"
     },
     {
       "id": 4008,
@@ -36919,7 +36141,8 @@
       "id": 4021,
       "english": "respectable",
       "spanish": [
-        "respetable"
+        "respetable",
+        "decente"
       ],
       "rank": 4021,
       "category": "adjective"
@@ -37001,7 +36224,8 @@
       "id": 4030,
       "english": "convincing",
       "spanish": [
-        "convincente"
+        "convincente",
+        "convencimiento"
       ],
       "rank": 4030,
       "category": "adjective"
@@ -37861,15 +37085,6 @@
       "category": "adjective"
     },
     {
-      "id": 4124,
-      "english": "additional",
-      "spanish": [
-        "adicional"
-      ],
-      "rank": 4124,
-      "category": "adjective"
-    },
-    {
       "id": 4125,
       "english": "sculpture, carving",
       "spanish": [
@@ -37914,16 +37129,6 @@
         "óptima"
       ],
       "rank": 4129,
-      "category": "adjective"
-    },
-    {
-      "id": 4130,
-      "english": "sudden",
-      "spanish": [
-        "súbito",
-        "súbita"
-      ],
-      "rank": 4130,
       "category": "adjective"
     },
     {
@@ -38237,15 +37442,6 @@
       "category": "noun"
     },
     {
-      "id": 4165,
-      "english": "criminal",
-      "spanish": [
-        "criminal"
-      ],
-      "rank": 4165,
-      "category": "adjective"
-    },
-    {
       "id": 4166,
       "english": "coherent, connected",
       "spanish": [
@@ -38261,15 +37457,6 @@
         "falla"
       ],
       "rank": 4167,
-      "category": "noun"
-    },
-    {
-      "id": 4168,
-      "english": "contribution",
-      "spanish": [
-        "contribución"
-      ],
-      "rank": 4168,
       "category": "noun"
     },
     {
@@ -38646,15 +37833,6 @@
         "imitación"
       ],
       "rank": 4209,
-      "category": "noun"
-    },
-    {
-      "id": 4210,
-      "english": "advance, progress",
-      "spanish": [
-        "adelanto"
-      ],
-      "rank": 4210,
       "category": "noun"
     },
     {
@@ -39509,15 +38687,6 @@
       "category": "noun"
     },
     {
-      "id": 4304,
-      "english": "virgin",
-      "spanish": [
-        "virgen"
-      ],
-      "rank": 4304,
-      "category": "adjective"
-    },
-    {
       "id": 4305,
       "english": "witch, hag",
       "spanish": [
@@ -40226,15 +39395,6 @@
       "category": "adjective"
     },
     {
-      "id": 4382,
-      "english": "stupidity, stupid thing",
-      "spanish": [
-        "estupidez"
-      ],
-      "rank": 4382,
-      "category": "noun"
-    },
-    {
       "id": 4383,
       "english": "wet",
       "spanish": [
@@ -40936,15 +40096,6 @@
       "category": "noun"
     },
     {
-      "id": 4459,
-      "english": "adolescent",
-      "spanish": [
-        "adolescente"
-      ],
-      "rank": 4459,
-      "category": "adjective"
-    },
-    {
       "id": 4460,
       "english": "to head, lead (off)",
       "spanish": [
@@ -41453,15 +40604,6 @@
       "category": "noun"
     },
     {
-      "id": 4515,
-      "english": "to investigate",
-      "spanish": [
-        "indagar"
-      ],
-      "rank": 4515,
-      "category": "verb"
-    },
-    {
       "id": 4516,
       "english": "dizzying",
       "spanish": [
@@ -41469,15 +40611,6 @@
         "vertiginosa"
       ],
       "rank": 4516,
-      "category": "adjective"
-    },
-    {
-      "id": 4517,
-      "english": "respectable",
-      "spanish": [
-        "decente"
-      ],
-      "rank": 4517,
       "category": "adjective"
     },
     {
@@ -41679,15 +40812,6 @@
         "euforia"
       ],
       "rank": 4539,
-      "category": "noun"
-    },
-    {
-      "id": 4540,
-      "english": "convincing",
-      "spanish": [
-        "convencimiento"
-      ],
-      "rank": 4540,
       "category": "noun"
     },
     {
@@ -41977,16 +41101,6 @@
       "category": "noun"
     },
     {
-      "id": 4572,
-      "english": "tourist",
-      "spanish": [
-        "turístico",
-        "turística"
-      ],
-      "rank": 4572,
-      "category": "adjective"
-    },
-    {
       "id": 4573,
       "english": "to clear (up)",
       "spanish": [
@@ -42011,16 +41125,6 @@
         "impecable"
       ],
       "rank": 4575,
-      "category": "adjective"
-    },
-    {
-      "id": 4576,
-      "english": "proud, arrogant",
-      "spanish": [
-        "soberbio",
-        "soberbia"
-      ],
-      "rank": 4576,
       "category": "adjective"
     },
     {
@@ -43275,16 +42379,6 @@
       "category": "noun"
     },
     {
-      "id": 4713,
-      "english": "understanding",
-      "spanish": [
-        "comprensivo",
-        "comprensiva"
-      ],
-      "rank": 4713,
-      "category": "adjective"
-    },
-    {
       "id": 4714,
       "english": "hollow",
       "spanish": [
@@ -43575,15 +42669,6 @@
         "violín"
       ],
       "rank": 4745,
-      "category": "noun"
-    },
-    {
-      "id": 4746,
-      "english": "star",
-      "spanish": [
-        "astro"
-      ],
-      "rank": 4746,
       "category": "noun"
     },
     {
@@ -43886,15 +42971,6 @@
         "limosna"
       ],
       "rank": 4779,
-      "category": "noun"
-    },
-    {
-      "id": 4780,
-      "english": "equivalent",
-      "spanish": [
-        "equivalente"
-      ],
-      "rank": 4780,
       "category": "noun"
     },
     {
@@ -45178,15 +44254,6 @@
       ],
       "rank": 4920,
       "category": "adverb"
-    },
-    {
-      "id": 4921,
-      "english": "plant, vegetable",
-      "spanish": [
-        "vegetal"
-      ],
-      "rank": 4921,
-      "category": "noun"
     },
     {
       "id": 4922,
