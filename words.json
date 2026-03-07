@@ -9340,7 +9340,8 @@
       "id": 1015,
       "english": "to divide",
       "spanish": [
-        "dividir"
+        "dividir",
+        "repartir"
       ],
       "rank": 1015,
       "category": "verb"
@@ -9964,7 +9965,7 @@
     },
     {
       "id": 1084,
-      "english": "curious, strange",
+      "english": "curious",
       "spanish": [
         "curioso",
         "curiosa"
@@ -10003,7 +10004,8 @@
       "id": 1088,
       "english": "present, current",
       "spanish": [
-        "presente"
+        "presente",
+        "actual"
       ],
       "rank": 1088,
       "category": "adjective"
@@ -10111,7 +10113,7 @@
     },
     {
       "id": 1100,
-      "english": "to try, seek",
+      "english": "to try, make sure",
       "spanish": [
         "procurar"
       ],
@@ -10674,9 +10676,9 @@
     },
     {
       "id": 1161,
-      "english": "to divide",
+      "english": "to distribute, divide, give out",
       "spanish": [
-        "repartir"
+        "repartir",
       ],
       "rank": 1161,
       "category": "verb"
@@ -10685,7 +10687,8 @@
       "id": 1162,
       "english": "start, beginning",
       "spanish": [
-        "comienzo"
+        "comienzo",
+        "empiezo
       ],
       "rank": 1162,
       "category": "noun"
@@ -11096,7 +11099,7 @@
     },
     {
       "id": 1207,
-      "english": "to",
+      "english": "to destroy",
       "spanish": [
         "destruir"
       ],
@@ -11208,7 +11211,8 @@
       "id": 1219,
       "english": "to move, transfer",
       "spanish": [
-        "trasladar"
+        "trasladar",
+        "mudarse"
       ],
       "rank": 1219,
       "category": "verb"
@@ -11257,8 +11261,11 @@
         "hermoso",
         "hermosa",
         "bonito",
+        "bonita",
+        "linda",
         "lindo",
-        "bello"
+        "bello",
+        "bella"
       ],
       "rank": 1224,
       "category": "adjective"
@@ -11274,7 +11281,7 @@
     },
     {
       "id": 1226,
-      "english": "advantage, benefit",
+      "english": "advantage",
       "spanish": [
         "ventaja"
       ],
