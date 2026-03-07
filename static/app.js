@@ -78,6 +78,8 @@ function initProgress() {
     }
     if (!localProgress.settings) localProgress.settings = {};
     currentLevel = localProgress.settings.level || 1;
+    currentTheme = localProgress.settings.theme || 'default';
+    applyTheme(currentTheme);
 }
 
 function saveLocalProgress() {
@@ -547,6 +549,8 @@ async function setTheme(theme) {
             body: JSON.stringify({ theme })
         });
         currentTheme = theme;
+        localProgress.settings.theme = theme;
+        saveLocalProgress();
         applyTheme(theme);
         updateThemeUI();
         closeThemeModal();

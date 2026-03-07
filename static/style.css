@@ -918,10 +918,10 @@ footer {
 }
 
 .default-preview            { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.spain-preview              { background: linear-gradient(135deg, #c60b1e 0%, #ffc400 100%); }
+.spain-preview              { background: linear-gradient(to bottom, #c60b1e 25%, #ffc400 25% 75%, #c60b1e 75%); }
 .mexico-preview             { background: linear-gradient(135deg, #006847 0%, #ce1126 100%); }
 .costa-rica-preview         { background: linear-gradient(135deg, #023e8a 0%, #ce1126 100%); }
-.colombia-preview           { background: linear-gradient(90deg, #fcd116 33%, #003087 33% 66%, #ce1126 66%); }
+.colombia-preview           { background: linear-gradient(to bottom, #fcd116 50%, #003087 50% 75%, #ce1126 75%); }
 .dominican-republic-preview { background: linear-gradient(135deg, #002D62 0%, #CE1126 100%); }
 
 .theme-flag {
