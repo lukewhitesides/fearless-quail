@@ -12657,6 +12657,8 @@
         "bella",
         "bonito",
         "lindo",
+        "linda"'
+        "hermosa"
         "hermoso"
       ],
       "rank": 1338,
@@ -12703,7 +12705,7 @@
     },
     {
       "id": 1343,
-      "english": "behavior, conduct",
+      "english": "behavior",
       "spanish": [
         "comportamiento"
       ],
@@ -12859,7 +12861,7 @@
     },
     {
       "id": 1359,
-      "english": "sign, mark, symbol",
+      "english": "sign",
       "spanish": [
         "signo"
       ],
@@ -12869,7 +12871,7 @@
     },
     {
       "id": 1360,
-      "english": "sign, mark, token",
+      "english": "sign, signal, token",
       "spanish": [
         "señal"
       ],
@@ -12995,7 +12997,7 @@
     },
     {
       "id": 1373,
-      "english": "you",
+      "english": "you [informal/plural/Spain]",
       "spanish": [
         "os",
         "vos"
@@ -13141,7 +13143,7 @@
     },
     {
       "id": 1388,
-      "english": "conduct, behavior",
+      "english": "conduct",
       "spanish": [
         "conducta"
       ],
@@ -13565,7 +13567,7 @@
     },
     {
       "id": 1434,
-      "english": "daily memoria",
+      "english": "daily",
       "spanish": [
         "cotidiano",
         "cotidiana"
@@ -13994,7 +13996,7 @@
       "id": 1478,
       "english": "moment, while, time",
       "spanish": [
-        "rato"
+        "rato",
       ],
       "rank": 1478,
       "category": "noun",
