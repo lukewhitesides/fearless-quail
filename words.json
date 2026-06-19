@@ -15998,7 +15998,7 @@
     },
     {
       "id": 1690,
-      "english": "entrance, admission, income realidad",
+      "english": "entrance, admission, income",
       "spanish": [
         "ingreso"
       ],
@@ -16128,7 +16128,8 @@
       "english": "your",
       "spanish": [
         "ti",
-        "tuyo"
+        "tuyo",
+        "tu"
       ],
       "rank": 1704,
       "category": "pronoun"
@@ -16177,7 +16178,7 @@
     },
     {
       "id": 1709,
-      "english": "current, common",
+      "english": "current",
       "spanish": [
         "corriente"
       ],
@@ -16466,7 +16467,7 @@
     },
     {
       "id": 1739,
-      "english": "to",
+      "english": "to derive from",
       "spanish": [
         "derivar"
       ],
@@ -17162,7 +17163,7 @@
     },
     {
       "id": 1813,
-      "english": "triumph, victory",
+      "english": "triumph",
       "spanish": [
         "triunfo"
       ],
@@ -18623,7 +18624,7 @@
     },
     {
       "id": 1970,
-      "english": "convenient opinar",
+      "english": "convenient",
       "spanish": [
         "conveniente"
       ],
@@ -21361,7 +21362,7 @@
     },
     {
       "id": 2256,
-      "english": "approximately coche",
+      "english": "approximately",
       "spanish": [
         "aproximadamente"
       ],
@@ -22072,7 +22073,7 @@
     },
     {
       "id": 2332,
-      "english": "to",
+      "english": "to denounce",
       "spanish": [
         "denunciar"
       ],
@@ -23055,7 +23056,7 @@
     },
     {
       "id": 2435,
-      "english": "concert, concerto",
+      "english": "concert",
       "spanish": [
         "concierto"
       ],
@@ -25586,7 +25587,7 @@
     },
     {
       "id": 2697,
-      "english": "to triumph compliment",
+      "english": "to triumph",
       "spanish": [
         "triunfar"
       ],
@@ -25625,7 +25626,7 @@
     },
     {
       "id": 2701,
-      "english": "school, scholastic hogar",
+      "english": "school, scholastic",
       "spanish": [
         "escolar"
       ],
@@ -27146,7 +27147,8 @@
       "spanish": [
         "agotado",
         "agotada",
-        "cansado"
+        "cansado",
+        "cansada"
       ],
       "rank": 2861,
       "category": "adjective"
@@ -27183,7 +27185,7 @@
     },
     {
       "id": 2865,
-      "english": "button caucho",
+      "english": "button",
       "spanish": [
         "botón"
       ],
@@ -27222,7 +27224,7 @@
     },
     {
       "id": 2869,
-      "english": "to",
+      "english": "to deduce",
       "spanish": [
         "deducir"
       ],
@@ -27406,8 +27408,7 @@
       "id": 2888,
       "english": "telephone",
       "spanish": [
-        "telefónico",
-        "telefónica"
+        "telefóno"
       ],
       "rank": 2888,
       "category": "adjective"
@@ -27606,7 +27607,7 @@
     },
     {
       "id": 2910,
-      "english": "to",
+      "english": "to design",
       "spanish": [
         "diseñar"
       ],
@@ -31497,7 +31498,7 @@
     },
     {
       "id": 3320,
-      "english": "to",
+      "english": "to delay",
       "spanish": [
         "demorar"
       ],
@@ -41424,7 +41425,7 @@
     },
     {
       "id": 4370,
-      "english": "to",
+      "english": "to devour",
       "spanish": [
         "devorar"
       ],
@@ -43966,7 +43967,7 @@
     },
     {
       "id": 4639,
-      "english": "to",
+      "english": "to damage, to spoil",
       "spanish": [
         "deteriorar"
       ],
