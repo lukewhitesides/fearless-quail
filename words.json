@@ -29513,7 +29513,7 @@
     },
     {
       "id": 3111,
-      "english": "poner",
+      "english": "manifesto",
       "spanish": [
         "manifiesto"
       ],
@@ -29622,7 +29622,8 @@
       "id": 3122,
       "english": "nurse",
       "spanish": [
-        "enfermero"
+        "enfermero",
+        "enfermera"
       ],
       "rank": 3122,
       "category": "noun",
@@ -30404,7 +30405,7 @@
     },
     {
       "id": 3206,
-      "english": "seriously furia",
+      "english": "seriously",
       "spanish": [
         "seriamente"
       ],
@@ -30647,7 +30648,7 @@
     },
     {
       "id": 3231,
-      "english": "chicken oscuridad",
+      "english": "chicken",
       "spanish": [
         "pollo"
       ],
@@ -30666,7 +30667,7 @@
     },
     {
       "id": 3233,
-      "english": "transcendent nature",
+      "english": "transcendence",
       "spanish": [
         "trascendencia"
       ],
@@ -30888,7 +30889,7 @@
     },
     {
       "id": 3256,
-      "english": "verbal, oral gran",
+      "english": "verbal",
       "spanish": [
         "verbal"
       ],
@@ -30899,7 +30900,7 @@
       "id": 3257,
       "english": "mathematics",
       "spanish": [
-        "matemática"
+        "matemáticas"
       ],
       "rank": 3257,
       "category": "noun",
@@ -34356,7 +34357,7 @@
     },
     {
       "id": 3623,
-      "english": "to narrate, tell profesionales",
+      "english": "to narrate, tell",
       "spanish": [
         "narrar"
       ],
@@ -34983,7 +34984,7 @@
     },
     {
       "id": 3690,
-      "english": "feeling",
+      "english": "to feel",
       "spanish": [
         "sentir"
       ],
@@ -35519,7 +35520,7 @@
     },
     {
       "id": 3746,
-      "english": "to question. interrogate",
+      "english": "to interrogate",
       "spanish": [
         "interrogar"
       ],
@@ -36328,7 +36329,7 @@
     },
     {
       "id": 3833,
-      "english": "cupola, dome",
+      "english": "dome",
       "spanish": [
         "cúpula"
       ],
