@@ -282,8 +282,8 @@ async function loadNextWord() {
 }
 
 async function checkAnswer() {
+    // An empty answer is allowed and counts as incorrect
     const userAnswer = answerInput.value.trim();
-    if (!userAnswer) { answerInput.focus(); return; }
     if (!currentWord) return;
 
     try {
