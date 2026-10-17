@@ -39525,7 +39525,7 @@
     },
     {
       "id": 4172,
-      "english": "pearl resultado",
+      "english": "pearl",
       "spanish": [
         "perla"
       ],
@@ -39535,7 +39535,7 @@
     },
     {
       "id": 4173,
-      "english": "ethical enfermedad",
+      "english": "ethical",
       "spanish": [
         "ético",
         "ética"
@@ -40329,7 +40329,7 @@
     },
     {
       "id": 4256,
-      "english": "handle, mango",
+      "english": "mango",
       "spanish": [
         "mango"
       ],
@@ -41145,9 +41145,9 @@
     },
     {
       "id": 4341,
-      "english": "a bordo: on board",
+      "english": "on board",
       "spanish": [
-        "bordo"
+        "a bordo"
       ],
       "rank": 4341,
       "category": "noun",
@@ -42792,7 +42792,7 @@
       "id": 4513,
       "english": "to become ill",
       "spanish": [
-        "enfermar"
+        "enfermarse"
       ],
       "rank": 4513,
       "category": "verb"
@@ -43508,7 +43508,7 @@
     },
     {
       "id": 4592,
-      "english": "(el) (meeting) proceedings, minutes",
+      "english": "proceedings, minutes",
       "spanish": [
         "acta"
       ],
@@ -43811,7 +43811,7 @@
     },
     {
       "id": 4623,
-      "english": "tactics, strategy",
+      "english": "tactics",
       "spanish": [
         "táctica"
       ],
@@ -44543,7 +44543,8 @@
       "id": 4698,
       "english": "surgeon",
       "spanish": [
-        "cirujano"
+        "cirujano",
+        "cirujana"
       ],
       "rank": 4698,
       "category": "noun",
@@ -44766,7 +44767,8 @@
       "id": 4722,
       "english": "diplomat",
       "spanish": [
-        "diplomático"
+        "diplomático",
+        "diplomática"
       ],
       "rank": 4722,
       "category": "noun",
@@ -44909,10 +44911,9 @@
     },
     {
       "id": 4737,
-      "english": "walk, gait, pace",
+      "english": "to walk, gait, pace",
       "spanish": [
-        "andar",
-        "caminar"
+        "andar"
       ],
       "rank": 4737,
       "category": "noun",
@@ -45613,7 +45614,7 @@
     },
     {
       "id": 4811,
-      "english": "to occur, befall, strike",
+      "english": "to happen, occur, befall, strike",
       "spanish": [
         "sobrevenir"
       ],
@@ -45641,7 +45642,7 @@
     },
     {
       "id": 4814,
-      "english": "a tenor",
+      "english": "tenor",
       "spanish": [
         "tenor"
       ],
@@ -45691,7 +45692,7 @@
     },
     {
       "id": 4819,
-      "english": "restriction nuevos",
+      "english": "restriction",
       "spanish": [
         "restricción"
       ],
@@ -46166,7 +46167,7 @@
     },
     {
       "id": 4868,
-      "english": "back, loin, spine dificultades",
+      "english": "back, loin, spine",
       "spanish": [
         "lomo"
       ],
@@ -46291,7 +46292,7 @@
     },
     {
       "id": 4881,
-      "english": "mystical infantil",
+      "english": "mystical",
       "spanish": [
         "místico",
         "mística"
@@ -47134,7 +47135,7 @@
     },
     {
       "id": 4969,
-      "english": "to outline, shape constructivo",
+      "english": "to outline, shape",
       "spanish": [
         "perfilar"
       ],
@@ -47243,7 +47244,8 @@
       "id": 4980,
       "english": "pioneer",
       "spanish": [
-        "pionero"
+        "pionero",
+        "pionera"
       ],
       "rank": 4980,
       "category": "noun",
