@@ -101,28 +101,27 @@ function isMastered(wp) {
 //
 // Each draw first picks between two pools, then picks a word within that pool:
 //
-// - Practice pool: words the user has seen. Weighted by frequency x need, where
-//   need comes from their history (high miss rate, or just missed, raises it).
-//   Words mastered on the first try drop out entirely; mastered words that were
-//   missed at some point come back occasionally, less often as their streak grows.
+// - Practice pool: every word the user has ever missed, mastered or not.
+//   Weighted by frequency x need, where need rises with the miss rate (and if
+//   the last answer was wrong) and falls as the streak of correct answers grows.
+//   Words that were never missed (correct on the first try) drop out entirely.
 // - New pool: the next few unseen words by rank, weighted by frequency.
 //
-// The practice pool gets a share of draws that grows with the number of words
-// the user is currently struggling with, so struggling words are never drowned
-// out by very common unseen words (and vice versa).
+// The practice pool's share of draws grows with the total need across it, so a
+// history full of struggled words is reviewed most of the time, and the share
+// shrinks on its own as those words are answered correctly.
 
 // Only the next few unseen words (by rank) are eligible, so new words are
 // introduced roughly in frequency order.
 const NEW_WORD_POOL_SIZE = 10;
-// Share of draws given to the practice pool per unmastered seen word (plus one),
-// capped at MAX_PRACTICE_SHARE so new words keep coming.
-const PRACTICE_SHARE_PER_WORD = 0.1;
-const MAX_PRACTICE_SHARE = 0.7;
+// Share of draws given to the practice pool per unit of total need, capped at
+// MAX_PRACTICE_SHARE so new words keep coming.
+const PRACTICE_SHARE_PER_NEED = 0.05;
+const MAX_PRACTICE_SHARE = 0.8;
 // Higher = stronger preference for common words.
 const FREQUENCY_EXPONENT = 0.25;
 const MISS_RATE_WEIGHT = 4;
 const RECENT_MISS_BONUS = 2;
-const MASTERED_REFRESH_WEIGHT = 0.5;
 
 function frequencyWeight(word) {
     return 1 / Math.pow(word.rank, FREQUENCY_EXPONENT);
@@ -130,13 +129,14 @@ function frequencyWeight(word) {
 
 function needWeight(wordWp) {
     const timesShown = wordWp.times_shown || 0;
-    const missRate = (timesShown - (wordWp.times_correct || 0)) / timesShown;
+    const misses = timesShown - (wordWp.times_correct || 0);
+    if (misses <= 0) return 0;
     const streak = wordWp.streak || 0;
-    if (wordWp.mastered) {
-        return MASTERED_REFRESH_WEIGHT * missRate / Math.pow(Math.max(1, streak), 2);
-    }
     // A streak of 0 on a word that's been shown means the last answer was wrong
-    return 1 + MISS_RATE_WEIGHT * missRate + (streak === 0 ? RECENT_MISS_BONUS : 0);
+    const need = 1 + MISS_RATE_WEIGHT * misses / timesShown + (streak === 0 ? RECENT_MISS_BONUS : 0);
+    // Each correct answer in a row makes the word less pressing; mastered
+    // words (streak of 3+) still come back now and then
+    return need / Math.pow(1 + streak, 2);
 }
 
 function weightedPick(candidates) {
@@ -153,7 +153,7 @@ function selectNextWord() {
     const sortedWords = allWords.slice().sort((a, b) => a.rank - b.rank);
     const wp = localProgress.word_progress;
     const practice = [], newWords = [];
-    let struggling = 0;
+    let struggling = 0, totalNeed = 0;
 
     for (const word of sortedWords) {
         // Avoid showing the same word twice in a row
@@ -166,8 +166,11 @@ function selectNextWord() {
             continue;
         }
         if (!wordWp.mastered) struggling++;
-        const weight = frequencyWeight(word) * needWeight(wordWp);
-        if (weight > 0) practice.push({ word, weight });
+        const need = needWeight(wordWp);
+        if (need > 0) {
+            totalNeed += need;
+            practice.push({ word, weight: frequencyWeight(word) * need });
+        }
     }
 
     if (!newWords.length && !struggling) {
@@ -177,7 +180,7 @@ function selectNextWord() {
         return currentWord;
     }
 
-    const practiceShare = Math.min(MAX_PRACTICE_SHARE, PRACTICE_SHARE_PER_WORD * (struggling + 1));
+    const practiceShare = Math.min(MAX_PRACTICE_SHARE, PRACTICE_SHARE_PER_NEED * totalNeed);
     if (!newWords.length || (practice.length && Math.random() < practiceShare)) {
         return weightedPick(practice);
     }
