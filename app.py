@@ -30,8 +30,6 @@ def load_progress_json():
         progress = json.load(f)
     if 'settings' not in progress:
         progress['settings'] = {'strictness': 'medium'}
-    if 'theme' not in progress['settings']:
-        progress['settings']['theme'] = 'default'
     return progress
 
 def save_progress_json(progress):
@@ -194,9 +192,6 @@ def handle_settings():
         data = request.get_json()
         if 'strictness' in data and data['strictness'] in ('low', 'medium', 'high'):
             progress['settings']['strictness'] = data['strictness']
-        valid_themes = ('default', 'spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic')
-        if 'theme' in data and data['theme'] in valid_themes:
-            progress['settings']['theme'] = data['theme']
         save_progress_json(progress)
     return jsonify(progress['settings'])
 
