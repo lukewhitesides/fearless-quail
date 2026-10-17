@@ -4,7 +4,6 @@ let isAnswered = false;
 let autoAdvanceTimeout = null;
 let currentStrictness = 'medium';
 let currentTheme = 'default';
-let currentLevel = 1;
 let allWords = [];
 let localProgress = null;
 
@@ -22,7 +21,6 @@ const nextBtn = document.getElementById('next-btn');
 const completionEl = document.getElementById('completion');
 const completionTitleEl = document.getElementById('completion-title');
 const completionMsgEl = document.getElementById('completion-msg');
-const nextLevelBtn = document.getElementById('next-level-btn');
 const flashcardEl = document.getElementById('flashcard');
 const progressFill = document.getElementById('progress-fill');
 const masteredCount = document.getElementById('mastered-count');
@@ -39,8 +37,6 @@ const articleMissNoteEl = document.getElementById('article-miss-note');
 const themeOpenBtn = document.getElementById('theme-open-btn');
 const themeModalOverlay = document.getElementById('theme-modal-overlay');
 const themeModalClose = document.getElementById('theme-modal-close');
-const levelRangeHint = document.getElementById('level-range-hint');
-const levelBtns = document.querySelectorAll('.level-option');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,11 +64,12 @@ function initProgress() {
                 session_count: 1,
                 last_session: new Date().toISOString()
             },
-            settings: { level: 1 }
+            settings: {}
         };
     }
     if (!localProgress.settings) localProgress.settings = {};
-    currentLevel = localProgress.settings.level || 1;
+    // Levels were removed; drop the stale setting from older saved progress
+    delete localProgress.settings.level;
     currentTheme = localProgress.settings.theme || 'default';
     applyTheme(currentTheme);
 }
@@ -80,34 +77,6 @@ function initProgress() {
 function saveLocalProgress() {
     localProgress.user_stats.last_session = new Date().toISOString();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(localProgress));
-}
-
-// --- Level helpers ---
-
-function getLevelRange(level) {
-    return { min: (level - 1) * 1000 + 1, max: level * 1000 };
-}
-
-function getLevelWords() {
-    const { min, max } = getLevelRange(currentLevel);
-    return allWords.filter(w => w.rank >= min && w.rank <= max);
-}
-
-function setLevel(level) {
-    currentLevel = level;
-    localProgress.settings.level = level;
-    saveLocalProgress();
-    updateLevelUI();
-    displayProgress();
-    loadNextWord();
-}
-
-function updateLevelUI() {
-    levelBtns.forEach(btn => {
-        btn.classList.toggle('active', Number(btn.dataset.level) === currentLevel);
-    });
-    const { min, max } = getLevelRange(currentLevel);
-    levelRangeHint.textContent = `ranks ${min.toLocaleString()}–${max.toLocaleString()}`;
 }
 
 // --- Mastery ---
@@ -124,7 +93,7 @@ function isMastered(wp) {
 
 // --- Word selection ---
 //
-// Every eligible word in the level gets a weight = frequency weight x need weight,
+// Every eligible word gets a weight = frequency weight x need weight,
 // and the next word is drawn at random in proportion to those weights.
 //
 // Frequency weight: more common words (lower rank) are more likely to appear.
@@ -136,15 +105,14 @@ function isMastered(wp) {
 // Only the next few unseen words (by rank) are eligible, so new words are still
 // introduced roughly in frequency order and don't drown out struggling words.
 const NEW_WORD_POOL_SIZE = 10;
-// Higher = stronger preference for common words within the level.
+// Higher = stronger preference for common words.
 const FREQUENCY_EXPONENT = 0.5;
 const MISS_RATE_WEIGHT = 4;
 const RECENT_MISS_BONUS = 2;
 const MASTERED_REFRESH_WEIGHT = 0.5;
 
 function frequencyWeight(word) {
-    const { min } = getLevelRange(currentLevel);
-    return 1 / Math.pow(word.rank - min + 1, FREQUENCY_EXPONENT);
+    return 1 / Math.pow(word.rank, FREQUENCY_EXPONENT);
 }
 
 function needWeight(wordWp) {
@@ -160,13 +128,13 @@ function needWeight(wordWp) {
 }
 
 function selectNextWord() {
-    const levelWords = getLevelWords().slice().sort((a, b) => a.rank - b.rank);
+    const sortedWords = allWords.slice().sort((a, b) => a.rank - b.rank);
     const wp = localProgress.word_progress;
     const candidates = [];
     let newSlots = NEW_WORD_POOL_SIZE;
     let unmastered = 0;
 
-    for (const word of levelWords) {
+    for (const word of sortedWords) {
         const wordWp = wp[String(word.id)] || {};
         if (!wordWp.mastered) unmastered++;
         if ((wordWp.times_shown || 0) === 0) {
@@ -201,7 +169,6 @@ async function loadWordsAndStart() {
         const response = await fetch('/api/words');
         const data = await response.json();
         allWords = data.words;
-        updateLevelUI();
         displayProgress();
         loadNextWord();
     } catch (error) {
@@ -215,15 +182,10 @@ function setupEventListeners() {
     nextBtn.addEventListener('click', loadNextWord);
     resetBtn.addEventListener('click', resetProgress);
     resetProgressBtn.addEventListener('click', confirmReset);
-    nextLevelBtn.addEventListener('click', () => setLevel(currentLevel + 1));
 
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
     strictnessMediumBtn.addEventListener('click', () => setStrictness('medium'));
     strictnessLowBtn.addEventListener('click', () => setStrictness('low'));
-
-    levelBtns.forEach(btn => {
-        btn.addEventListener('click', () => setLevel(Number(btn.dataset.level)));
-    });
 
     themeOpenBtn.addEventListener('click', openThemeModal);
     themeModalClose.addEventListener('click', closeThemeModal);
@@ -436,26 +398,25 @@ async function checkAnswer() {
 function displayProgress() {
     if (!localProgress || !allWords.length) return;
 
-    const levelWords = getLevelWords();
     const wp = localProgress.word_progress;
 
-    const masteredCountVal = levelWords.filter(w => wp[String(w.id)]?.mastered).length;
+    const masteredCountVal = allWords.filter(w => wp[String(w.id)]?.mastered).length;
     masteredCount.textContent = masteredCountVal;
-    totalCount.textContent = levelWords.length;
+    totalCount.textContent = allWords.length;
 
-    // Level-specific accuracy from word_progress totals
-    let levelPracticed = 0, levelCorrect = 0;
-    for (const word of levelWords) {
+    // Accuracy from word_progress totals
+    let practiced = 0, correct = 0;
+    for (const word of allWords) {
         const wordWp = wp[String(word.id)] || {};
-        levelPracticed += wordWp.times_shown || 0;
-        levelCorrect += wordWp.times_correct || 0;
+        practiced += wordWp.times_shown || 0;
+        correct += wordWp.times_correct || 0;
     }
-    const accuracy = levelPracticed > 0
-        ? Math.round(levelCorrect / levelPracticed * 1000) / 10
+    const accuracy = practiced > 0
+        ? Math.round(correct / practiced * 1000) / 10
         : 0;
     accuracyEl.textContent = accuracy;
 
-    const percentage = levelWords.length > 0 ? (masteredCountVal / levelWords.length) * 100 : 0;
+    const percentage = (masteredCountVal / allWords.length) * 100;
     progressFill.style.width = `${percentage}%`;
 }
 
@@ -464,17 +425,8 @@ function showCompletion() {
     answerSection.style.display = 'none';
     feedbackEl.style.display = 'none';
 
-    if (currentLevel < 5) {
-        completionTitleEl.textContent = `Level ${currentLevel} Complete!`;
-        completionMsgEl.textContent =
-            `You've mastered all ${getLevelWords().length} words in Level ${currentLevel}!`;
-        nextLevelBtn.textContent = `Go to Level ${currentLevel + 1}`;
-        nextLevelBtn.style.display = 'inline-block';
-    } else {
-        completionTitleEl.textContent = 'Amazing!';
-        completionMsgEl.textContent = "You've mastered all 5000 Spanish words!";
-        nextLevelBtn.style.display = 'none';
-    }
+    completionTitleEl.textContent = 'Amazing!';
+    completionMsgEl.textContent = `You've mastered all ${allWords.length.toLocaleString()} Spanish words!`;
 
     completionEl.style.display = 'block';
 }
@@ -565,14 +517,12 @@ async function resetProgress() {
         localStorage.removeItem(STORAGE_KEY);
         initProgress();
         await fetch('/api/reset', { method: 'POST' });
-        updateLevelUI();
         displayProgress();
         loadNextWord();
     } catch (error) {
         console.error('Error resetting progress:', error);
         localStorage.removeItem(STORAGE_KEY);
         initProgress();
-        updateLevelUI();
         displayProgress();
         loadNextWord();
     }
