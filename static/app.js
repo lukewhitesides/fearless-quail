@@ -93,20 +93,27 @@ function isMastered(wp) {
 
 // --- Word selection ---
 //
-// Every eligible word gets a weight = frequency weight x need weight,
-// and the next word is drawn at random in proportion to those weights.
+// Each draw first picks between two pools, then picks a word within that pool:
 //
-// Frequency weight: more common words (lower rank) are more likely to appear.
-// Need weight: comes from the user's history, so words they struggle with
-// (high miss rate, or just missed) appear more often. Words mastered on the
-// first try drop out entirely; mastered words that were missed at some point
-// come back occasionally, less often the longer their streak grows.
+// - Practice pool: words the user has seen. Weighted by frequency x need, where
+//   need comes from their history (high miss rate, or just missed, raises it).
+//   Words mastered on the first try drop out entirely; mastered words that were
+//   missed at some point come back occasionally, less often as their streak grows.
+// - New pool: the next few unseen words by rank, weighted by frequency.
+//
+// The practice pool gets a share of draws that grows with the number of words
+// the user is currently struggling with, so struggling words are never drowned
+// out by very common unseen words (and vice versa).
 
-// Only the next few unseen words (by rank) are eligible, so new words are still
-// introduced roughly in frequency order and don't drown out struggling words.
+// Only the next few unseen words (by rank) are eligible, so new words are
+// introduced roughly in frequency order.
 const NEW_WORD_POOL_SIZE = 10;
+// Share of draws given to the practice pool per unmastered seen word (plus one),
+// capped at MAX_PRACTICE_SHARE so new words keep coming.
+const PRACTICE_SHARE_PER_WORD = 0.1;
+const MAX_PRACTICE_SHARE = 0.7;
 // Higher = stronger preference for common words.
-const FREQUENCY_EXPONENT = 0.5;
+const FREQUENCY_EXPONENT = 0.25;
 const MISS_RATE_WEIGHT = 4;
 const RECENT_MISS_BONUS = 2;
 const MASTERED_REFRESH_WEIGHT = 0.5;
@@ -117,7 +124,6 @@ function frequencyWeight(word) {
 
 function needWeight(wordWp) {
     const timesShown = wordWp.times_shown || 0;
-    if (timesShown === 0) return 1;
     const missRate = (timesShown - (wordWp.times_correct || 0)) / timesShown;
     const streak = wordWp.streak || 0;
     if (wordWp.mastered) {
@@ -127,39 +133,49 @@ function needWeight(wordWp) {
     return 1 + MISS_RATE_WEIGHT * missRate + (streak === 0 ? RECENT_MISS_BONUS : 0);
 }
 
-function selectNextWord() {
-    const sortedWords = allWords.slice().sort((a, b) => a.rank - b.rank);
-    const wp = localProgress.word_progress;
-    const candidates = [];
-    let newSlots = NEW_WORD_POOL_SIZE;
-    let unmastered = 0;
-
-    for (const word of sortedWords) {
-        const wordWp = wp[String(word.id)] || {};
-        if (!wordWp.mastered) unmastered++;
-        if ((wordWp.times_shown || 0) === 0) {
-            if (newSlots <= 0) continue;
-            newSlots--;
-        }
-        const weight = frequencyWeight(word) * needWeight(wordWp);
-        if (weight > 0) candidates.push({ word, weight });
-    }
-
-    if (!unmastered) return null;
-
-    // Avoid showing the same word twice in a row when there's an alternative
-    let pool = candidates;
-    if (currentWord && candidates.length > 1) {
-        pool = candidates.filter(c => c.word.id !== currentWord.id);
-    }
-
-    const total = pool.reduce((sum, c) => sum + c.weight, 0);
+function weightedPick(candidates) {
+    const total = candidates.reduce((sum, c) => sum + c.weight, 0);
     let r = Math.random() * total;
-    for (const c of pool) {
+    for (const c of candidates) {
         r -= c.weight;
         if (r <= 0) return c.word;
     }
-    return pool[pool.length - 1].word;
+    return candidates[candidates.length - 1].word;
+}
+
+function selectNextWord() {
+    const sortedWords = allWords.slice().sort((a, b) => a.rank - b.rank);
+    const wp = localProgress.word_progress;
+    const practice = [], newWords = [];
+    let struggling = 0;
+
+    for (const word of sortedWords) {
+        // Avoid showing the same word twice in a row
+        if (currentWord && word.id === currentWord.id) continue;
+        const wordWp = wp[String(word.id)] || {};
+        if ((wordWp.times_shown || 0) === 0) {
+            if (newWords.length < NEW_WORD_POOL_SIZE) {
+                newWords.push({ word, weight: frequencyWeight(word) });
+            }
+            continue;
+        }
+        if (!wordWp.mastered) struggling++;
+        const weight = frequencyWeight(word) * needWeight(wordWp);
+        if (weight > 0) practice.push({ word, weight });
+    }
+
+    if (!newWords.length && !struggling) {
+        // Everything is mastered, unless the only word left is the one just shown
+        const currentWp = currentWord && wp[String(currentWord.id)];
+        if (!currentWp || currentWp.mastered) return null;
+        return currentWord;
+    }
+
+    const practiceShare = Math.min(MAX_PRACTICE_SHARE, PRACTICE_SHARE_PER_WORD * (struggling + 1));
+    if (!newWords.length || (practice.length && Math.random() < practiceShare)) {
+        return weightedPick(practice);
+    }
+    return weightedPick(newWords);
 }
 
 // --- Startup ---
