@@ -7,11 +7,22 @@ from datetime import datetime
 app = Flask(__name__)
 
 WORDS_FILE = 'words.json'
+EXAMPLES_FILE = 'examples.json'
 PROGRESS_FILE = 'user_progress.json'
 
 def load_words():
     with open(WORDS_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)['words']
+
+def load_examples():
+    """Example sentences keyed by word id: {"es": ..., "en": ...}.
+
+    In "es", the target word is wrapped in *asterisks* for highlighting.
+    """
+    if not os.path.exists(EXAMPLES_FILE):
+        return {}
+    with open(EXAMPLES_FILE, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 # JSON-based progress functions for local development
 def load_progress_json():
@@ -165,6 +176,7 @@ def check_user_answer():
         'article_miss': result['article_miss'],
         'valid_answers': valid_answers,
         'article': word.get('article'),
+        'example': load_examples().get(word_id),
     })
 
 @app.route('/api/progress')

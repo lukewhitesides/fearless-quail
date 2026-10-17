@@ -6,6 +6,9 @@ let currentStrictness = 'medium';
 let allWords = [];
 let localProgress = null;
 
+// Correct answers auto-advance; give the user time to read the example sentence
+const EXAMPLE_READ_DELAY = 4500;
+
 const STORAGE_KEY = 'fearless_quail_progress';
 const THEMES = ['spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic', 'uruguay'];
 
@@ -17,6 +20,9 @@ const feedbackEl = document.getElementById('feedback');
 const feedbackIcon = document.getElementById('feedback-icon');
 const feedbackText = document.getElementById('feedback-text');
 const correctAnswersEl = document.getElementById('correct-answers');
+const exampleEl = document.getElementById('example');
+const exampleEsEl = document.getElementById('example-es');
+const exampleEnEl = document.getElementById('example-en');
 const nextBtn = document.getElementById('next-btn');
 const completionEl = document.getElementById('completion');
 const completionTitleEl = document.getElementById('completion-title');
@@ -243,6 +249,7 @@ async function loadNextWord() {
     feedbackEl.classList.remove('correct', 'incorrect', 'show');
     accentMissNoteEl.style.display = 'none';
     articleMissNoteEl.style.display = 'none';
+    exampleEl.style.display = 'none';
     answerInput.value = '';
     answerInput.disabled = false;
     submitBtn.style.display = 'inline-block';
@@ -323,6 +330,7 @@ async function checkAnswer() {
         feedbackEl.classList.add('show');
         answerInput.disabled = true;
         submitBtn.style.display = 'none';
+        const hasExample = showExample(data.example);
 
         if (data.correct) {
             feedbackEl.classList.add('correct');
@@ -352,6 +360,7 @@ async function checkAnswer() {
             const otherAnswers = data.valid_answers.filter(
                 a => a.toLowerCase() !== userAnswer.toLowerCase()
             );
+            let delay;
             if (otherAnswers.length > 0) {
                 correctAnswersEl.innerHTML = '<strong>Other ways to say it:</strong>';
                 otherAnswers.forEach(answer => {
@@ -359,14 +368,16 @@ async function checkAnswer() {
                     span.textContent = answer;
                     correctAnswersEl.appendChild(span);
                 });
-                autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
+                delay = 2500;
             } else if (data.accent_only_miss) {
                 correctAnswersEl.innerHTML = '';
-                autoAdvanceTimeout = setTimeout(() => loadNextWord(), 2500);
+                delay = 2500;
             } else {
                 correctAnswersEl.innerHTML = '';
-                autoAdvanceTimeout = setTimeout(() => loadNextWord(), 1000);
+                delay = 1000;
             }
+            if (hasExample) delay = Math.max(delay, EXAMPLE_READ_DELAY);
+            autoAdvanceTimeout = setTimeout(() => loadNextWord(), delay);
         } else {
             feedbackEl.classList.add('incorrect');
             feedbackIcon.textContent = '✗';
@@ -395,6 +406,29 @@ async function checkAnswer() {
     } catch (error) {
         console.error('Error checking answer:', error);
     }
+}
+
+// Render an example sentence, bolding the *marked* target word. Returns
+// whether an example was shown.
+function showExample(example) {
+    if (!example) {
+        exampleEl.style.display = 'none';
+        return false;
+    }
+    exampleEsEl.textContent = '';
+    example.es.split('*').forEach((part, i) => {
+        if (!part) return;
+        if (i % 2 === 1) {
+            const strong = document.createElement('strong');
+            strong.textContent = part;
+            exampleEsEl.appendChild(strong);
+        } else {
+            exampleEsEl.appendChild(document.createTextNode(part));
+        }
+    });
+    exampleEnEl.textContent = example.en;
+    exampleEl.style.display = 'block';
+    return true;
 }
 
 function displayProgress() {
