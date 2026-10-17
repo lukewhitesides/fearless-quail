@@ -3,11 +3,11 @@ let currentWord = null;
 let isAnswered = false;
 let autoAdvanceTimeout = null;
 let currentStrictness = 'medium';
-let currentTheme = 'default';
 let allWords = [];
 let localProgress = null;
 
 const STORAGE_KEY = 'fearless_quail_progress';
+const THEMES = ['spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic', 'uruguay'];
 
 // DOM Elements
 const englishWordEl = document.getElementById('english-word');
@@ -34,13 +34,11 @@ const strictnessMediumBtn = document.getElementById('btn-strictness-medium');
 const strictnessLowBtn = document.getElementById('btn-strictness-low');
 const accentMissNoteEl = document.getElementById('accent-miss-note');
 const articleMissNoteEl = document.getElementById('article-miss-note');
-const themeOpenBtn = document.getElementById('theme-open-btn');
-const themeModalOverlay = document.getElementById('theme-modal-overlay');
-const themeModalClose = document.getElementById('theme-modal-close');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initProgress();
+    applyRandomTheme();
     loadWordsAndStart();
     loadSettings();
     setupEventListeners();
@@ -70,8 +68,16 @@ function initProgress() {
     if (!localProgress.settings) localProgress.settings = {};
     // Levels were removed; drop the stale setting from older saved progress
     delete localProgress.settings.level;
-    currentTheme = localProgress.settings.theme || 'default';
-    applyTheme(currentTheme);
+}
+
+// Pick a random theme on each visit, avoiding a repeat of the last one
+function applyRandomTheme() {
+    const lastTheme = localProgress.settings.theme;
+    const choices = THEMES.filter(t => t !== lastTheme);
+    const theme = choices[Math.floor(Math.random() * choices.length)];
+    document.body.classList.add(`theme-${theme}`);
+    localProgress.settings.theme = theme;
+    saveLocalProgress();
 }
 
 function saveLocalProgress() {
@@ -202,15 +208,6 @@ function setupEventListeners() {
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
     strictnessMediumBtn.addEventListener('click', () => setStrictness('medium'));
     strictnessLowBtn.addEventListener('click', () => setStrictness('low'));
-
-    themeOpenBtn.addEventListener('click', openThemeModal);
-    themeModalClose.addEventListener('click', closeThemeModal);
-    themeModalOverlay.addEventListener('click', (e) => {
-        if (e.target === themeModalOverlay) closeThemeModal();
-    });
-    document.querySelectorAll('.theme-option').forEach(btn => {
-        btn.addEventListener('click', () => setTheme(btn.dataset.theme));
-    });
 
     answerInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -452,10 +449,7 @@ async function loadSettings() {
         const response = await fetch('/api/settings');
         const data = await response.json();
         currentStrictness = data.strictness;
-        currentTheme = data.theme || 'default';
         updateStrictnessUI();
-        applyTheme(currentTheme);
-        updateThemeUI();
     } catch (error) {
         console.error('Error loading settings:', error);
     }
@@ -486,39 +480,6 @@ async function setStrictness(value) {
         }
     } catch (error) {
         console.error('Error saving settings:', error);
-    }
-}
-
-function openThemeModal() { themeModalOverlay.style.display = 'flex'; }
-function closeThemeModal() { themeModalOverlay.style.display = 'none'; }
-
-function applyTheme(theme) {
-    const themes = ['spain', 'mexico', 'costa-rica', 'colombia', 'dominican-republic'];
-    themes.forEach(t => document.body.classList.remove(`theme-${t}`));
-    if (theme !== 'default') document.body.classList.add(`theme-${theme}`);
-}
-
-function updateThemeUI() {
-    document.querySelectorAll('.theme-option').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.theme === currentTheme);
-    });
-}
-
-async function setTheme(theme) {
-    try {
-        await fetch('/api/settings', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ theme })
-        });
-        currentTheme = theme;
-        localProgress.settings.theme = theme;
-        saveLocalProgress();
-        applyTheme(theme);
-        updateThemeUI();
-        closeThemeModal();
-    } catch (error) {
-        console.error('Error saving theme:', error);
     }
 }
 

@@ -1,14 +1,4 @@
 /* === THEME VARIABLES === */
-:root {
-    --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --warm: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
-    --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --accent: #667eea;
-    --warm-shadow: rgba(241, 39, 17, 0.3);
-    --primary-shadow: rgba(102, 126, 234, 0.4);
-    --char-shadow: rgba(102, 126, 234, 0.3);
-}
-
 /* Spain: passion red & golden saffron */
 body.theme-spain {
     --bg: linear-gradient(135deg, #f5af19 0%, #e8341c 100%);
@@ -62,6 +52,17 @@ body.theme-dominican-republic {
     --warm-shadow: rgba(206, 17, 38, 0.3);
     --primary-shadow: rgba(0, 85, 165, 0.4);
     --char-shadow: rgba(0, 85, 165, 0.3);
+}
+
+/* Uruguay: white & blue stripes, Sol de Mayo gold */
+body.theme-uruguay {
+    --bg: repeating-linear-gradient(to bottom, #ffffff 0 11.12vh, #0038a8 11.12vh 22.23vh);
+    --warm: linear-gradient(135deg, #0038a8 0%, #00237a 100%);
+    --primary: linear-gradient(135deg, #f6b40e 0%, #c47f00 100%);
+    --accent: #0038a8;
+    --warm-shadow: rgba(0, 56, 168, 0.3);
+    --primary-shadow: rgba(196, 127, 0, 0.4);
+    --char-shadow: rgba(0, 56, 168, 0.3);
 }
 
 /* === BASE STYLES === */
@@ -170,28 +171,6 @@ header h1 {
     background: rgba(255, 255, 255, 0.92);
     color: #c0392b;
     border-color: white;
-}
-
-.header-divider {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.8rem;
-}
-
-.theme-open-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.85);
-    padding: 4px 14px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.theme-open-btn:hover {
-    background: rgba(255, 255, 255, 0.35);
-    color: white;
 }
 
 main {
@@ -551,15 +530,6 @@ footer {
         font-size: 0.75rem;
     }
 
-    .theme-open-btn {
-        padding: 3px 10px;
-        font-size: 0.75rem;
-    }
-
-    .header-divider {
-        display: none;
-    }
-
     main {
         padding: 15px;
     }
@@ -652,148 +622,4 @@ footer {
     font-size: 0.75rem;
     margin-left: 10px;
     vertical-align: middle;
-}
-
-/* === THEME MODAL === */
-.theme-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(4px);
-}
-
-.theme-modal {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 480px;
-    width: 90%;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-    animation: modalSlideIn 0.25s ease;
-}
-
-@keyframes modalSlideIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to   { transform: scale(1);   opacity: 1; }
-}
-
-.theme-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-}
-
-.theme-modal-header h3 {
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 700;
-}
-
-.theme-modal-close {
-    background: #f0f0f0;
-    border: none;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    font-size: 1rem;
-    cursor: pointer;
-    color: #555;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.theme-modal-close:hover {
-    background: #e0e0e0;
-    color: #333;
-}
-
-.theme-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.theme-option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    padding: 14px 10px;
-    border: 2px solid #e0e0e0;
-    border-radius: 14px;
-    background: white;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    position: relative;
-}
-
-.theme-option:hover {
-    border-color: #bbb;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-.theme-option.active {
-    border-color: #333;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
-}
-
-.theme-option.active::after {
-    content: '✓';
-    position: absolute;
-    top: 6px;
-    right: 8px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: white;
-    background: #333;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.theme-preview {
-    width: 100%;
-    height: 32px;
-    border-radius: 8px;
-    margin-bottom: 2px;
-}
-
-.default-preview            { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.spain-preview              { background: linear-gradient(to bottom, #c60b1e 25%, #ffc400 25% 75%, #c60b1e 75%); }
-.mexico-preview             { background: linear-gradient(135deg, #006847 0%, #ce1126 100%); }
-.costa-rica-preview         { background: linear-gradient(135deg, #023e8a 0%, #ce1126 100%); }
-.colombia-preview           { background: linear-gradient(to bottom, #fcd116 50%, #003087 50% 75%, #ce1126 75%); }
-.dominican-republic-preview { background: linear-gradient(135deg, #002D62 0%, #CE1126 100%); }
-
-.theme-flag {
-    font-size: 1.6rem;
-    line-height: 1;
-}
-
-.theme-name {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #444;
-    text-align: center;
-    line-height: 1.2;
-}
-
-@media (max-width: 400px) {
-    .theme-options {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
