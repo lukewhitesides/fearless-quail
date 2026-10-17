@@ -2,8 +2,6 @@
 let currentWord = null;
 let isAnswered = false;
 let autoAdvanceTimeout = null;
-let reviewMode = false;
-let reviewedWordIds = [];
 let currentStrictness = 'medium';
 let currentTheme = 'default';
 let currentLevel = 1;
@@ -33,11 +31,6 @@ const accuracyEl = document.getElementById('accuracy');
 const resetBtn = document.getElementById('reset-btn');
 const resetProgressBtn = document.getElementById('reset-progress-btn');
 const answerSection = document.querySelector('.answer-section');
-const reviewBtn = document.getElementById('review-btn');
-const activeCountEl = document.getElementById('active-count');
-const reviewModeIndicator = document.getElementById('review-mode-indicator');
-const reviewRemainingEl = document.getElementById('review-remaining');
-const exitReviewBtn = document.getElementById('exit-review-btn');
 const strictnessHighBtn = document.getElementById('btn-strictness-high');
 const strictnessMediumBtn = document.getElementById('btn-strictness-medium');
 const strictnessLowBtn = document.getElementById('btn-strictness-low');
@@ -105,12 +98,6 @@ function setLevel(level) {
     localProgress.settings.level = level;
     saveLocalProgress();
     updateLevelUI();
-    // Exit review mode when switching levels
-    if (reviewMode) {
-        reviewMode = false;
-        reviewedWordIds = [];
-        reviewModeIndicator.style.display = 'none';
-    }
     displayProgress();
     loadNextWord();
 }
@@ -136,54 +123,75 @@ function isMastered(wp) {
 }
 
 // --- Word selection ---
+//
+// Every eligible word in the level gets a weight = frequency weight x need weight,
+// and the next word is drawn at random in proportion to those weights.
+//
+// Frequency weight: more common words (lower rank) are more likely to appear.
+// Need weight: comes from the user's history, so words they struggle with
+// (high miss rate, or just missed) appear more often. Words mastered on the
+// first try drop out entirely; mastered words that were missed at some point
+// come back occasionally, less often the longer their streak grows.
+
+// Only the next few unseen words (by rank) are eligible, so new words are still
+// introduced roughly in frequency order and don't drown out struggling words.
+const NEW_WORD_POOL_SIZE = 10;
+// Higher = stronger preference for common words within the level.
+const FREQUENCY_EXPONENT = 0.5;
+const MISS_RATE_WEIGHT = 4;
+const RECENT_MISS_BONUS = 2;
+const MASTERED_REFRESH_WEIGHT = 0.5;
+
+function frequencyWeight(word) {
+    const { min } = getLevelRange(currentLevel);
+    return 1 / Math.pow(word.rank - min + 1, FREQUENCY_EXPONENT);
+}
+
+function needWeight(wordWp) {
+    const timesShown = wordWp.times_shown || 0;
+    if (timesShown === 0) return 1;
+    const missRate = (timesShown - (wordWp.times_correct || 0)) / timesShown;
+    const streak = wordWp.streak || 0;
+    if (wordWp.mastered) {
+        return MASTERED_REFRESH_WEIGHT * missRate / Math.pow(Math.max(1, streak), 2);
+    }
+    // A streak of 0 on a word that's been shown means the last answer was wrong
+    return 1 + MISS_RATE_WEIGHT * missRate + (streak === 0 ? RECENT_MISS_BONUS : 0);
+}
 
 function selectNextWord() {
-    const levelWords = getLevelWords();
+    const levelWords = getLevelWords().slice().sort((a, b) => a.rank - b.rank);
     const wp = localProgress.word_progress;
-    const active = [], newWords = [], review = [];
+    const candidates = [];
+    let newSlots = NEW_WORD_POOL_SIZE;
+    let unmastered = 0;
 
     for (const word of levelWords) {
         const wordWp = wp[String(word.id)] || {};
-        if (wordWp.mastered) {
-            if (wordWp.first_attempt_correct === false) review.push(word);
-            continue;
+        if (!wordWp.mastered) unmastered++;
+        if ((wordWp.times_shown || 0) === 0) {
+            if (newSlots <= 0) continue;
+            newSlots--;
         }
-        if ((wordWp.times_shown || 0) > 0) active.push(word);
-        else newWords.push(word);
+        const weight = frequencyWeight(word) * needWeight(wordWp);
+        if (weight > 0) candidates.push({ word, weight });
     }
 
-    if (!active.length && !newWords.length) return null;
+    if (!unmastered) return null;
 
-    if (review.length && Math.random() < 0.05) {
-        return review[Math.floor(Math.random() * review.length)];
-    }
-    if (active.length && newWords.length) {
-        if (Math.random() < 0.2) return active[Math.floor(Math.random() * active.length)];
-        newWords.sort((a, b) => a.rank - b.rank);
-        return newWords[0];
-    }
-    if (active.length) return active[Math.floor(Math.random() * active.length)];
-    newWords.sort((a, b) => a.rank - b.rank);
-    return newWords[0];
-}
-
-function selectNextReviewWord(excludeIds) {
-    const levelWords = getLevelWords();
-    const wp = localProgress.word_progress;
-    const excludeSet = new Set(excludeIds.map(String));
-    const active = [];
-
-    for (const word of levelWords) {
-        const wordId = String(word.id);
-        if (excludeSet.has(wordId)) continue;
-        const wordWp = wp[wordId] || {};
-        if (!wordWp.mastered && (wordWp.times_shown || 0) > 0) {
-            active.push(word);
-        }
+    // Avoid showing the same word twice in a row when there's an alternative
+    let pool = candidates;
+    if (currentWord && candidates.length > 1) {
+        pool = candidates.filter(c => c.word.id !== currentWord.id);
     }
 
-    if (!active.length) return null;
-    return { word: active[Math.floor(Math.random() * active.length)], remaining: active.length };
+    const total = pool.reduce((sum, c) => sum + c.weight, 0);
+    let r = Math.random() * total;
+    for (const c of pool) {
+        r -= c.weight;
+        if (r <= 0) return c.word;
+    }
+    return pool[pool.length - 1].word;
 }
 
 // --- Startup ---
@@ -208,9 +216,6 @@ function setupEventListeners() {
     resetBtn.addEventListener('click', resetProgress);
     resetProgressBtn.addEventListener('click', confirmReset);
     nextLevelBtn.addEventListener('click', () => setLevel(currentLevel + 1));
-
-    reviewBtn.addEventListener('click', enterReviewMode);
-    exitReviewBtn.addEventListener('click', exitReviewMode);
 
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
     strictnessMediumBtn.addEventListener('click', () => setStrictness('medium'));
@@ -283,23 +288,10 @@ async function loadNextWord() {
 
     if (!allWords.length) return;
 
-    let selected;
-    if (reviewMode) {
-        const result = selectNextReviewWord(reviewedWordIds);
-        if (!result) {
-            exitReviewMode();
-            return;
-        }
-        selected = result.word;
-        reviewedWordIds.push(String(selected.id));
-        const remaining = result.remaining - 1;
-        reviewRemainingEl.textContent = `${remaining} word${remaining !== 1 ? 's' : ''} remaining`;
-    } else {
-        selected = selectNextWord();
-        if (!selected) {
-            showCompletion();
-            return;
-        }
+    const selected = selectNextWord();
+    if (!selected) {
+        showCompletion();
+        return;
     }
 
     currentWord = selected;
@@ -465,18 +457,7 @@ function displayProgress() {
 
     const percentage = levelWords.length > 0 ? (masteredCountVal / levelWords.length) * 100 : 0;
     progressFill.style.width = `${percentage}%`;
-
-    let activeCount = 0;
-    for (const word of levelWords) {
-        const wordWp = wp[String(word.id)] || {};
-        if (!wordWp.mastered && (wordWp.times_shown || 0) > 0) activeCount++;
-    }
-    activeCountEl.textContent = activeCount;
-    reviewBtn.style.display = activeCount > 0 ? 'inline-block' : 'none';
 }
-
-function loadProgress() { displayProgress(); }
-function loadActiveWordCount() { displayProgress(); }
 
 function showCompletion() {
     flashcardEl.style.display = 'none';
@@ -496,22 +477,6 @@ function showCompletion() {
     }
 
     completionEl.style.display = 'block';
-}
-
-function enterReviewMode() {
-    reviewMode = true;
-    reviewedWordIds = [];
-    reviewBtn.style.display = 'none';
-    reviewModeIndicator.style.display = 'flex';
-    loadNextWord();
-}
-
-function exitReviewMode() {
-    reviewMode = false;
-    reviewedWordIds = [];
-    reviewModeIndicator.style.display = 'none';
-    displayProgress();
-    loadNextWord();
 }
 
 async function loadSettings() {

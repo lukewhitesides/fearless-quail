@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, render_template
 import json
 import os
-import random
 import unicodedata
 from datetime import datetime
 
@@ -127,74 +126,6 @@ def check_answer_match(user_answer, correct_answers, strictness='high', word=Non
 def index():
     return render_template('index.html')
 
-@app.route('/api/next-word')
-def get_next_word():
-    words = load_words()
-    progress = load_progress()
-    word_progress = progress['word_progress']
-
-    # Separate words into categories:
-    # - active: shown at least once but not mastered (randomly select from these)
-    # - new: never shown (introduce by frequency rank when no active words)
-    # - review: mastered words that were initially gotten wrong (5% chance to review)
-
-    active_words = []
-    new_words = []
-    review_words = []
-
-    for word in words:
-        word_id = str(word['id'])
-        wp = word_progress.get(word_id, {})
-
-        if wp.get('mastered', False):
-            # Mastered word - check if it was initially gotten wrong for review pool
-            if wp.get('first_attempt_correct') is False:
-                review_words.append(word)
-            continue
-
-        times_shown = wp.get('times_shown', 0)
-
-        if times_shown > 0:
-            # Word has been shown but not mastered - add to active pool
-            active_words.append(word)
-        else:
-            # New word - track for introduction by frequency
-            new_words.append(word)
-
-    # If no unmastered words remain, we're done
-    if not active_words and not new_words:
-        return jsonify({'done': True, 'message': 'All words mastered!'})
-
-    # Selection logic:
-    # 5% chance to review a mastered word that was initially gotten wrong
-    # 80% new word by frequency rank, 20% random active word (if both available)
-    if review_words and random.random() < 0.05:
-        selected = random.choice(review_words)
-    elif active_words and new_words:
-        if random.random() < 0.2:
-            selected = random.choice(active_words)
-        else:
-            new_words.sort(key=lambda x: x['rank'])
-            selected = new_words[0]
-    elif active_words:
-        selected = random.choice(active_words)
-    else:
-        # Sort new words by rank and pick the most common (lowest rank)
-        new_words.sort(key=lambda x: x['rank'])
-        selected = new_words[0]
-
-    return jsonify({
-        'done': False,
-        'word': {
-            'id': selected['id'],
-            'english': selected['english'],
-            'category': selected['category'],
-            'hint': selected.get('hint', ''),
-            'rank': selected['rank'],
-            'article': selected.get('article'),
-        }
-    })
-
 @app.route('/api/words')
 def get_all_words():
     words = load_words()
@@ -236,62 +167,6 @@ def check_user_answer():
         'article_miss': result['article_miss'],
         'valid_answers': valid_answers,
         'article': word.get('article'),
-    })
-
-@app.route('/api/active-words')
-def get_active_words():
-    """Return count of active words (shown but not mastered)."""
-    words = load_words()
-    progress = load_progress()
-    word_progress = progress['word_progress']
-
-    count = 0
-    for word in words:
-        word_id = str(word['id'])
-        wp = word_progress.get(word_id, {})
-        if not wp.get('mastered', False) and wp.get('times_shown', 0) > 0:
-            count += 1
-
-    return jsonify({'active_count': count})
-
-@app.route('/api/next-review-word')
-def get_next_review_word():
-    """Return a random active word for review mode.
-
-    Accepts an optional 'exclude' query parameter with comma-separated
-    word IDs to exclude (words already reviewed this session).
-    """
-    words = load_words()
-    progress = load_progress()
-    word_progress = progress['word_progress']
-
-    exclude_param = request.args.get('exclude', '')
-    excluded_ids = set(exclude_param.split(',')) if exclude_param else set()
-
-    active_words = []
-    for word in words:
-        word_id = str(word['id'])
-        wp = word_progress.get(word_id, {})
-        if not wp.get('mastered', False) and wp.get('times_shown', 0) > 0:
-            if word_id not in excluded_ids:
-                active_words.append(word)
-
-    if not active_words:
-        return jsonify({'done': True, 'message': 'No active words to review!'})
-
-    selected = random.choice(active_words)
-
-    return jsonify({
-        'done': False,
-        'word': {
-            'id': selected['id'],
-            'english': selected['english'],
-            'category': selected['category'],
-            'hint': selected.get('hint', ''),
-            'rank': selected['rank'],
-            'article': selected.get('article'),
-        },
-        'remaining': len(active_words)
     })
 
 @app.route('/api/progress')
