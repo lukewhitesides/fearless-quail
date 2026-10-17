@@ -7,7 +7,6 @@ body.theme-spain {
     --accent: #c60b1e;
     --warm-shadow: rgba(198, 11, 30, 0.3);
     --primary-shadow: rgba(198, 11, 30, 0.4);
-    --char-shadow: rgba(198, 11, 30, 0.3);
 }
 
 /* Mexico: forest green & aztec red */
@@ -18,7 +17,6 @@ body.theme-mexico {
     --accent: #40916c;
     --warm-shadow: rgba(206, 17, 38, 0.3);
     --primary-shadow: rgba(64, 145, 108, 0.4);
-    --char-shadow: rgba(64, 145, 108, 0.3);
 }
 
 /* Costa Rica: ocean blue & pura vida red */
@@ -29,7 +27,6 @@ body.theme-costa-rica {
     --accent: #0077b6;
     --warm-shadow: rgba(206, 17, 38, 0.3);
     --primary-shadow: rgba(0, 119, 182, 0.4);
-    --char-shadow: rgba(0, 119, 182, 0.3);
 }
 
 /* Colombia: golden yellow, navy & crimson */
@@ -40,7 +37,6 @@ body.theme-colombia {
     --accent: #003087;
     --warm-shadow: rgba(0, 48, 135, 0.3);
     --primary-shadow: rgba(206, 17, 38, 0.4);
-    --char-shadow: rgba(0, 48, 135, 0.3);
 }
 
 /* Dominican Republic: Caribbean navy & crimson */
@@ -51,7 +47,6 @@ body.theme-dominican-republic {
     --accent: #0055a5;
     --warm-shadow: rgba(206, 17, 38, 0.3);
     --primary-shadow: rgba(0, 85, 165, 0.4);
-    --char-shadow: rgba(0, 85, 165, 0.3);
 }
 
 /* Uruguay: white & blue stripes, Sol de Mayo gold */
@@ -62,7 +57,6 @@ body.theme-uruguay {
     --accent: #0038a8;
     --warm-shadow: rgba(0, 56, 168, 0.3);
     --primary-shadow: rgba(196, 127, 0, 0.4);
-    --char-shadow: rgba(0, 56, 168, 0.3);
 }
 
 /* === BASE STYLES === */
@@ -241,41 +235,6 @@ main {
     color: #666;
     font-style: italic;
     font-size: 0.9rem;
-}
-
-/* Special character buttons */
-.special-chars {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.char-btn {
-    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
-    border: 2px solid #dee2e6;
-    color: #495057;
-    width: 42px;
-    height: 42px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.char-btn:hover {
-    background: var(--primary);
-    border-color: var(--accent);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px var(--char-shadow);
-}
-
-.char-btn:active {
-    transform: translateY(0);
 }
 
 .answer-section {
@@ -567,18 +526,6 @@ footer {
     .submit-btn {
         width: 100%;
         padding: 12px 20px;
-    }
-
-    .special-chars {
-        gap: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .char-btn {
-        width: 34px;
-        height: 34px;
-        font-size: 1rem;
     }
 
     .feedback {

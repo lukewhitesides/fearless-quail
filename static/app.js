@@ -229,20 +229,6 @@ function setupEventListeners() {
             answerInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     });
-
-    // Special character buttons
-    document.querySelectorAll('.char-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const char = btn.dataset.char;
-            const input = answerInput;
-            const start = input.selectionStart;
-            const end = input.selectionEnd;
-            const text = input.value;
-            input.value = text.substring(0, start) + char + text.substring(end);
-            input.selectionStart = input.selectionEnd = start + 1;
-            input.focus();
-        });
-    });
 }
 
 async function loadNextWord() {
