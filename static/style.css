@@ -395,45 +395,6 @@ main {
     transform: scale(1.05);
 }
 
-.completion {
-    text-align: center;
-    padding: 40px;
-}
-
-.completion h2 {
-    color: #155724;
-    margin-bottom: 15px;
-}
-
-.completion p {
-    color: #666;
-    margin-bottom: 25px;
-}
-
-.completion-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.reset-btn {
-    background: var(--warm);
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.reset-btn:hover {
-    transform: scale(1.05);
-}
-
 footer {
     padding: 20px;
     text-align: center;
@@ -581,16 +542,4 @@ footer {
 
 .feedback.show {
     animation: pulse 0.3s ease;
-}
-
-/* Mastered indicator */
-.mastered-badge {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 0.75rem;
-    margin-left: 10px;
-    vertical-align: middle;
 }
