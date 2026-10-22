@@ -63,23 +63,6 @@ def reset_all_progress():
     if os.path.exists(PROGRESS_FILE):
         os.remove(PROGRESS_FILE)
 
-def is_mastered(word_progress):
-    """Check if a word is mastered based on the mastery rules."""
-    times_shown = word_progress.get('times_shown', 0)
-    times_correct = word_progress.get('times_correct', 0)
-    streak = word_progress.get('streak', 0)
-
-    # Rule 1: Correct on first attempt
-    if times_shown == 1 and times_correct == 1:
-        return True
-    # Rule 2: Streak of 3 or more
-    if streak >= 3:
-        return True
-    # Rule 3: Shown 5+ times with 80%+ accuracy
-    if times_shown >= 5 and (times_correct / times_shown) >= 0.8:
-        return True
-    return False
-
 def normalize_answer(answer):
     """Normalize answer for comparison."""
     return answer.strip().lower()
@@ -185,11 +168,11 @@ def get_progress():
     progress = load_progress()
 
     total_words = len(words)
-    mastered_count = sum(1 for wp in progress['word_progress'].values() if wp.get('mastered', False))
+    practiced_count = sum(1 for wp in progress['word_progress'].values() if wp.get('times_shown', 0) > 0)
 
     return jsonify({
         'total_words': total_words,
-        'mastered': mastered_count,
+        'practiced': practiced_count,
         'total_practiced': progress['user_stats']['total_practiced'],
         'total_correct': progress['user_stats']['total_correct'],
         'accuracy': round(progress['user_stats']['total_correct'] / max(1, progress['user_stats']['total_practiced']) * 100, 1),

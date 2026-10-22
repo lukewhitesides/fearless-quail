@@ -24,15 +24,11 @@ const exampleEl = document.getElementById('example');
 const exampleEsEl = document.getElementById('example-es');
 const exampleEnEl = document.getElementById('example-en');
 const nextBtn = document.getElementById('next-btn');
-const completionEl = document.getElementById('completion');
-const completionTitleEl = document.getElementById('completion-title');
-const completionMsgEl = document.getElementById('completion-msg');
 const flashcardEl = document.getElementById('flashcard');
 const progressFill = document.getElementById('progress-fill');
-const masteredCount = document.getElementById('mastered-count');
+const practicedCount = document.getElementById('practiced-count');
 const totalCount = document.getElementById('total-count');
 const accuracyEl = document.getElementById('accuracy');
-const resetBtn = document.getElementById('reset-btn');
 const resetProgressBtn = document.getElementById('reset-progress-btn');
 const answerSection = document.querySelector('.answer-section');
 const strictnessHighBtn = document.getElementById('btn-strictness-high');
@@ -91,58 +87,67 @@ function saveLocalProgress() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(localProgress));
 }
 
-// --- Mastery ---
-
-function isMastered(wp) {
-    const timesShown = wp.times_shown || 0;
-    const timesCorrect = wp.times_correct || 0;
-    const streak = wp.streak || 0;
-    if (timesShown === 1 && timesCorrect === 1) return true;
-    if (streak >= 3) return true;
-    if (timesShown >= 5 && timesCorrect / timesShown >= 0.8) return true;
-    return false;
-}
-
 // --- Word selection ---
 //
-// Each draw first picks between two pools, then picks a word within that pool:
+// Every word the user has seen is weighted by frequency x need, and the next
+// word is a weighted random draw:
 //
-// - Practice pool: every word the user has ever missed, mastered or not.
-//   Weighted by frequency x need, where need rises with the miss rate (and if
-//   the last answer was wrong) and falls as the streak of correct answers grows.
-//   Words that were never missed (correct on the first try) drop out entirely.
-// - New pool: the next few unseen words by rank, weighted by frequency.
+// - Frequency: more common words (lower rank) are more likely to appear.
+// - Need: ((misses + 1) / (successes + 1)) ^ SUCCESS_EXPONENT. Words missed
+//   more often than answered correctly weigh more; each correct answer lowers
+//   the weight, but it never reaches zero, so every word keeps coming back now
+//   and then.
 //
-// The practice pool's share of draws grows with the total need across it, so a
-// history full of struggled words is reviewed most of the time, and the share
-// shrinks on its own as those words are answered correctly.
+// Unseen words are introduced from the next few by rank. The share of new
+// words follows recent accuracy: the more of the last few answers were right,
+// the more new words appear. A word can't come back until COOLDOWN other cards
+// have been shown.
 
 // Only the next few unseen words (by rank) are eligible, so new words are
 // introduced roughly in frequency order.
 const NEW_WORD_POOL_SIZE = 10;
-// Share of draws given to the practice pool per unit of total need, capped at
-// MAX_PRACTICE_SHARE so new words keep coming.
-const PRACTICE_SHARE_PER_NEED = 0.05;
-const MAX_PRACTICE_SHARE = 0.8;
+// Share of new words: MIN_NEW_SHARE at RECENT_ACCURACY_FLOOR accuracy or below,
+// rising linearly to MAX_NEW_SHARE at 100% accuracy.
+const MIN_NEW_SHARE = 0.1;
+const MAX_NEW_SHARE = 0.5;
+const RECENT_ACCURACY_FLOOR = 0.5;
+// Number of recent answers used to measure accuracy.
+const RECENT_ANSWERS = 20;
 // Higher = stronger preference for common words.
 const FREQUENCY_EXPONENT = 0.25;
-const MISS_RATE_WEIGHT = 4;
-const RECENT_MISS_BONUS = 2;
+// Higher = stronger preference for words with a poor success record.
+const SUCCESS_EXPONENT = 2;
+// Number of cards before the same word can be shown again.
+const COOLDOWN = 10;
+
+// Ids of the most recently shown words, newest last
+let recentWordIds = [];
+// Results (true = correct) of the most recent answers, newest last
+let recentResults = [];
+
+function recordResult(correct) {
+    recentResults.push(correct);
+    if (recentResults.length > RECENT_ANSWERS) recentResults.shift();
+}
+
+function newWordShare() {
+    // Before any answers this session, fall back to overall accuracy
+    const stats = localProgress.user_stats;
+    const accuracy = recentResults.length
+        ? recentResults.filter(Boolean).length / recentResults.length
+        : (stats.total_practiced ? stats.total_correct / stats.total_practiced : 1);
+    const t = Math.max(0, (accuracy - RECENT_ACCURACY_FLOOR) / (1 - RECENT_ACCURACY_FLOOR));
+    return MIN_NEW_SHARE + (MAX_NEW_SHARE - MIN_NEW_SHARE) * t;
+}
 
 function frequencyWeight(word) {
     return 1 / Math.pow(word.rank, FREQUENCY_EXPONENT);
 }
 
 function needWeight(wordWp) {
-    const timesShown = wordWp.times_shown || 0;
-    const misses = timesShown - (wordWp.times_correct || 0);
-    if (misses <= 0) return 0;
-    const streak = wordWp.streak || 0;
-    // A streak of 0 on a word that's been shown means the last answer was wrong
-    const need = 1 + MISS_RATE_WEIGHT * misses / timesShown + (streak === 0 ? RECENT_MISS_BONUS : 0);
-    // Each correct answer in a row makes the word less pressing; mastered
-    // words (streak of 3+) still come back now and then
-    return need / Math.pow(1 + streak, 2);
+    const correct = wordWp.times_correct || 0;
+    const misses = (wordWp.times_shown || 0) - correct;
+    return Math.pow((misses + 1) / (correct + 1), SUCCESS_EXPONENT);
 }
 
 function weightedPick(candidates) {
@@ -155,15 +160,12 @@ function weightedPick(candidates) {
     return candidates[candidates.length - 1].word;
 }
 
-function selectNextWord() {
-    const sortedWords = allWords.slice().sort((a, b) => a.rank - b.rank);
+function buildPools(sortedWords, recent) {
     const wp = localProgress.word_progress;
     const practice = [], newWords = [];
-    let struggling = 0, totalNeed = 0;
 
     for (const word of sortedWords) {
-        // Avoid showing the same word twice in a row
-        if (currentWord && word.id === currentWord.id) continue;
+        if (recent.has(word.id)) continue;
         const wordWp = wp[String(word.id)] || {};
         if ((wordWp.times_shown || 0) === 0) {
             if (newWords.length < NEW_WORD_POOL_SIZE) {
@@ -171,26 +173,27 @@ function selectNextWord() {
             }
             continue;
         }
-        if (!wordWp.mastered) struggling++;
-        const need = needWeight(wordWp);
-        if (need > 0) {
-            totalNeed += need;
-            practice.push({ word, weight: frequencyWeight(word) * need });
-        }
+        practice.push({ word, weight: frequencyWeight(word) * needWeight(wordWp) });
     }
+    return { practice, newWords };
+}
 
-    if (!newWords.length && !struggling) {
-        // Everything is mastered, unless the only word left is the one just shown
-        const currentWp = currentWord && wp[String(currentWord.id)];
-        if (!currentWp || currentWp.mastered) return null;
-        return currentWord;
+function selectNextWord() {
+    const sortedWords = allWords.slice().sort((a, b) => a.rank - b.rank);
+    let pools = buildPools(sortedWords, new Set(recentWordIds));
+    if (!pools.practice.length && !pools.newWords.length) {
+        // Every word was shown recently (tiny word list); ignore the cooldown
+        pools = buildPools(sortedWords, new Set());
     }
+    const { practice, newWords } = pools;
 
-    const practiceShare = Math.min(MAX_PRACTICE_SHARE, PRACTICE_SHARE_PER_NEED * totalNeed);
-    if (!newWords.length || (practice.length && Math.random() < practiceShare)) {
-        return weightedPick(practice);
-    }
-    return weightedPick(newWords);
+    const word = (!newWords.length || (practice.length && Math.random() >= newWordShare()))
+        ? weightedPick(practice)
+        : weightedPick(newWords);
+
+    recentWordIds.push(word.id);
+    if (recentWordIds.length > COOLDOWN) recentWordIds.shift();
+    return word;
 }
 
 // --- Startup ---
@@ -211,7 +214,6 @@ async function loadWordsAndStart() {
 function setupEventListeners() {
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', loadNextWord);
-    resetBtn.addEventListener('click', resetProgress);
     resetProgressBtn.addEventListener('click', confirmReset);
 
     strictnessHighBtn.addEventListener('click', () => setStrictness('high'));
@@ -255,17 +257,10 @@ async function loadNextWord() {
     submitBtn.style.display = 'inline-block';
     answerSection.style.display = 'flex';
     flashcardEl.style.display = 'block';
-    completionEl.style.display = 'none';
 
     if (!allWords.length) return;
 
-    const selected = selectNextWord();
-    if (!selected) {
-        showCompletion();
-        return;
-    }
-
-    currentWord = selected;
+    currentWord = selectNextWord();
     englishWordEl.textContent = currentWord.english;
 
     // Update placeholder hint for high strictness nouns
@@ -305,12 +300,9 @@ async function checkAnswer() {
         const wp = localProgress.word_progress[wordId] || {
             times_shown: 0,
             times_correct: 0,
-            streak: 0,
-            mastered: false,
-            first_attempt_correct: null
+            streak: 0
         };
 
-        if (wp.times_shown === 0) wp.first_attempt_correct = data.correct;
         wp.times_shown += 1;
         if (data.correct) {
             wp.times_correct += 1;
@@ -318,9 +310,9 @@ async function checkAnswer() {
         } else {
             wp.streak = 0;
         }
-        wp.mastered = isMastered(wp);
 
         localProgress.word_progress[wordId] = wp;
+        recordResult(data.correct);
         localProgress.user_stats.total_practiced += 1;
         if (data.correct) localProgress.user_stats.total_correct += 1;
         saveLocalProgress();
@@ -337,9 +329,7 @@ async function checkAnswer() {
             feedbackIcon.textContent = '✓';
 
             let text = 'Correct!';
-            if (wp.mastered) {
-                text += ' Word mastered!';
-            } else if (wp.streak > 1) {
+            if (wp.streak > 1) {
                 text += ` Streak: ${wp.streak}`;
             }
             feedbackText.textContent = text;
@@ -436,8 +426,8 @@ function displayProgress() {
 
     const wp = localProgress.word_progress;
 
-    const masteredCountVal = allWords.filter(w => wp[String(w.id)]?.mastered).length;
-    masteredCount.textContent = masteredCountVal;
+    const practicedCountVal = allWords.filter(w => (wp[String(w.id)]?.times_shown || 0) > 0).length;
+    practicedCount.textContent = practicedCountVal;
     totalCount.textContent = allWords.length;
 
     // Accuracy from word_progress totals
@@ -452,19 +442,8 @@ function displayProgress() {
         : 0;
     accuracyEl.textContent = accuracy;
 
-    const percentage = (masteredCountVal / allWords.length) * 100;
+    const percentage = (practicedCountVal / allWords.length) * 100;
     progressFill.style.width = `${percentage}%`;
-}
-
-function showCompletion() {
-    flashcardEl.style.display = 'none';
-    answerSection.style.display = 'none';
-    feedbackEl.style.display = 'none';
-
-    completionTitleEl.textContent = 'Amazing!';
-    completionMsgEl.textContent = `You've mastered all ${allWords.length.toLocaleString()} Spanish words!`;
-
-    completionEl.style.display = 'block';
 }
 
 async function loadSettings() {
