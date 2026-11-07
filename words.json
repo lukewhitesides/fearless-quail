@@ -739,7 +739,8 @@
       "id": 82,
       "english": "our",
       "spanish": [
-        "nuestro"
+        "nuestro",
+        "nuestra"
       ],
       "rank": 82,
       "category": "adjective"
@@ -834,7 +835,8 @@
       "spanish": [
         "hablar",
         "conversar",
-        "platicar"
+        "platicar",
+        "decir"
       ],
       "rank": 92,
       "category": "verb"
@@ -1354,7 +1356,7 @@
     },
     {
       "id": 148,
-      "english": "during, for (time",
+      "english": "during",
       "spanish": [
         "durante"
       ],
@@ -1541,7 +1543,8 @@
       "english": "there, over there",
       "spanish": [
         "allí",
-        "allá"
+        "allá",
+        "ahí"
       ],
       "rank": 167,
       "category": "adverb"
@@ -1753,7 +1756,8 @@
       "id": 189,
       "english": "there",
       "spanish": [
-        "ahí"
+        "ahí",
+        "allí"
       ],
       "rank": 189,
       "category": "adverb"
@@ -1808,7 +1812,7 @@
     },
     {
       "id": 195,
-      "english": "to produce, cause",
+      "english": "to produce",
       "spanish": [
         "producir"
       ],
@@ -2572,7 +2576,8 @@
       "english": "bad",
       "spanish": [
         "malo",
-        "mala"
+        "mala",
+        "mal"
       ],
       "rank": 275,
       "category": "adjective"
@@ -2910,7 +2915,7 @@
     },
     {
       "id": 312,
-      "english": "the rest, others semana",
+      "english": "the rest, others",
       "spanish": [
         "demás"
       ],
@@ -3631,7 +3636,8 @@
       "id": 391,
       "english": "close, near",
       "spanish": [
-        "cerca"
+        "cerca",
+        "cercano"
       ],
       "rank": 391,
       "category": "adverb"
@@ -3663,7 +3669,8 @@
       "spanish": [
         "tercero",
         "tercera",
-        "tercio"
+        "tercio",
+        "tercer"
       ],
       "rank": 394,
       "category": "adjective"
@@ -4174,7 +4181,8 @@
       "id": 447,
       "english": "rest, remainder",
       "spanish": [
-        "resto"
+        "resto",
+        "restante"
       ],
       "rank": 447,
       "category": "noun",
@@ -4299,7 +4307,7 @@
     },
     {
       "id": 460,
-      "english": "contrary, opposite",
+      "english": "contrary",
       "spanish": [
         "contrario",
         "contraria"
@@ -4328,7 +4336,7 @@
     },
     {
       "id": 463,
-      "english": "opportunity, occasion",
+      "english": "occasion",
       "spanish": [
         "ocasión"
       ],
